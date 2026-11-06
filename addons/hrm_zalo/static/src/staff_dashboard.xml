@@ -1,0 +1,61 @@
+<templates xml:space="preserve">
+  <t t-name="hrm_zalo.StaffDashboard">
+    <div class="smb-staff-dashboard">
+      <t t-set="data" t-value="this.data"/>
+      <div class="smb-dash-hero">
+        <span class="smb-dash-eyebrow">SMBPLUS HRM</span>
+        <h2>Tổng quan nhân sự</h2>
+        <p>Biến động nhân sự và sự kiện trong tháng <strong t-esc="data.month"/>.</p>
+      </div>
+      <section t-if="data.leave" class="smb-dash-panel smb-leave-alert">
+        <h3><i class="fa fa-bell me-2" aria-hidden="true"/>Đơn nghỉ cần duyệt <span class="smb-dash-pill" t-esc="data.leave"/></h3>
+        <div t-foreach="data.pending_leave || []" t-as="item" t-key="item.id" class="smb-dash-metric">
+          <span><strong t-esc="item.employee"/> · <t t-esc="item.type"/></span>
+          <span t-esc="item.start"/>
+        </div>
+      </section>
+      <div class="smb-dash-cards">
+        <article t-foreach="this.categories" t-as="row" t-key="row.color" t-att-class="'smb-dash-card smb-' + row.color">
+          <i t-att-class="'fa ' + row.icon" aria-hidden="true"/>
+          <span t-esc="row.label"/>
+          <strong t-esc="row.count"/>
+        </article>
+      </div>
+      <div class="smb-dash-columns">
+        <section class="smb-dash-panel">
+          <h3>Biểu đồ nhân sự</h3>
+          <p>Số người theo từng nhóm. Nhân viên mới và thực tập sinh có thể cùng thuộc nhóm đang làm.</p>
+          <div t-foreach="this.categories" t-as="row" t-key="row.color" t-att-class="'smb-bar smb-' + row.color">
+            <div><span t-esc="row.label"/><strong t-esc="row.count"/></div>
+            <div class="smb-bar-track" aria-hidden="true"><span t-att-style="'width:' + row.width + '%'"/></div>
+          </div>
+        </section>
+        <section class="smb-dash-panel">
+          <h3>Sinh nhật trong tháng <span class="smb-dash-pill" t-esc="(data.birthdays || []).length"/></h3>
+          <p t-if="!data.birthdays?.length">Chưa có sinh nhật trong dữ liệu tháng này.</p>
+          <div t-else="" class="smb-birthday-list">
+            <div t-foreach="data.birthdays" t-as="person" t-key="person.id" class="smb-birthday">
+              <span t-esc="person.date"/><strong t-esc="person.name"/>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="smb-dash-columns">
+        <section class="smb-dash-panel">
+          <h3>Sự kiện quan trọng</h3>
+          <p t-if="!data.events?.length">Chưa có sự kiện đang đăng.</p>
+          <ul t-else="">
+            <li t-foreach="data.events" t-as="event" t-key="event.id" t-esc="event.title"/>
+          </ul>
+        </section>
+        <section class="smb-dash-panel">
+          <h3>Hoạt động Mini App</h3>
+          <div class="smb-dash-metric"><span>Đã liên kết Zalo</span><strong t-esc="data.linked || 0"/></div>
+          <div class="smb-dash-metric"><span>Đang dùng phiên đăng nhập bằng mã 6 số</span><strong t-esc="data.code_sessions || 0"/></div>
+          <div class="smb-dash-metric"><span>Đơn nghỉ chờ duyệt</span><strong t-esc="data.leave || 0"/></div>
+          <div class="smb-dash-metric"><span>Thông báo đang đăng</span><strong t-esc="data.notices || 0"/></div>
+        </section>
+      </div>
+    </div>
+  </t>
+</templates>

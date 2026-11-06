@@ -9,6 +9,12 @@
           <select id="hrm_attendance_grid_period" class="form-select w-auto" t-on-change="(event) => this.changePeriod(event)" t-att-disabled="this.state.busy || Object.keys(this.state.edits).length">
             <option t-foreach="this.state.grid.periods" t-as="period" t-key="period.id" t-att-value="period.id" t-att-selected="period.id === this.state.grid.period_id" t-esc="period.label"/>
           </select>
+          <input type="search" class="form-control w-auto" placeholder="Tìm mã hoặc tên nhân viên"
+                 aria-label="Tìm mã hoặc tên nhân viên" t-att-value="this.state.employeeQuery"
+                 t-on-input="(event) => this.state.employeeQuery = event.target.value"/>
+          <button t-if="this.state.grid.leave_history_action" type="button" class="btn btn-outline-primary"
+                  t-on-click="() => this.action.doAction(this.state.grid.leave_history_action)"
+                  t-att-disabled="this.state.busy || Object.keys(this.state.edits).length">Lịch sử xin nghỉ</button>
           <button class="btn btn-primary" t-on-click="() => this.save()" t-att-disabled="this.state.busy || !Object.keys(this.state.edits).length">Lưu công</button>
           <button class="btn btn-secondary" t-on-click="() => this.load(this.state.grid.period_id)" t-att-disabled="this.state.busy">Tải lại bảng</button>
           <button t-if="this.state.grid.manage_symbols &amp;&amp; !this.state.grid.locked" type="button" class="btn btn-outline-secondary"
@@ -70,7 +76,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr t-foreach="this.state.grid.rows" t-as="row" t-key="row.id">
+              <tr t-foreach="this.visibleRows" t-as="row" t-key="row.id">
                 <t t-set="hours" t-value="this.total(row)"/>
                 <th scope="row" class="position-sticky start-0 bg-white"><t t-esc="row.code"/> · <t t-esc="row.name"/></th>
                 <td t-esc="row.department"/><td t-esc="row.projects"/>

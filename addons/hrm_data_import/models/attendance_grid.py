@@ -15,7 +15,8 @@ GRID_COLUMNS = {
     'approval_reference': 'text', 'work_date': 'date', 'regular_hours': 'number',
     'overtime_hours': 'number', 'attendance_symbol': 'text',
 }
-DEFAULT_SYMBOLS = {'X': (8, 0), 'X4': (4, 0), 'TC2': (0, 2), 'X+TC2': (8, 2), '0': (0, 0)}
+DEFAULT_SYMBOLS = {'X': (8, 0), 'X4': (4, 0), 'TC2': (0, 2), 'X+TC2': (8, 2),
+                   'RO': (0, 0), '1/2RO': (4, 0), '0': (0, 0)}
 
 
 class AttendanceSymbol(models.Model):
@@ -44,8 +45,8 @@ class AttendanceSymbol(models.Model):
     @api.constrains('code', 'regular_hours', 'overtime_hours')
     def _check_symbol(self):
         for record in self:
-            if not re.fullmatch(r'[A-Z0-9+_-]{1,16}', record.code or '') or record.code == '0':
-                raise UserError('Ký hiệu gồm tối đa 16 chữ, số hoặc dấu + _ -. Mã 0 dành cho ngày không có giờ.')
+            if not re.fullmatch(r'[A-Z0-9+_/-]{1,16}', record.code or '') or record.code == '0':
+                raise UserError('Ký hiệu gồm tối đa 16 chữ, số hoặc dấu + _ / -. Mã 0 dành cho ngày không có giờ.')
             regular, overtime = record.regular_hours, record.overtime_hours
             if not all(math.isfinite(hours) and hours >= 0 for hours in (regular, overtime)) or regular + overtime > 24:
                 raise UserError('Tổng giờ thường và giờ tăng ca phải từ 0 đến 24.')

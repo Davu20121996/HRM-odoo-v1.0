@@ -8,7 +8,7 @@ class AttendanceGrid extends Component {
     setup() {
         this.orm = useService("orm");
         this.action = useService("action");
-        this.state = proxy({ grid: { periods: [], rows: [] }, edits: {}, busy: false, message: "", error: false, batchId: false });
+        this.state = proxy({ grid: { periods: [], rows: [] }, edits: {}, busy: false, message: "", error: false, batchId: false, employeeQuery: "" });
         this.state.symbolForm = null;
         onWillStart(() => this.load());
     }
@@ -28,6 +28,11 @@ class AttendanceGrid extends Component {
         this.state.message = "";
         this.state.batchId = false;
         return this.load(Number(event.target.value));
+    }
+
+    get visibleRows() {
+        const query = this.state.employeeQuery.trim().toLocaleLowerCase("vi");
+        return this.state.grid.rows.filter((row) => `${row.code} ${row.name}`.toLocaleLowerCase("vi").includes(query));
     }
 
     key(row, day) {

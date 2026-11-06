@@ -11,6 +11,10 @@
             <option t-foreach="this.state.grid.periods" t-as="period" t-key="period.id" t-att-value="period.id"
                     t-att-selected="period.id === this.state.grid.period_id" t-esc="period.label"/>
           </select>
+          <input type="search" class="form-control w-auto" placeholder="Tìm mã hoặc tên nhân viên"
+                 aria-label="Tìm mã hoặc tên nhân viên" t-att-value="this.state.employeeQuery"
+                 t-on-input="(event) => this.state.employeeQuery = event.target.value"/>
+
           <button t-if="this.editable" class="btn btn-secondary" type="button" t-on-click="() => this.execute('calculate')"
                   t-att-disabled="this.state.busy || Object.keys(this.state.edits).length">Tính theo công thức</button>
           <button t-if="this.editable &amp;&amp; this.state.grid.manage" class="btn btn-primary" type="button"
@@ -45,7 +49,7 @@
               <th t-foreach="this.state.grid.columns" t-as="column" t-key="column.id" t-esc="column.label"/>
               <th>Phụ cấp hợp đồng</th><th>Tổng thu nhập</th><th>Bảo hiểm NLĐ</th><th>Tổng khấu trừ</th><th>Thuế TNCN</th><th>Thực nhận</th>
             </tr></thead>
-            <tbody><tr t-foreach="this.state.grid.rows" t-as="row" t-key="row.id">
+            <tbody><tr t-foreach="this.visibleRows" t-as="row" t-key="row.id">
               <th scope="row" class="position-sticky start-0 bg-white"><t t-esc="row.label"/>
                 <div t-if="row.error" class="small text-danger text-wrap" t-esc="row.error"/>
               </th>

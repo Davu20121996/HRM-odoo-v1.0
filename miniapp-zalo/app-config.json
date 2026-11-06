@@ -1,0 +1,14 @@
+{
+  "app": {
+    "title": "SMBPlus Nhân sự",
+    "headerColor": "#0068FF",
+    "textColor": "white",
+    "statusBar": "normal",
+    "actionBarHidden": false,
+    "hideIOSSafeAreaBottom": true
+  },
+  "listCSS": ["assets/index.css"],
+  "listSyncJS": ["assets/index.module.js"],
+  "listAsyncJS": [],
+  "pages": []
+}

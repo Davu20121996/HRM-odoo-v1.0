@@ -1,0 +1,27 @@
+.smb-staff-dashboard { --smb-border: var(--border-color, #e1e7f0); width: 100%; }
+.smb-dash-hero { background: linear-gradient(115deg, #15345c, #2666a7); color: #fff; padding: 24px; border-radius: 16px; }
+.smb-dash-eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .13em; }
+.smb-staff-dashboard .smb-dash-hero h2 { margin: .4rem 0; font-size: 1.8rem; color: #fff; }
+.smb-dash-hero p { margin: 0; color: #e1edff; }
+.smb-dash-cards, .smb-dash-columns { display: grid; gap: 14px; margin-top: 14px; }
+.smb-dash-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.smb-dash-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.smb-dash-panel, .smb-dash-card { border: 1px solid var(--smb-border); border-radius: 14px; padding: 16px; background: var(--body-bg, #fff); }
+.smb-dash-card { display: grid; gap: 6px; border-top: 3px solid var(--smb-accent); }
+.smb-dash-card i { color: var(--smb-accent); }
+.smb-dash-card strong { font-size: 1.8rem; line-height: 1.05; }
+.smb-dash-panel h3 { font-size: 1.08rem; margin-bottom: .65rem; }
+.smb-dash-panel p { opacity: .78; }
+.smb-leave-alert { margin-top: 14px; border-inline-start: 4px solid #b97712; }
+.smb-blue { --smb-accent: #407ac6; }
+.smb-pink { --smb-accent: #bc5078; }
+.smb-green { --smb-accent: #278965; }
+.smb-amber { --smb-accent: #ac6a17; }
+.smb-bar { margin-top: 12px; }
+.smb-bar > div:first-child, .smb-dash-metric { display: flex; justify-content: space-between; gap: 10px; }
+.smb-bar-track { background: var(--smb-border); border-radius: 99px; height: 8px; margin-top: 5px; overflow: hidden; }
+.smb-bar-track span { display: block; height: 100%; border-radius: inherit; background: var(--smb-accent); }
+.smb-dash-pill, .smb-birthday span { background: #eaf2ff; color: #194987; border-radius: 8px; padding: 3px 8px; }
+.smb-birthday-list { max-height: 245px; overflow: auto; }
+.smb-birthday, .smb-dash-metric { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--smb-border); }
+@media (max-width: 850px) { .smb-dash-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .smb-dash-columns { grid-template-columns: 1fr; } }

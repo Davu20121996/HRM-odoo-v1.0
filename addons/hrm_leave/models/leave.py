@@ -359,7 +359,6 @@ class HrmLeaveBalanceLedger(models.Model):
         "UNIQUE(tenant_id, employee_id, leave_type_id, reference_type, reference_id, transaction_type)",
         "Duplicate ledger posting for the same reference.",
     )
-    _uuid_unique = models.Constraint("UNIQUE(uuid)", "Ledger UUID must be unique.")
 
     def write(self, vals):
         raise UserError("The leave ledger is immutable.")

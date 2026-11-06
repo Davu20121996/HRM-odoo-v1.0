@@ -1,0 +1,235 @@
+<odoo>
+  <record id="access_notice" model="ir.access">
+    <field name="name">Quản lý thông báo Mini App</field>
+    <field name="model_id" ref="model_hrm_zalo_notice"/>
+    <field name="group_id" ref="hrm_data_import.group_import_approver"/>
+    <field name="operation">crud</field>
+  </record>
+  <record id="scope_notice" model="ir.access">
+    <field name="name">Thông báo theo công ty</field>
+    <field name="model_id" ref="model_hrm_zalo_notice"/>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="scope_leave_request" model="ir.access">
+    <field name="name">Đơn nghỉ theo công ty</field>
+    <field name="model_id" ref="hrm_leave.model_hrm_leave_request"/>
+    <field name="domain">[('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="scope_leave_allocation" model="ir.access">
+    <field name="name">Cấp phép theo công ty</field>
+    <field name="model_id" ref="hrm_leave.model_hrm_leave_allocation"/>
+    <field name="domain">[('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="scope_leave_approval" model="ir.access">
+    <field name="name">Duyệt nghỉ theo công ty</field>
+    <field name="model_id" ref="hrm_leave.model_hrm_leave_approval"/>
+    <field name="domain">[('request_id.employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="scope_leave_ledger" model="ir.access">
+    <field name="name">Sổ phép theo công ty</field>
+    <field name="model_id" ref="hrm_leave.model_hrm_leave_balance_ledger"/>
+    <field name="domain">[('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="access_code" model="ir.access">
+    <field name="name">Cấp mã Zalo</field>
+    <field name="model_id" ref="model_hrm_zalo_code"/>
+    <field name="group_id" ref="hrm_data_import.group_import_approver"/>
+    <field name="operation">crud</field>
+  </record>
+  <record id="access_dashboard" model="ir.access">
+    <field name="name">Dashboard Mini App</field>
+    <field name="model_id" ref="model_hrm_zalo_dashboard"/>
+    <field name="group_id" ref="hrm_data_import.group_import_approver"/>
+    <field name="operation">crud</field>
+  </record>
+  <record id="code_form" model="ir.ui.view">
+    <field name="name">hrm.zalo.code.form</field><field name="model">hrm.zalo.code</field>
+    <field name="arch" type="xml">
+      <form>
+        <group><field name="employee_id"/><field name="issued" invisible="1"/>
+          <field name="code" readonly="issued" placeholder="Để trống nếu muốn tự sinh"/>
+        </group>
+        <p invisible="issued">Nhập mã 6 số hoặc để trống và bấm Cấp mã.</p>
+        <p invisible="not issued">Gửi riêng mã này cho nhân viên. Mã dùng lại được đến khi nhân sự cấp mã khác hoặc thu hồi.</p>
+        <footer><button name="action_issue" type="object" string="Cấp mã" class="btn-primary" invisible="issued"/>
+          <button string="Đóng" special="cancel"/></footer>
+      </form>
+    </field>
+  </record>
+  <record id="employee_zalo_list" model="ir.ui.view">
+    <field name="name">hr.employee.zalo.list</field><field name="model">hr.employee</field>
+    <field name="inherit_id" ref="hrm_data_import.employee_complete_list"/>
+    <field name="arch" type="xml">
+      <field name="employee_code" position="after">
+        <field name="zalo_user_id" column_invisible="True" groups="hrm_data_import.group_import_approver"/>
+        <field name="zalo_code_configured" string="Đã cấp mã" optional="show" groups="hrm_data_import.group_import_approver"/>
+        <button name="action_zalo_code" type="object" string="Cấp mã 6 số"
+                invisible="not employee_code or current_status not in ('active','onboarding')"
+                groups="hrm_data_import.group_import_approver"/>
+      </field>
+    </field>
+  </record>
+  <record id="employee_zalo_form" model="ir.ui.view">
+    <field name="name">hr.employee.zalo.form</field><field name="model">hr.employee</field>
+    <field name="inherit_id" ref="hrm_data_import.employee_complete_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//notebook" position="inside">
+        <page name="zalo" string="Zalo Mini App" groups="hrm_data_import.group_import_approver">
+          <group><field name="zalo_user_id" string="Zalo User ID"/><field name="zalo_code_configured" string="Đã cấp mã"/><field name="zalo_code_expires" string="Mã tạm hết hạn" invisible="not zalo_code_expires"/><field name="zalo_session_expires" string="Phiên đăng nhập hết hạn"/></group>
+          <button name="action_zalo_code" type="object" string="Cấp mã 6 số" class="btn-primary"
+                  invisible="not id or not employee_code or current_status not in ('active','onboarding')"/>
+          <button name="action_zalo_unlink" type="object" string="Thu hồi quyền truy cập" invisible="not zalo_user_id and not zalo_session_expires and not zalo_code_configured"
+                  confirm="Hủy liên kết tài khoản Zalo của nhân viên này?"/>
+        </page>
+      </xpath>
+    </field>
+  </record>
+  <record id="notice_list" model="ir.ui.view">
+    <field name="name">hrm.zalo.notice.list</field><field name="model">hrm.zalo.notice</field>
+    <field name="arch" type="xml"><list><field name="title"/><field name="company_id"/><field name="important"/>
+      <field name="published_at"/></list></field>
+  </record>
+  <record id="notice_form" model="ir.ui.view">
+    <field name="name">hrm.zalo.notice.form</field><field name="model">hrm.zalo.notice</field>
+    <field name="arch" type="xml"><form>
+      <header><button name="action_publish" type="object" string="Đăng lên Mini App" class="oe_highlight" invisible="published_at"/>
+        <button name="action_unpublish" type="object" string="Gỡ khỏi Mini App" invisible="not published_at"/></header>
+      <sheet><group><field name="company_id"/><field name="title"/><field name="important"/><field name="published_at"/>
+        <field name="body"/><field name="image" widget="image"/></group></sheet>
+    </form></field>
+  </record>
+  <record id="action_notices" model="ir.actions.act_window">
+    <field name="name">Thông báo Mini App</field><field name="res_model">hrm.zalo.notice</field>
+    <field name="view_mode">list,form</field>
+  </record>
+  <record id="miniapp_leave_request_form" model="ir.ui.view">
+    <field name="name">hrm.leave.request.miniapp.form</field>
+    <field name="model">hrm.leave.request</field>
+    <field name="inherit_id" ref="hrm_leave.view_hrm_leave_request_form"/>
+    <field name="arch" type="xml">
+      <field name="reason" position="before">
+        <field name="miniapp_kind" invisible="not miniapp_kind"/>
+        <field name="miniapp_minutes" invisible="not miniapp_minutes"/>
+        <field name="miniapp_attendance_state" invisible="not miniapp_kind or not miniapp_attendance_state"/>
+        <field name="miniapp_attendance_message" invisible="not miniapp_attendance_message"/>
+        <field name="miniapp_applied_at" invisible="not miniapp_applied_at"/>
+        <field name="miniapp_applied_by" invisible="not miniapp_applied_by"/>
+      </field>
+      <button name="action_approve" position="after">
+        <button name="action_apply_miniapp_attendance" type="object" string="Ghi công từ đơn" class="btn-primary"
+                invisible="status != 'approved' or miniapp_attendance_state != 'waiting'"
+                groups="hrm_data_import.group_import_approver"/>
+      </button>
+      <field name="status" position="attributes"><attribute name="readonly">miniapp_kind</attribute></field>
+      <button name="action_approve" position="attributes">
+        <attribute name="string">Duyệt</attribute><attribute name="invisible">status != 'pending_approval'</attribute>
+      </button>
+      <button name="action_reject" position="attributes">
+        <attribute name="string">Từ chối</attribute><attribute name="invisible">status != 'pending_approval'</attribute>
+      </button>
+      <button name="action_submit" position="attributes"><attribute name="invisible">status != 'draft'</attribute></button>
+      <button name="action_take" position="attributes"><attribute name="invisible">miniapp_kind or status != 'approved'</attribute></button>
+      <button name="action_cancel" position="attributes"><attribute name="invisible">status not in ('draft', 'submitted', 'pending_approval')</attribute></button>
+    </field>
+  </record>
+  <record id="miniapp_leave_history_list" model="ir.ui.view">
+    <field name="name">hrm.leave.request.miniapp.history.list</field>
+    <field name="model">hrm.leave.request</field>
+    <field name="arch" type="xml">
+      <list create="false" delete="false" default_order="create_date desc, id desc">
+        <field name="employee_id" string="Nhân viên"/>
+        <field name="miniapp_kind" string="Loại yêu cầu"/>
+        <field name="start_at" string="Từ ngày"/>
+        <field name="end_at" string="Đến ngày"/>
+        <field name="status" string="Trạng thái đơn" widget="badge"/>
+        <field name="miniapp_attendance_state" widget="badge" decoration-warning="miniapp_attendance_state == 'waiting'"
+               decoration-success="miniapp_attendance_state == 'applied'"/>
+        <field name="miniapp_attendance_message" optional="hide"/>
+        <field name="miniapp_applied_at" optional="hide"/>
+      </list>
+    </field>
+  </record>
+  <record id="miniapp_leave_history_search" model="ir.ui.view">
+    <field name="name">hrm.leave.request.miniapp.history.search</field>
+    <field name="model">hrm.leave.request</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="employee_id" string="Mã hoặc tên nhân viên"
+               filter_domain="['|', ('employee_id.employee_code', 'ilike', self), ('employee_id.name', 'ilike', self)]"/>
+        <field name="miniapp_kind"/>
+        <filter name="waiting_attendance" string="Chờ ghi công" domain="[('miniapp_attendance_state', '=', 'waiting')]"/>
+        <filter name="applied_attendance" string="Đã ghi công" domain="[('miniapp_attendance_state', '=', 'applied')]"/>
+        <separator/>
+        <filter name="request_date" string="Ngày áp dụng" date="start_at"/>
+      </search>
+    </field>
+  </record>
+  <record id="action_miniapp_leave_history" model="ir.actions.act_window">
+    <field name="name">Lịch sử xin nghỉ và điều chỉnh công</field>
+    <field name="res_model">hrm.leave.request</field>
+    <field name="view_mode">list,form</field>
+    <field name="view_id" ref="miniapp_leave_history_list"/>
+    <field name="search_view_id" ref="miniapp_leave_history_search"/>
+    <field name="context">{'create': False, 'delete': False}</field>
+    <field name="domain">[('id', '=', False)]</field>
+  </record>
+  <record id="open_miniapp_leave_history" model="ir.actions.server">
+    <field name="name">Lịch sử xin nghỉ và điều chỉnh công</field>
+    <field name="model_id" ref="hrm_leave.model_hrm_leave_request"/>
+    <field name="state">code</field>
+    <field name="code">action = model._miniapp_history_action()</field>
+  </record>
+  <record id="dashboard_form" model="ir.ui.view">
+    <field name="name">hrm.zalo.dashboard.form</field><field name="model">hrm.zalo.dashboard</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <div class="d-flex align-items-center flex-wrap gap-2 mb-3">
+            <label for="company_id" string="Công ty"/>
+            <field name="company_id" domain="[('create_uid','=',uid)]" options="{'no_create':True,'no_open':True}"/>
+            <button name="%(action_notices)d" type="action" string="Quản lý thông báo" class="btn btn-outline-primary"/>
+            <button name="action_pending_leave" type="object" string="Mở đơn nghỉ chờ duyệt" class="btn btn-primary" icon="fa-calendar-check-o"/>
+          </div>
+          <field name="dashboard_payload" widget="smb_staff_dashboard" readonly="1" nolabel="1"/>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="maternity_leave_type_form" model="ir.ui.view">
+    <field name="name">hrm.leave.type.dashboard.form</field><field name="model">hrm.leave.type</field>
+    <field name="arch" type="xml">
+      <form><sheet><group>
+        <field name="tenant_id"/><field name="code"/><field name="name"/><field name="status"/>
+        <field name="paid"/><field name="unit"/><field name="requires_attachment"/><field name="allow_negative_balance"/>
+        <field name="dashboard_maternity"/>
+      </group></sheet></form>
+    </field>
+  </record>
+  <record id="internship_contract_type_form" model="ir.ui.view">
+    <field name="name">hrm.contract.type.dashboard.form</field><field name="model">hrm.contract.type</field>
+    <field name="arch" type="xml">
+      <form><sheet><group>
+        <field name="tenant_id"/><field name="code"/><field name="name"/><field name="status"/>
+        <field name="employment_category"/><field name="default_duration_days"/><field name="is_indefinite"/>
+        <field name="dashboard_internship"/>
+      </group></sheet></form>
+    </field>
+  </record>
+  <record id="action_dashboard" model="ir.actions.act_window">
+    <field name="name">Dashboard nhân sự</field><field name="res_model">hrm.zalo.dashboard</field>
+    <field name="view_mode">form</field>
+  </record>
+  <menuitem id="menu_dashboard" name="Dashboard nhân sự" parent="hrm_employee.menu_hrm_core"
+            action="action_dashboard" sequence="0" groups="hrm_data_import.group_import_approver"/>
+  <menuitem id="menu_notices" name="Thông báo Mini App" parent="hrm_employee.menu_hrm_core"
+            action="action_notices" sequence="5" groups="hrm_data_import.group_import_approver"/>
+  <menuitem id="menu_leave" name="Đơn xin nghỉ" parent="hrm_employee.menu_hrm_core"
+            action="hrm_leave.action_hrm_leave_request" sequence="6" groups="hrm_data_import.group_import_approver"/>
+  <menuitem id="menu_miniapp_leave_history" name="Lịch sử xin nghỉ và điều chỉnh công" parent="hrm_time.menu_hrm_time"
+            action="open_miniapp_leave_history" sequence="2" groups="hrm_data_import.group_import_approver"/>
+</odoo>

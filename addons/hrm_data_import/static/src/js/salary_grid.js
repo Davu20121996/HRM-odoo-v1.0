@@ -9,7 +9,7 @@ class SalaryGrid extends Component {
         this.orm = useService("orm");
         const props = useProps({ action: t.object() });
         this.state = proxy({ grid: { periods: [], rows: [], columns: [] }, edits: {}, busy: false,
-            operation: "", reason: "", message: "", error: false });
+            operation: "", reason: "", message: "", error: false, employeeQuery: "" });
         onWillStart(() => this.load(props.action.context?.salary_grid_period_id || false));
     }
 
@@ -27,6 +27,11 @@ class SalaryGrid extends Component {
 
     get editable() {
         return ["open", "manual"].includes(this.state.grid.mode);
+    }
+
+    get visibleRows() {
+        const query = this.state.employeeQuery.trim().toLocaleLowerCase("vi");
+        return this.state.grid.rows.filter((row) => row.label.toLocaleLowerCase("vi").includes(query));
     }
 
     key(row, column) {
