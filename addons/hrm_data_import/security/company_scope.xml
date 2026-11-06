@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="company_scope_hr_employee" model="ir.access">
+    <field name="name">Company ownership hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('hrm_company_id', 'in', user.hrm_company_ids.ids), ('current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hr_employee_public" model="ir.access">
+    <field name="name">Company ownership hr.employee.public</field>
+    <field name="model_id" ref="hr.model_hr_employee_public" />
+    <field name="operation">crud</field>
+    <field name="domain">[('hrm_company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_approval_request" model="ir.access">
+    <field name="name">Company ownership hrm.approval.request</field>
+    <field name="model_id" ref="hrm_workflow.model_hrm_approval_request" />
+    <field name="operation">crud</field>
+    <field name="domain">[('instance_id.definition_id.create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_attendance" model="ir.access">
+    <field name="name">Company ownership hrm.attendance</field>
+    <field name="model_id" ref="hrm_time.model_hrm_attendance" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_attendance_adjustment" model="ir.access">
+    <field name="name">Company ownership hrm.attendance.adjustment</field>
+    <field name="model_id" ref="hrm_time.model_hrm_attendance_adjustment" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_attendance_device" model="ir.access">
+    <field name="name">Company ownership hrm.attendance.device</field>
+    <field name="model_id" ref="hrm_time.model_hrm_attendance_device" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_attendance_device_event" model="ir.access">
+    <field name="name">Company ownership hrm.attendance.device.event</field>
+    <field name="model_id" ref="hrm_time.model_hrm_attendance_device_event" />
+    <field name="operation">crud</field>
+    <field name="domain">[('device_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_audit_log" model="ir.access">
+    <field name="name">Company ownership hrm.audit.log</field>
+    <field name="model_id" ref="hrm_base.model_hrm_audit_log" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('company_id', 'in', user.hrm_company_ids.ids), '&amp;', ('company_id', '=', False), ('actor_user_id', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_bonus" model="ir.access">
+    <field name="name">Company ownership hrm.bonus</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_bonus" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_business_unit" model="ir.access">
+    <field name="name">Company ownership hrm.business.unit</field>
+    <field name="model_id" ref="hrm_base.model_hrm_business_unit" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_company" model="ir.access">
+    <field name="name">Company ownership hrm.company</field>
+    <field name="model_id" ref="hrm_base.model_hrm_company" />
+    <field name="operation">crud</field>
+    <field name="domain">[('create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_configuration" model="ir.access">
+    <field name="name">Company ownership hrm.configuration</field>
+    <field name="model_id" ref="hrm_base.model_hrm_configuration" />
+    <field name="operation">crud</field>
+    <field name="domain">[('create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_contract_type" model="ir.access">
+    <field name="name">Company ownership hrm.contract.type</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_contract_type" />
+    <field name="operation">crud</field>
+    <field name="domain">[('create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_cost_center" model="ir.access">
+    <field name="name">Company ownership hrm.cost.center</field>
+    <field name="model_id" ref="hrm_base.model_hrm_cost_center" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_deduction" model="ir.access">
+    <field name="name">Company ownership hrm.deduction</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_deduction" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_department" model="ir.access">
+    <field name="name">Company ownership hrm.department</field>
+    <field name="model_id" ref="hrm_base.model_hrm_department" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_emergency_contact" model="ir.access">
+    <field name="name">Company ownership hrm.emergency.contact</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_emergency_contact" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_assignment" model="ir.access">
+    <field name="name">Company ownership hrm.employee.assignment</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employee_assignment" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_certification" model="ir.access">
+    <field name="name">Company ownership hrm.employee.certification</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employee_certification" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_contact" model="ir.access">
+    <field name="name">Company ownership hrm.employee.contact</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employee_contact" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_contract" model="ir.access">
+    <field name="name">Company ownership hrm.employee.contract</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employee_contract" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_document" model="ir.access">
+    <field name="name">Company ownership hrm.employee.document</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employee_document" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_education" model="ir.access">
+    <field name="name">Company ownership hrm.employee.education</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employee_education" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_family" model="ir.access">
+    <field name="name">Company ownership hrm.employee.family</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employee_family" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_history" model="ir.access">
+    <field name="name">Company ownership hrm.employee.history</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employee_history" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_salary" model="ir.access">
+    <field name="name">Company ownership hrm.employee.salary</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_employee_salary" />
+    <field name="operation">crud</field>
+    <field name="domain">['&amp;', ('structure_id.company_id', 'in', user.hrm_company_ids.ids), '|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employee_skill" model="ir.access">
+    <field name="name">Company ownership hrm.employee.skill</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employee_skill" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_employment_status_history" model="ir.access">
+    <field name="name">Company ownership hrm.employment.status.history</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_employment_status_history" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_feature_flag" model="ir.access">
+    <field name="name">Company ownership hrm.feature.flag</field>
+    <field name="model_id" ref="hrm_base.model_hrm_feature_flag" />
+    <field name="operation">crud</field>
+    <field name="domain">[('create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_grade" model="ir.access">
+    <field name="name">Company ownership hrm.grade</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_grade" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_import_batch" model="ir.access">
+    <field name="name">Company ownership hrm.import.batch</field>
+    <field name="model_id" ref="hrm_data_import.model_hrm_import_batch" />
+    <field name="operation">crud</field>
+    <field name="domain">[('profile_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_import_input" model="ir.access">
+    <field name="name">Company ownership hrm.import.input</field>
+    <field name="model_id" ref="hrm_data_import.model_hrm_import_input" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_import_line" model="ir.access">
+    <field name="name">Company ownership hrm.import.line</field>
+    <field name="model_id" ref="hrm_data_import.model_hrm_import_line" />
+    <field name="operation">crud</field>
+    <field name="domain">[('batch_id.profile_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_import_mapping" model="ir.access">
+    <field name="name">Company ownership hrm.import.mapping</field>
+    <field name="model_id" ref="hrm_data_import.model_hrm_import_mapping" />
+    <field name="operation">crud</field>
+    <field name="domain">[('profile_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_import_profile" model="ir.access">
+    <field name="name">Company ownership hrm.import.profile</field>
+    <field name="model_id" ref="hrm_data_import.model_hrm_import_profile" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_job" model="ir.access">
+    <field name="name">Company ownership hrm.job</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_job" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_location" model="ir.access">
+    <field name="name">Company ownership hrm.location</field>
+    <field name="model_id" ref="hrm_base.model_hrm_location" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_notification" model="ir.access">
+    <field name="name">Company ownership hrm.notification</field>
+    <field name="model_id" ref="hrm_workflow.model_hrm_notification" />
+    <field name="operation">crud</field>
+    <field name="domain">[('recipient_user_id', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_overtime_request" model="ir.access">
+    <field name="name">Company ownership hrm.overtime.request</field>
+    <field name="model_id" ref="hrm_time.model_hrm_overtime_request" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_payroll" model="ir.access">
+    <field name="name">Company ownership hrm.payroll</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_payroll" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_payroll_formula" model="ir.access">
+    <field name="name">Company ownership hrm.payroll.formula</field>
+    <field name="model_id" ref="hrm_data_import.model_hrm_payroll_formula" />
+    <field name="operation">crud</field>
+    <field name="domain">[('component_id.structure_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_payroll_item" model="ir.access">
+    <field name="name">Company ownership hrm.payroll.item</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_payroll_item" />
+    <field name="operation">crud</field>
+    <field name="domain">[('payroll_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_payroll_period" model="ir.access">
+    <field name="name">Company ownership hrm.payroll.period</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_payroll_period" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_payslip" model="ir.access">
+    <field name="name">Company ownership hrm.payslip</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_payslip" />
+    <field name="operation">crud</field>
+    <field name="domain">[('payroll_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_payslip_item" model="ir.access">
+    <field name="name">Company ownership hrm.payslip.item</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_payslip_item" />
+    <field name="operation">crud</field>
+    <field name="domain">[('payroll_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_person" model="ir.access">
+    <field name="name">Company ownership hrm.person</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_person" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_position" model="ir.access">
+    <field name="name">Company ownership hrm.position</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_position" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_probation" model="ir.access">
+    <field name="name">Company ownership hrm.probation</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_probation" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_promotion" model="ir.access">
+    <field name="name">Company ownership hrm.promotion</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_promotion" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_reporting_line" model="ir.access">
+    <field name="name">Company ownership hrm.reporting.line</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_reporting_line" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_role" model="ir.access">
+    <field name="name">Company ownership hrm.role</field>
+    <field name="model_id" ref="hrm_base.model_hrm_role" />
+    <field name="operation">crud</field>
+    <field name="domain">[('create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_role_permission" model="ir.access">
+    <field name="name">Company ownership hrm.role.permission</field>
+    <field name="model_id" ref="hrm_base.model_hrm_role_permission" />
+    <field name="operation">crud</field>
+    <field name="domain">[('create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_role_scope" model="ir.access">
+    <field name="name">Company ownership hrm.role.scope</field>
+    <field name="model_id" ref="hrm_base.model_hrm_role_scope" />
+    <field name="operation">crud</field>
+    <field name="domain">[('create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_salary_component" model="ir.access">
+    <field name="name">Company ownership hrm.salary.component</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_salary_component" />
+    <field name="operation">crud</field>
+    <field name="domain">[('structure_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_salary_history" model="ir.access">
+    <field name="name">Company ownership hrm.salary.history</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_salary_history" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_salary_structure" model="ir.access">
+    <field name="name">Company ownership hrm.salary.structure</field>
+    <field name="model_id" ref="hrm_payroll.model_hrm_salary_structure" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_shift" model="ir.access">
+    <field name="name">Company ownership hrm.shift</field>
+    <field name="model_id" ref="hrm_time.model_hrm_shift" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_shift_assignment" model="ir.access">
+    <field name="name">Company ownership hrm.shift.assignment</field>
+    <field name="model_id" ref="hrm_time.model_hrm_shift_assignment" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_tenant" model="ir.access">
+    <field name="name">Company ownership hrm.tenant</field>
+    <field name="model_id" ref="hrm_base.model_hrm_tenant" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('create_uid', '=', user.id), ('company_ids.create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_timesheet" model="ir.access">
+    <field name="name">Company ownership hrm.timesheet</field>
+    <field name="model_id" ref="hrm_time.model_hrm_timesheet" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_transfer" model="ir.access">
+    <field name="name">Company ownership hrm.transfer</field>
+    <field name="model_id" ref="hrm_employee.model_hrm_transfer" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_user_role" model="ir.access">
+    <field name="name">Company ownership hrm.user.role</field>
+    <field name="model_id" ref="hrm_base.model_hrm_user_role" />
+    <field name="operation">crud</field>
+    <field name="domain">[('create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_work_entry" model="ir.access">
+    <field name="name">Company ownership hrm.work.entry</field>
+    <field name="model_id" ref="hrm_time.model_hrm_work_entry" />
+    <field name="operation">crud</field>
+    <field name="domain">['|', ('employee_id.hrm_company_id', 'in', user.hrm_company_ids.ids), ('employee_id.current_assignment_id.company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_work_schedule" model="ir.access">
+    <field name="name">Company ownership hrm.work.schedule</field>
+    <field name="model_id" ref="hrm_time.model_hrm_work_schedule" />
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="company_scope_hrm_workflow_definition" model="ir.access">
+    <field name="name">Company ownership hrm.workflow.definition</field>
+    <field name="model_id" ref="hrm_workflow.model_hrm_workflow_definition" />
+    <field name="operation">crud</field>
+    <field name="domain">[('create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_workflow_instance" model="ir.access">
+    <field name="name">Company ownership hrm.workflow.instance</field>
+    <field name="model_id" ref="hrm_workflow.model_hrm_workflow_instance" />
+    <field name="operation">crud</field>
+    <field name="domain">[('definition_id.create_uid', '=', user.id)]</field>
+  </record>
+  <record id="company_scope_hrm_workflow_step" model="ir.access">
+    <field name="name">Company ownership hrm.workflow.step</field>
+    <field name="model_id" ref="hrm_workflow.model_hrm_workflow_step" />
+    <field name="operation">crud</field>
+    <field name="domain">[('definition_id.create_uid', '=', user.id)]</field>
+  </record>
+</odoo>

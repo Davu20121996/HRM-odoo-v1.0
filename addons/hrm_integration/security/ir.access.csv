@@ -1,0 +1,17 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_outbox_user,outbox user,hrm.event.outbox,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_outbox_admin,outbox admin,hrm.event.outbox,hrm_base.group_hrm_admin,cr,
+access_hrm_endpoint_user,endpoint user,hrm.webhook.endpoint,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_endpoint_admin,endpoint admin,hrm.webhook.endpoint,hrm_base.group_hrm_admin,crud,
+access_hrm_delivery_user,delivery user,hrm.webhook.delivery,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_delivery_admin,delivery admin,hrm.webhook.delivery,hrm_base.group_hrm_admin,cr,
+access_hrm_idem_user,idempotency user,hrm.idempotency.key,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_idem_admin,idempotency admin,hrm.idempotency.key,hrm_base.group_hrm_admin,crud,
+access_hrm_connection_user,connection user,hrm.integration.connection,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_connection_admin,connection admin,hrm.integration.connection,hrm_base.group_hrm_admin,crud,
+access_hrm_import_user,import user,hrm.import.job,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_import_admin,import admin,hrm.import.job,hrm_base.group_hrm_admin,crud,
+access_hrm_apitoken_user,apitoken user,hrm.api.token,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_apitoken_admin,apitoken admin,hrm.api.token,hrm_base.group_hrm_admin,crud,
+access_hrm_tokenwiz_user,token wizard,hrm.api.token.show,hrm_base.group_hrm_user,cru,
+access_hrm_tokenwiz_admin,token wizard admin,hrm.api.token.show,hrm_base.group_hrm_admin,crud,

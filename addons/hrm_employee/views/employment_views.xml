@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_contract_type_list" model="ir.ui.view">
+        <field name="name">hrm.contract.type.list</field>
+        <field name="model">hrm.contract.type</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="employment_category"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_contract_type" model="ir.actions.act_window">
+        <field name="name">Contract Types</field>
+        <field name="res_model">hrm.contract.type</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_employee_contract_list" model="ir.ui.view">
+        <field name="name">hrm.employee.contract.list</field>
+        <field name="model">hrm.employee.contract</field>
+        <field name="arch" type="xml">
+            <list default_order="start_date desc, id desc">
+                <field name="contract_no"/><field name="employee_id"/><field name="contract_type_id"/>
+                <field name="start_date"/><field name="end_date"/>
+                <field name="status" widget="badge" decoration-success="status == 'active'"
+                       decoration-warning="status in ('pending_approval', 'approved')" decoration-muted="status == 'expired'"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_hrm_employee_contract_form" model="ir.ui.view">
+        <field name="name">hrm.employee.contract.form</field>
+        <field name="model">hrm.employee.contract</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="company_id"/>
+                    <field name="employee_id"/><field name="contract_type_id"/>
+                    <field name="contract_no"/>
+                    <field name="start_date"/><field name="end_date"/>
+                    <field name="base_salary" digits="[19,0]"/><field name="currency_code"/>
+                    <field name="status"/>
+                </group>
+                <group string="Actions">
+                    <button name="action_submit" string="Submit" type="object"/>
+                    <button name="action_approve" string="Approve" type="object"/>
+                    <button name="action_activate" string="Activate" type="object"/>
+                    <button name="action_expire" string="Expire" type="object"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="view_hrm_employee_contract_search" model="ir.ui.view">
+        <field name="name">hrm.employee.contract.search</field>
+        <field name="model">hrm.employee.contract</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="contract_no"/>
+                <field name="employee_id"/>
+                <filter name="contract_active" string="In effect" domain="[('status', '=', 'active')]"/>
+                <filter name="contract_pending" string="Awaiting action" domain="[('status', 'in', ['draft', 'pending_approval', 'approved'])]"/>
+                <filter name="contract_closed" string="Closed history" domain="[('status', '=', 'expired')]"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_hrm_employee_contract" model="ir.actions.act_window">
+        <field name="name">Contracts</field>
+        <field name="res_model">hrm.employee.contract</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_hrm_employee_contract_search"/>
+    </record>
+
+    <record id="view_hrm_employee_assignment_list" model="ir.ui.view">
+        <field name="name">hrm.employee.assignment.list</field>
+        <field name="model">hrm.employee.assignment</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="department_id"/><field name="position_id"/><field name="assignment_type"/><field name="start_date"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_employee_assignment_form" model="ir.ui.view">
+        <field name="name">hrm.employee.assignment.form</field>
+        <field name="model">hrm.employee.assignment</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="company_id"/>
+                <field name="employee_id"/><field name="business_unit_id"/>
+                <field name="department_id"/><field name="position_id"/>
+                <field name="job_id"/><field name="grade_id"/><field name="location_id"/>
+                <field name="manager_employee_id"/>
+                <field name="assignment_type"/><field name="is_primary"/>
+                <field name="start_date"/><field name="end_date"/>
+                <field name="status"/><field name="reason"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_employee_assignment" model="ir.actions.act_window">
+        <field name="name">Assignments</field>
+        <field name="res_model">hrm.employee.assignment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_salary_history_list" model="ir.ui.view">
+        <field name="name">hrm.salary.history.list</field>
+        <field name="model">hrm.salary.history</field>
+        <field name="arch" type="xml">
+            <list create="false"><field name="employee_id"/><field name="base_salary" digits="[19,0]"/><field name="currency_code"/><field name="effective_from"/><field name="change_type"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_salary_history" model="ir.actions.act_window">
+        <field name="name">Salary History</field>
+        <field name="res_model">hrm.salary.history</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_employment_status_history_list" model="ir.ui.view">
+        <field name="name">hrm.employment.status.history.list</field>
+        <field name="model">hrm.employment.status.history</field>
+        <field name="arch" type="xml">
+            <list create="false"><field name="employee_id"/><field name="from_status"/><field name="to_status"/><field name="effective_at"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_employment_status_history" model="ir.actions.act_window">
+        <field name="name">Status History</field>
+        <field name="res_model">hrm.employment.status.history</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

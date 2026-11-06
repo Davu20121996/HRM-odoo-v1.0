@@ -1,0 +1,15 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_cycle_user,cycle user,hrm.performance.cycle,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_cycle_admin,cycle admin,hrm.performance.cycle,hrm_base.group_hrm_admin,crud,
+access_hrm_goal_user,goal user,hrm.goal,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_goal_admin,goal admin,hrm.goal,hrm_base.group_hrm_admin,crud,
+access_hrm_kpi_user,kpi user,hrm.kpi,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_kpi_admin,kpi admin,hrm.kpi,hrm_base.group_hrm_admin,crud,
+access_hrm_okr_user,okr user,hrm.okr,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_okr_admin,okr admin,hrm.okr,hrm_base.group_hrm_admin,crud,
+access_hrm_competency_user,competency user,hrm.competency,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_competency_admin,competency admin,hrm.competency,hrm_base.group_hrm_admin,crud,
+access_hrm_appraisal_user,appraisal user,hrm.appraisal,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_appraisal_admin,appraisal admin,hrm.appraisal,hrm_base.group_hrm_admin,crud,
+access_hrm_feedback_user,feedback user,hrm.feedback.360,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_feedback_admin,feedback admin,hrm.feedback.360,hrm_base.group_hrm_admin,crud,

@@ -1,0 +1,60 @@
+<odoo>
+  <record id="hrm_employee.menu_hrm_core" model="ir.ui.menu"><field name="parent_id" eval="False"/><field name="sequence">10</field><field name="name">Staff</field><field name="web_icon">hrm_data_import,static/description/staff.svg</field></record>
+  <record id="hrm_time.menu_hrm_time" model="ir.ui.menu"><field name="parent_id" eval="False"/><field name="sequence">20</field><field name="name">Time tracking</field><field name="web_icon">hrm_data_import,static/description/time.svg</field></record>
+  <record id="hrm_payroll.menu_hrm_payroll" model="ir.ui.menu"><field name="parent_id" eval="False"/><field name="sequence">30</field><field name="name">Payroll</field><field name="web_icon">hrm_data_import,static/description/pay.svg</field></record>
+  <record id="hrm_base.menu_hrm_foundation" model="ir.ui.menu"><field name="parent_id" eval="False"/><field name="sequence">40</field><field name="name">Business</field><field name="web_icon">hrm_data_import,static/description/business.svg</field></record>
+  <record id="hrm_base.menu_hrm_root" model="ir.ui.menu"><field name="parent_id" eval="False"/><field name="sequence">90</field><field name="name">HR administration</field></record>
+  <record id="hr.menu_hr_root" model="ir.ui.menu"><field name="parent_id" ref="hrm_base.menu_hrm_root"/><field name="sequence">70</field><field name="name">Native employee tools</field></record>
+  <record id="hrm_employee.menu_hrm_employee" model="ir.ui.menu"><field name="parent_id" ref="hrm_employee.menu_hrm_core"/><field name="sequence">1</field><field name="name">Employee directory</field></record>
+  <record id="menu_employee_import" model="ir.ui.menu"><field name="parent_id" ref="hrm_employee.menu_hrm_core"/><field name="sequence">2</field></record>
+  <record id="hrm_employee.menu_hrm_contract" model="ir.ui.menu"><field name="parent_id" ref="hrm_employee.menu_hrm_core"/><field name="sequence">3</field><field name="name">Contracts and addenda</field></record>
+  <record id="menu_staff_advanced" model="ir.ui.menu"><field name="parent_id" ref="hrm_employee.menu_hrm_core"/><field name="sequence">90</field><field name="name">Staff settings</field></record>
+  <record id="hrm_employee.menu_hrm_person" model="ir.ui.menu"><field name="parent_id" ref="menu_staff_advanced"/><field name="sequence">10</field></record>
+  <record id="hrm_employee.menu_hrm_catalog" model="ir.ui.menu"><field name="parent_id" ref="menu_staff_advanced"/><field name="sequence">20</field></record>
+  <record id="hrm_employee.menu_hrm_employment" model="ir.ui.menu"><field name="parent_id" ref="menu_staff_advanced"/><field name="sequence">30</field></record>
+  <record id="menu_employee_records" model="ir.ui.menu"><field name="active" eval="False"/></record>
+  <record id="menu_contract_records" model="ir.ui.menu"><field name="active" eval="False"/></record>
+  <record id="menu_company_start" model="ir.ui.menu"><field name="active" eval="False"/></record>
+  <record id="menu_company_setup" model="ir.ui.menu"><field name="active" eval="False"/></record>
+  <record id="menu_monthly_workspace" model="ir.ui.menu"><field name="active" eval="False"/></record>
+  <record id="menu_period_input" model="ir.ui.menu"><field name="active" eval="False"/></record>
+  <record id="hrm_payroll.menu_hrm_period" model="ir.ui.menu"><field name="active" eval="False"/></record>
+  <record id="hrm_time.menu_hrm_timesheet" model="ir.ui.menu"><field name="parent_id" ref="hrm_time.menu_hrm_time"/><field name="sequence">1</field></record>
+  <record id="menu_manual_input" model="ir.ui.menu"><field name="parent_id" ref="hrm_time.menu_hrm_time"/><field name="sequence">2</field><field name="name">Enter attendance</field></record>
+  <record id="menu_time_advanced" model="ir.ui.menu"><field name="parent_id" ref="hrm_time.menu_hrm_time"/><field name="sequence">90</field><field name="name">Time settings</field></record>
+  <record id="hrm_time.menu_hrm_shift" model="ir.ui.menu"><field name="parent_id" ref="menu_time_advanced"/></record>
+  <record id="hrm_time.menu_hrm_device" model="ir.ui.menu"><field name="parent_id" ref="menu_time_advanced"/></record>
+  <record id="hrm_time.menu_hrm_attendance" model="ir.ui.menu"><field name="parent_id" ref="menu_time_advanced"/></record>
+  <record id="hrm_time.menu_hrm_ot" model="ir.ui.menu"><field name="parent_id" ref="menu_time_advanced"/></record>
+  <record id="hrm_time.menu_hrm_work_entry" model="ir.ui.menu"><field name="parent_id" ref="menu_time_advanced"/></record>
+  <record id="menu_salary_excel" model="ir.ui.menu"><field name="parent_id" ref="hrm_payroll.menu_hrm_payroll"/><field name="sequence">1</field></record>
+  <record id="menu_monthly_overview" model="ir.ui.menu"><field name="parent_id" ref="hrm_payroll.menu_hrm_payroll"/><field name="sequence">2</field></record>
+  <record id="menu_payroll_report" model="ir.ui.menu"><field name="parent_id" ref="hrm_payroll.menu_hrm_payroll"/><field name="sequence">4</field></record>
+  <record id="menu_payroll_advanced" model="ir.ui.menu"><field name="parent_id" ref="hrm_payroll.menu_hrm_payroll"/><field name="sequence">90</field><field name="name">Payroll settings and history</field></record>
+  <record id="menu_root" model="ir.ui.menu"><field name="parent_id" ref="menu_payroll_advanced"/></record>
+  <record id="menu_formula" model="ir.ui.menu"><field name="parent_id" ref="menu_payroll_advanced"/><field name="sequence">20</field></record>
+  <record id="menu_salary_adjustment" model="ir.ui.menu"><field name="parent_id" ref="menu_payroll_advanced"/><field name="sequence">30</field></record>
+  <record id="hrm_payroll.menu_hrm_structure" model="ir.ui.menu"><field name="parent_id" ref="menu_payroll_advanced"/></record>
+  <record id="hrm_payroll.menu_hrm_payroll_runs" model="ir.ui.menu"><field name="parent_id" ref="menu_payroll_advanced"/></record>
+  <record id="hrm_payroll.menu_hrm_payslip" model="ir.ui.menu"><field name="parent_id" ref="menu_payroll_advanced"/></record>
+  <record id="hrm_payroll.menu_hrm_bonus" model="ir.ui.menu"><field name="parent_id" ref="menu_payroll_advanced"/></record>
+  <record id="hrm_payroll.menu_hrm_deduction" model="ir.ui.menu"><field name="parent_id" ref="menu_payroll_advanced"/></record>
+  <record id="hrm_base.menu_hrm_company" model="ir.ui.menu"><field name="parent_id" ref="hrm_base.menu_hrm_foundation"/><field name="sequence">1</field><field name="name">Company information</field></record>
+  <record id="hrm_base.menu_hrm_department" model="ir.ui.menu"><field name="parent_id" ref="hrm_base.menu_hrm_foundation"/><field name="sequence">2</field></record>
+  <record id="menu_company_advanced" model="ir.ui.menu"><field name="parent_id" ref="hrm_base.menu_hrm_foundation"/><field name="sequence">90</field><field name="name">Organization settings</field></record>
+  <record id="hrm_base.menu_hrm_business_unit" model="ir.ui.menu"><field name="parent_id" ref="menu_company_advanced"/></record>
+  <record id="hrm_base.menu_hrm_location" model="ir.ui.menu"><field name="parent_id" ref="menu_company_advanced"/></record>
+  <record id="hrm_base.menu_hrm_cost_center" model="ir.ui.menu"><field name="parent_id" ref="menu_company_advanced"/></record>
+  <record id="hrm_base.menu_hrm_tenant" model="ir.ui.menu"><field name="parent_id" ref="hrm_base.menu_hrm_root"/><field name="sequence">50</field></record>
+  <record id="menu_demo_workspace" model="ir.ui.menu"><field name="parent_id" ref="menu_company_advanced"/><field name="sequence">90</field></record>
+  <record id="action_manual_input" model="ir.actions.act_window">
+    <field name="name">Enter attendance</field><field name="domain">[('dataset', '=', 'attendance')]</field>
+    <field name="context">{'default_dataset': 'attendance'}</field>
+  </record>
+  <record id="action_payroll_manual_amounts" model="ir.actions.act_window">
+    <field name="name">Nhập hiệu quả công việc</field><field name="res_model">hrm.manual.input</field>
+    <field name="view_mode">list,form</field><field name="domain">[('dataset', '=', 'performance')]</field>
+    <field name="context">{'default_dataset': 'performance'}</field>
+  </record>
+  <menuitem id="menu_payroll_manual_amounts" name="Nhập hiệu quả công việc" parent="hrm_payroll.menu_hrm_payroll" action="action_payroll_manual_amounts" sequence="3" groups="group_import_operator"/>
+</odoo>

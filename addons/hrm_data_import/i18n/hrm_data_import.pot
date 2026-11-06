@@ -1,0 +1,3631 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hrm_data_import
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0-20260928\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 03:46+0000\n"
+"PO-Revision-Date: 2026-11-05 03:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_employee_contract__insurance_salary
+msgid ""
+"0 = contract base salary. Enter the verified insurable salary if eligible "
+"allowances apply."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_import_form
+msgid "1. Check file"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.period_workspace_form
+msgid "1. Enter attendance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_batch_form
+msgid "1. Validate and preview"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.period_workspace_form
+msgid "2. Enter performance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_import_form
+msgid "2. Import employees"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_batch_form
+msgid "2. Save data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.period_workspace_form
+msgid "3. Check data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.period_workspace_form
+msgid "4. Calculate monthly payroll"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "; Khấu trừ:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "; Thuế:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>After entering, correcting or calculating data:</strong> return to "
+"the correct month and click <strong>Refresh monthly data</strong>. Change "
+"the year when moving from December to January."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>Check and calculate payroll.</strong><br/>\n"
+"              Click <strong>Refresh monthly data</strong>. Check paid days, performance, contract salary and each employee status. Open <strong>Set up payroll period</strong> and <strong>3. Check data</strong> to find missing information.<br/>\n"
+"              Select an employee or leave blank for all, then click <strong>Quick payroll calculation</strong>. Resolve missing contracts, attendance or performance first. Base salary comes from the contract. Employee insurance reduces net pay; employer insurance is shown separately."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>Correct data and review history.</strong><br/>\n"
+"              Before calculation: create a new manual entry with the same source ID, date/component and a higher revision (2, 3, etc.). Enter the reason. Saved entries cannot be edited directly. Correct Excel inputs through their original Excel source and revision.<br/>\n"
+"              After calculation: open <strong>Set up payroll period</strong>, enter a reopening reason and click <strong>Reopen for correction and recalculation</strong>. Save the correction and run <strong>Quick payroll calculation</strong>. To replace a component amount, open the payslip and <strong>Adjust salary</strong>, enter the replacement and reason, approve it, then recalculate.<br/>\n"
+"              To change a formula: Payslip → <strong>Excel formulas</strong> → Create new version → select effective dates → Test → Approve version. Approved/finalized periods are locked. Do not overwrite issued payslips.<br/>\n"
+"              Change Year/Month to review history. Open <strong>Attendance / performance</strong> on the employee row to inspect sources and import batch logs, or use <strong>Import and payroll logs</strong>."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>Create a period if the month has none.</strong><br/>\n"
+"              Click <strong>Set up payroll period</strong>. Check the first/last date of the month, standard working days, hours per day and the correct regional minimum wage for unemployment insurance. Save, return and click <strong>Refresh monthly data</strong>. Reuse an existing period instead of creating a duplicate.<br/>\n"
+"              Employees need an active contract, salary structure and base salary. Use a new contract/addendum for lasting contract changes; do not re-enter base salary every month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>Enter performance, bonuses or salary components.</strong><br/>\n"
+"              Click <strong>Manual entry / attendance</strong>, select <strong>Performance</strong> or <strong>Salary component</strong>, choose a component in the contract salary structure and enter the amount. Use a stable employee/component/month source ID such as <code>NV001-202611-KPI</code>, revision 1 and an approval reason.<br/>\n"
+"              Click <strong>Validate and save</strong> and review the results/log. If performance is required and a zero amount is confirmed, enter 0 for the appropriate component. Do not re-enter Excel amounts through a separate web source; this can conflict or double-count."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>Example: November 2026.</strong> Use confirmed November attendance "
+"and amounts. A new month does not automatically copy the previous month "
+"attendance, bonuses or payroll."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>Record daily attendance.</strong><br/>\n"
+"              Click <strong>Manual entry / attendance</strong>, check the company, period and employee, select <strong>Attendance</strong>, then enter the work date and hours. For example, enter 8 for eight hours on 02/11/2026. Use 0 only for confirmed zero hours, not for unknown data.<br/>\n"
+"              Use a stable employee-and-date source ID such as <code>NV001-20261102</code>. Start at revision <strong>1</strong>. Enter an approval reference / correction reason, then click <strong>Validate and save</strong>. Confirm the batch is <strong>Saved</strong>; review rejected rows and logs before continuing.<br/>\n"
+"              Repeat for each date and employee. Return to <strong>Refresh monthly data</strong>, then <strong>Attendance grid, days 01–31</strong> to review the month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>Review payslips and download Excel.</strong><br/>\n"
+"              Click <strong>Refresh monthly data</strong> after calculation. Open each <strong>Payslip</strong> or <strong>Excel-style payroll</strong> to check components, insurance, deductions and net pay. Click <strong>Export payroll Excel</strong> for the selected month. A selected employee limits this export to that person; clear the employee to export the company.<br/>\n"
+"              The <strong>Export entire month to Excel</strong> button on the 52-column grid or payslip always exports the whole month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>Select the month and employees.</strong><br/>\n"
+"              Select Company, Year and Month above. Leave Employee blank for the whole company or select one employee. Click <strong>Refresh monthly data</strong> after changing filters."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"<strong>Start a new payroll month:</strong> select year/month → Set up "
+"payroll period → Manual entry / attendance → Quick payroll calculation."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_a
+msgid "A · Employee code"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_aa
+msgid "AA · SOCIAL (17%), HEALTH (3%), UNEMPLOYMENT (1%)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ab
+msgid "AB · BONUS"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ac
+msgid "AC · GROSS TOTAL"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ad
+msgid "AD · DIRECT DEDUCTIONS"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ae
+msgid "AE · DEPENDANT RELIEF"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_af
+msgid "AF · EMPLOYEE INSURANCE"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ag
+msgid "AG · TAX EXEMPT AMOUNTS"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ah
+msgid "AH · TAX EXEMPT AMOUNTS (AH)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ai
+msgid "AI · TAX EXEMPT AMOUNTS (AI)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_aj
+msgid "AJ · DEDUCTION TOTAL"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ak
+msgid "AK · TAXABLE INCOME"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_al
+msgid "AL · PERSONAL INCOME TAX"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_am
+msgid "AM · NET MONTHLY PAY"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_an
+msgid "AN · Notes"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ao
+msgid "AO · EMPLOYER SOCIAL 17%"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ap
+msgid "AP · OCCUPATIONAL ACCIDENT 0.5%"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_aq
+msgid "AQ · EMPLOYER HEALTH 3%"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ar
+msgid "AR · EMPLOYER UNEMPLOYMENT 1%"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_as
+msgid "AS · EMPLOYER UNION 2%"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_at
+msgid "AT · EMPLOYER TOTAL"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_au
+msgid "AU · EMPLOYEE SOCIAL 8%"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_av
+msgid "AV · EMPLOYEE HEALTH 1.5%"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_aw
+msgid "AW · EMPLOYEE UNEMPLOYMENT 1%"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ax
+msgid "AX · EMPLOYEE UNION 1%"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_ay
+msgid "AY · EMPLOYEE TOTAL"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_az
+msgid "AZ · COMBINED TOTAL"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_ir_access
+msgid "Access"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__working_count
+msgid "Active employment"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__appendix_ids
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_details_form
+msgid "Addenda"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_slip_actions
+msgid "Adjust salary"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__terms
+msgid "Agreed terms"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_attendance_month
+msgid "All employee monthly attendance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "All employees"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_details_form
+msgid "All populated original source fields"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__amount
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "Amount"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_audit_log
+msgid "Append-only audit log (SPEC §16)."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__approval_reference
+msgid "Approval / reason"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__approval_reference
+msgid "Approval reference / correction reason"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_adjustment_form
+msgid "Approve adjustment"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_profile_form
+msgid "Approve column mapping"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_formula_form
+msgid "Approve version"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_profile__state__approved
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_formula__state__approved
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_salary_adjustment__state__approved
+msgid "Approved"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__approved_at
+msgid "Approved At"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__approved_by
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__approved_by
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__approved_by
+msgid "Approved By"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_manual_input__dataset__attendance
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.input_search_month
+msgid "Attendance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.manual_input_friendly_labels
+msgid "Attendance / payroll period"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Attendance / performance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_month_list
+msgid "Attendance and payroll"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__data_state
+msgid "Attendance data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_month_list
+msgid "Attendance details"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_timesheet_button
+msgid "Attendance grid, days 01–31"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__period_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__period_id
+msgid "Attendance period"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__data_state__đã_có_công
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_month_search
+msgid "Attendance recorded"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__require_imported_attendance
+msgid "Attendance required"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__attendance_count
+msgid "Attendance rows"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Attendance • Performance • Payroll"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_b
+msgid "B · No."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_bank_name
+msgid "Bank"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_bank_number
+msgid "Bank account number"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_bank_branch
+msgid "Bank branch"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Base salary"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid ""
+"Base salary comes from the active contract or salary addendum. Create a new "
+"contract/addendum to change approved terms."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "Base salary:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__batch_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__batch_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__batch_id
+msgid "Batch"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_demo_workspace_form
+msgid "Business workflow with source data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_day_search
+msgid "By day"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_day_search
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_month_search
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.input_search_month
+msgid "By employee"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.input_search_month
+msgid "By month"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.payroll_item_report_search
+msgid "By payroll run"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_month_search
+msgid "By period"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_c
+msgid "C · FULL NAME"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__employee_identity
+msgid "CCCD/CMND"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "CONTRACT ADDENDUM"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_line__state__đã_tính
+msgid "Calculated"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__column
+msgid "Column"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_import_form
+msgid "Column mapping"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_import_mapping__column
+msgid "Column position starts at 1"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__committed_at
+msgid "Committed At"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__committed_by
+msgid "Committed By"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_res_users__hrm_company_ids
+msgid "Companies created by this account"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_audit_log__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_person__company_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__company_id
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_list
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.manual_input_friendly_labels
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_allowance_type__company_id
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_list
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Company"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_templates
+msgid "Company import templates"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_company_setup
+#: model:ir.ui.menu,name:hrm_data_import.menu_company_start
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_company
+msgid "Company information"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "Company representative                 Employee"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_demo_workspace_form
+msgid "Company source files"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__component_id
+msgid "Component"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__component_id
+msgid "Component to adjust"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.insurance_slip_details
+msgid "Compulsory insurance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Contract No"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_details_form
+msgid "Contract salary"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__base_salary
+msgid "Contract salary (VND)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_contract_ids
+#: model:ir.ui.menu,name:hrm_data_import.menu_contract_records
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_contract
+msgid "Contracts and addenda"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__symbols
+msgid "Convert symbols to paid hours"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.actions.act_window,help:hrm_data_import.action_templates
+msgid ""
+"Create a company mapping, select the data category and download the XLSX "
+"template. Performance files may have any number of columns, each mapped to "
+"the appropriate salary component."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.formula_excel_editor
+msgid "Create new version"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__create_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__create_uid
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Created by"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__create_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__create_date
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Created on"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Currently displayed"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_d
+msgid "D · JOB TITLE"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_input__dataset__attendance
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_profile__dataset__attendance
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_day_pivot
+msgid "Daily attendance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__data_type
+msgid "Data Type"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.manual_input_friendly_labels
+msgid "Data category"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__preview
+msgid "Data preview"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__notice
+msgid "Data status"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Data workspace"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__dataset
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__dataset
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__dataset
+msgid "Dataset"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__date_format
+msgid "Date Format"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__employee_birth_date
+msgid "Date of birth"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_birth_date
+msgid "Date of birth (HR source)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__data_type__date
+msgid "Day"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__first_day_column
+msgid "Day 1 column"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__recorded_days
+msgid "Days with data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__deduction
+msgid "Deductions"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_payroll_period__insurance_regional_minimum
+msgid ""
+"Default: region I in 2026. Select the company region; the unemployment "
+"insurance cap is 20 times this wage."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_demo_workspace
+msgid "Demo company"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_demo_workspace
+msgid "Demo company from source data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_demo_workspace
+msgid "Demo company from source files"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__prepared_on
+msgid "Demo preparation date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee_public__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_audit_log__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_company__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_person__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_component__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_tenant__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_ir_access__display_name
+#: model:ir.model.fields,field_description:hrm_data_import.field_res_users__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_profile_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_templates_list
+msgid "Download XLSX template"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_demo_source_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_demo_workspace_form
+msgid "Download original file"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_profile__state__draft
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_formula__state__draft
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_salary_adjustment__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__profile_id
+msgid "Draft column mapping"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__job_description
+msgid "Duties and responsibilities"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "Duties:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_e
+msgid "E · DEPARTMENT"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "EMPLOYMENT CONTRACT"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__amount_columns
+msgid "Each column is a performance / salary component"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__effective_from
+msgid "Effective From"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__effective_to
+msgid "Effective To"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Effective from"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__employee_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__employee_id
+msgid "Employee"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hr_employee
+msgid "Employee (SPEC §4.2)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__employee_id
+msgid "Employee (blank = all)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__employee_code
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__employee_code
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__employee_code
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_list
+msgid "Employee code"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_employee_contract
+msgid "Employee contract, state machine (SPEC §5.6)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_employee_import_column
+msgid "Employee import column mapping"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__target
+msgid "Employee information"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_details_form
+msgid "Employee information from Excel"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__employee_insurance
+msgid "Employee insurance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_monthly_line
+msgid "Employee monthly attendance and payroll summary"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_employee_records
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Employee records"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_demo_workspace_form
+msgid ""
+"Employee records have been imported from the source. Attendance and "
+"performance require populated files before payroll calculation, "
+"reconciliation and approval. Do not invent payroll amounts or treat missing "
+"submissions as zero."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_details_form
+msgid "Employee source profile"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__line_ids
+msgid "Employee summary"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "Employee:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__employee_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__employee_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__employee_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__employee_id
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.manual_input_friendly_labels
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.manual_input_search
+msgid "Employees"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__employer_insurance
+msgid "Employer insurance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_details_form
+msgid "Employment contracts and addenda"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__employment_status
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Employment status"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.manual_input_form
+msgid ""
+"Enter attendance or performance per employee. The source ID identifies one "
+"record. Correct it with a new entry using the same ID and a higher revision."
+" All entries are logged and validated like Excel imports. Do not overwrite "
+"another source."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Enter full name"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.period_workspace_form
+msgid "Enter salary components"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__error
+msgid "Error"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_payroll_formula__expression
+msgid "Example: =ROUND(BASE_SALARY * PAID_DAYS / STANDARD_DAYS, 0)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_payroll_formula__excel_expression
+msgid ""
+"Example: =ROUND(G12*U12/N12,0). Same-row references only; external workbook "
+"links are not supported."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_import_profile__symbols
+msgid ""
+"Example: {\"X\": 8, \"KL\": 0}. Does not create leave or overtime "
+"transactions."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__excel_expression
+msgid "Excel column formula"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__mapping_ids
+msgid "Excel column mapping"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__source
+msgid "Excel column name"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_payroll_formula
+msgid "Excel formula version"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_slip_actions
+msgid "Excel formulas"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_source_table
+msgid "Excel information"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Excel information for reconciliation"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_salary_excel
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_salary_buttons
+msgid "Excel-style payroll"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_slip_actions
+msgid "Export entire month to Excel"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_salary_buttons
+msgid "Export payroll Excel"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_excel_list
+msgid "Export selected month to Excel"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__expression
+msgid "Expression"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_f
+msgid "F · EMPLOYMENT STATUS"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__file_data
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__file_data
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__file_data
+msgid "File Data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__file_hash
+msgid "File Hash"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__approval_reference
+msgid "File approval reference"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_import_mapping
+msgid "File column mapping"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__source_revision
+msgid "File revision"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__filename
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__filename
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__filename
+msgid "Filename"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.payroll_item_report_search
+msgid "Finalized"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_input__dataset__history
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_profile__dataset__history
+msgid "Finalized payroll history"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__data_start_row
+msgid "First data row (0 = after header)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_adjustment_form
+msgid ""
+"For calculated payroll: open the period, enter a reason, reopen for "
+"correction, approve the adjustment and recalculate. Approved/finalized "
+"periods are locked."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_line__state__đã_nghỉ_—_chỉ_xem_hồ_sơ
+msgid "Former employee — profile only"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__period_start
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "From date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_list
+msgid "Full name"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_g
+msgid "G · BASE SALARY"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_import_profile__batch_identity
+msgid ""
+"Generate a stable source ID from employee, date, shift and project when "
+"source control columns are missing."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__gross
+msgid "Gross pay"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "Gross pay:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_h
+msgid "H · LUNCH"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_import_profile
+msgid "HR import mapping version"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:res.groups,name:hrm_data_import.group_import_operator
+msgid "HRM Data Entry and Formula Editor"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.module.module,shortdesc:base.module_hrm_data_import
+msgid "HRM Imports and Payroll Formulas"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:res.groups,name:hrm_data_import.group_import_approver
+msgid "HRM Mapping and Formula Approver"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_company_id
+msgid "HRM company"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_batch__state__failed
+msgid "Has errors"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__header_row
+msgid "Header Row"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__headers
+msgid "Headers"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_list
+msgid "Hire date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d01
+msgid ""
+"Hours on day 01. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d02
+msgid ""
+"Hours on day 02. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d03
+msgid ""
+"Hours on day 03. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d04
+msgid ""
+"Hours on day 04. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d05
+msgid ""
+"Hours on day 05. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d06
+msgid ""
+"Hours on day 06. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d07
+msgid ""
+"Hours on day 07. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d08
+msgid ""
+"Hours on day 08. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d09
+msgid ""
+"Hours on day 09. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d10
+msgid ""
+"Hours on day 10. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d11
+msgid ""
+"Hours on day 11. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d12
+msgid ""
+"Hours on day 12. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d13
+msgid ""
+"Hours on day 13. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d14
+msgid ""
+"Hours on day 14. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d15
+msgid ""
+"Hours on day 15. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d16
+msgid ""
+"Hours on day 16. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d17
+msgid ""
+"Hours on day 17. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d18
+msgid ""
+"Hours on day 18. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d19
+msgid ""
+"Hours on day 19. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d20
+msgid ""
+"Hours on day 20. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d21
+msgid ""
+"Hours on day 21. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d22
+msgid ""
+"Hours on day 22. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d23
+msgid ""
+"Hours on day 23. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d24
+msgid ""
+"Hours on day 24. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d25
+msgid ""
+"Hours on day 25. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d26
+msgid ""
+"Hours on day 26. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d27
+msgid ""
+"Hours on day 27. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d28
+msgid ""
+"Hours on day 28. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d29
+msgid ""
+"Hours on day 29. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d30
+msgid ""
+"Hours on day 30. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_attendance_month__d31
+msgid ""
+"Hours on day 31. Blank: no source; 0: recorded zero hours; —: day does not "
+"exist in this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__hours_per_day
+msgid "Hours per day"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee_public__hrm_company_id
+msgid "Hrm Company"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_i
+msgid "I · FUEL SUPPORT"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee_public__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_audit_log__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_company__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_person__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_component__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_tenant__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_ir_access__id
+#: model:ir.model.fields,field_description:hrm_data_import.field_res_users__id
+msgid "ID"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__import_id
+msgid "Import"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_import_audit
+msgid "Import and payroll logs"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Import attendance Excel"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__batch_id
+msgid "Import batch / log"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.manual_input_friendly_labels
+msgid "Import batch / view log"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_import_batch
+msgid "Import batches and row logs"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_employee_import
+#: model:ir.model,name:hrm_data_import.model_hrm_employee_import
+msgid "Import employee records"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_import_form
+msgid ""
+"Import employee.xlsx, worksheet VP. Required columns: code, full_name and "
+"working_status_id (source values: Đang làm việc / Nghỉ việc). Birth date, "
+"national ID, contact and bank fields are supported; blank cells keep current"
+" values. Source tax/insurance columns need verification and are not "
+"automatically imported. Updating a profile does not change employment "
+"status."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_employee_import
+msgid "Import employees"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_batch
+#: model:ir.ui.menu,name:hrm_data_import.menu_batch
+msgid "Import file"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Import performance Excel"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_templates
+msgid "Import templates"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_import_line
+msgid "Import validation log"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import__state__done
+msgid "Imported"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_input
+#: model:ir.ui.menu,name:hrm_data_import.menu_input
+msgid "Imported data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_import_input
+msgid "Imported inputs with source and revision"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_root
+msgid "Imports and formulas"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__insurance_salary
+msgid "Insurable salary"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-python
+#: code:addons/hrm_data_import/models/ui_language.py:0
+msgid "Insurance calculated"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__insurance_snapshot
+msgid "Insurance calculation snapshot"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-python
+#: code:addons/hrm_data_import/models/ui_language.py:0
+msgid "Insurance missing — export blocked"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__insurance_state
+msgid "Insurance status"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_identity_date
+msgid "Issue date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_identity_place
+msgid "Issuing authority"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_j
+msgid "J · PHONE SUPPORT"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_k
+msgid "K · TRAVEL SUPPORT"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hr_employee__hrm_source_profile
+msgid ""
+"Keep original column names for reconciliation. Do not calculate payroll from"
+" unverified values."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_l
+msgid "L · HOUSING SUPPORT"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__write_uid
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import_column__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__write_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_list
+msgid "Leave date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__line_ids
+msgid "Line"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_demo_source__state__imported
+msgid "Loaded"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__locale
+msgid "Locale"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.audit_details_form
+msgid "Log details"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_m
+msgid "M · PERFORMANCE"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_res_users__hrm_owned_tenant_ids
+msgid "Management units owned by this account"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_manual_input
+msgid "Manual attendance and performance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Manual entry / attendance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid "Manual entry guide for the next month"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_import_profile__amount_columns
+msgid ""
+"Map any number of company file columns. Select one salary component per "
+"amount column; no 100-column limit."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_profile_form
+msgid "Map remaining amount columns"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__template_data
+msgid "Mapped template file"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__mapping
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__mapping_ids
+msgid "Mapping"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_profile
+#: model:ir.ui.menu,name:hrm_data_import.menu_profile
+msgid "Mapping file"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__message
+msgid "Message"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_line__state__thiếu_công
+msgid "Missing attendance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_line__state__thiếu_hợp_đồng
+msgid "Missing contract"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_line__state__thiếu_hiệu_quả
+msgid "Missing performance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Mobile"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__month
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__month
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__month
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__salary_month
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.manual_input_search
+msgid "Month"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-python
+#: code:addons/hrm_data_import/models/ui_language.py:0
+msgid ""
+"Month %(month)s/%(year)s: %(employees)s employees; %(attendance)s attendance"
+" rows; %(performance)s performance items; %(results)s payroll results."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__1
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__1
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__1
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__1
+msgid "Month 01"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__2
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__2
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__2
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__2
+msgid "Month 02"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__3
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__3
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__3
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__3
+msgid "Month 03"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__4
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__4
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__4
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__4
+msgid "Month 04"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__5
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__5
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__5
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__5
+msgid "Month 05"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__6
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__6
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__6
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__6
+msgid "Month 06"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__7
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__7
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__7
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__7
+msgid "Month 07"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__8
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__8
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__8
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__8
+msgid "Month 08"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__9
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__9
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__9
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__9
+msgid "Month 09"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__10
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__10
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__10
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__10
+msgid "Month 10"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__11
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__11
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__11
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__11
+msgid "Month 11"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_day__month__12
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__month__12
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_workspace__month__12
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_payroll_item__salary_month__12
+msgid "Month 12"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_salary_excel
+msgid "Monthly Excel-style payroll"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-python
+#: code:addons/hrm_data_import/models/ui_language.py:0
+#: model:ir.actions.act_window,name:hrm_data_import.action_monthly_overview
+#: model:ir.model,name:hrm_data_import.model_hrm_monthly_workspace
+#: model:ir.ui.menu,name:hrm_data_import.menu_monthly_overview
+msgid "Monthly attendance and payroll"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__monthly
+msgid "Monthly attendance grid, days 1 to 31"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_month_pivot
+msgid "Monthly attendance summary"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_monthly_workspace
+#: model:ir.actions.act_window,name:hrm_data_import.action_period_input
+#: model:ir.ui.menu,name:hrm_data_import.menu_monthly_workspace
+msgid "Monthly payroll processing"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_salary_adjustment
+msgid "Monthly salary adjustments with reasons and history"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_line__state__nhiều_bảng_lương_—_cần_đối_chiếu
+msgid "Multiple payroll runs — reconciliation required"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.constraint,message:hrm_data_import.constraint_hrm_demo_source_source_unique
+msgid "Mỗi file chỉ có một bản nguồn trong bộ demo."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_n
+msgid "N · STANDARD DAYS IN MONTH"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__name
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_allowance_type__name
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_list
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Name"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_identity_number
+msgid "National ID number"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_manual_help
+msgid ""
+"Need help? Open <strong>Manual entry guide for the next month</strong> "
+"below."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__net
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_excel_list
+msgid "Net pay"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.insurance_slip_details
+msgid ""
+"Net pay = gross pay − other deductions − employee insurance − personal "
+"income tax. Total deductions already include employee insurance. Employer "
+"insurance does not reduce employee net pay."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "Net pay:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_attendance_month__data_state__chưa_có_công
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_month_search
+msgid "No attendance data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_demo_source__state__empty
+msgid "No data rows"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-python
+#: code:addons/hrm_data_import/models/ui_language.py:0
+msgid "No payroll period exists for this month."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__normalized
+msgid "Normalized"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_batch__state__draft
+msgid "Not checked"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import__state__draft
+msgid "Not imported"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Notes"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__data_type__number
+msgid "Number"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "Number:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_o
+msgid "O · PROBATION DAYS"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Onboarding"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_slip_actions
+msgid "Open period / recalculate"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_company
+msgid "Operating company inside a tenant (SPEC §3.2)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_source_profile
+msgid "Original Excel information (unprocessed)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_p
+msgid "P · EMPLOYMENT CONTRACT DAYS"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "PAYROLL RECONCILIATION"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__work_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__total_days
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__work_date
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__paid_days
+msgid "Paid days"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__parent_id
+msgid "Parent contract"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "Parent contract:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__payload
+msgid "Payload"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-python
+#: code:addons/hrm_data_import/models/ui_language.py:0
+msgid "Payroll %(period)s / Run %(run)s"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_audit
+msgid "Payroll and approval logs"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__detail_ids
+msgid "Payroll component details"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__selected_employee_ids
+msgid "Payroll employees (blank = all)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_formula
+#: model:ir.ui.menu,name:hrm_data_import.menu_formula
+msgid "Payroll formulas"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_payroll_item
+msgid "Payroll line per employee (SPEC §9.6)."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__period_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__period_id
+msgid "Payroll month"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__period_id
+msgid "Payroll period"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_payroll_period
+msgid "Payroll period (SPEC §9.4)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.payroll_item_pivot
+msgid "Payroll report"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_payroll_report
+#: model:ir.ui.menu,name:hrm_data_import.menu_payroll_report
+msgid "Payroll reports and payslips"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_payroll
+msgid "Payroll run (SPEC §9.5)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_salary_ids
+msgid "Payroll settings"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Payslip"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_excel_list
+msgid "Payslip / adjustment / formulas"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.payroll_item_details
+msgid "Payslip preview"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-python
+#: code:addons/hrm_data_import/models/ui_language.py:0
+msgid "Payslip: %(employee)s — %(period)s"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_manual_input__dataset__performance
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.input_search_month
+msgid "Performance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__performance
+msgid "Performance (VND)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__component_id
+msgid "Performance / salary component"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_input__dataset__performance
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_profile__dataset__performance
+msgid "Performance amounts"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__performance_count
+msgid "Performance items"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__require_imported_performance
+msgid "Performance required"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__period_label
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__period_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__period_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__period_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__period_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__salary_period
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "Period"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_period_input
+msgid "Period standard days"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-python
+#: code:addons/hrm_data_import/models/ui_language.py:0
+msgid "Period: %(period)s."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_person
+msgid "Person (SPEC §4.1)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Personal information"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_list
+msgid "Phone"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__record_count
+msgid "Populated business rows"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_import_form
+msgid "Preview employee records"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__previous
+msgid "Previous"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.report,name:hrm_data_import.report_contract
+msgid "Print contract / addendum"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.report,name:hrm_data_import.report_salary_preview
+msgid "Print payroll reconciliation"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__profile_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__profile_id
+msgid "Profile"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__project_code
+msgid "Project"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hr_employee_public
+msgid "Public Employee"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_q
+msgid "Q · ACTUAL WORKED DAYS"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Quick payroll calculation"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_r
+msgid "R · ANNUAL LEAVE"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__raw
+msgid "Raw"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_profile_form
+msgid "Read template columns"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_import_profile__headers
+msgid "Read template columns in order, including duplicate names"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_monthly_line__state__sẵn_sàng_tính
+msgid "Ready to calculate"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_batch__state__ready
+msgid "Ready to save"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__reason
+msgid "Reason / approval reference"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__correction_reason
+msgid "Reason for reopening"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Reason for status change"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_attendance_day
+msgid "Recorded daily attendance details"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__hours
+msgid "Recorded hours"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Refresh monthly data"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__insurance_regional_minimum
+msgid "Regional minimum wage for unemployment insurance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.period_workspace_form
+msgid "Reopen for correction and recalculation"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__amount
+msgid "Replacement amount"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__required
+msgid "Required"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__result
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__result
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__result_id
+msgid "Result"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__revision
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__revision
+msgid "Revision"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__row_no
+msgid "Row No"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_line
+#: model:ir.ui.menu,name:hrm_data_import.menu_line
+msgid "Row logs"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_batch_form
+msgid "Row preview and logs"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_s
+msgid "S · PAID PERSONAL LEAVE"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_tenant
+msgid "SaaS tenant boundary (SPEC §3.1)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__salary_export
+msgid "Salary Export"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__salary_filename
+msgid "Salary Filename"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__changes_salary
+msgid "Salary adjustment addendum"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_salary_adjustment
+#: model:ir.ui.menu,name:hrm_data_import.menu_salary_adjustment
+msgid "Salary adjustments and history"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__component_id
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_manual_input__dataset__salary
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "Salary component"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_salary_component
+msgid "Salary component (SPEC §9.2)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_input__dataset__salary
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_profile__dataset__salary
+msgid "Salary inputs"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__structure_id
+msgid "Salary structure"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.formula_excel_editor
+msgid ""
+"Same-row Excel columns: G = contract salary, M = performance, N = standard "
+"days, Q/U = paid days, V = calculated BASE component. Example: "
+"=ROUND(G12*U12/N12,0). Supports IF, IFERROR, SUM, MIN, MAX, ROUND, AND, OR "
+"and earlier component codes. VLOOKUP, external workbook links and other "
+"employee rows are not supported. Imported calculated amounts override "
+"formulas; approved adjustments have the highest priority."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_batch__state__committed
+msgid "Saved"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_import_mapping__component_id
+msgid "Select the payroll component for this amount column."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.period_workspace_form
+msgid ""
+"Select the period and confirmed standard days. Import attendance/performance"
+" using approved column mappings → Check data → Calculate monthly payroll. "
+"Reopen an unfinalized period with a reason before importing a higher "
+"revision. Previous results are logged and must be recalculated. "
+"Approved/finalized payroll cannot be reopened."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll__selected_employee_ids
+msgid "Selected employees"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Set up payroll period"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__sha256
+msgid "Sha256"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__sheet
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__sheet
+msgid "Sheet"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__signed_document
+msgid "Signed contract/addendum"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_details_form
+msgid "Signed document"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__attachment_filename
+msgid "Signed document filename"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__source
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__source_ids
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__source
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__source
+msgid "Source"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__source_record_id
+msgid "Source Record"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__source_header
+msgid "Source column name"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_import_form
+msgid ""
+"Source column names are on the left; employee fields are on the right. Adapt"
+" names to the company file and remove unused mappings."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__notes
+msgid "Source data status"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_hrm_demo_source
+msgid "Source file and demo reconciliation"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_demo_workspace_form
+msgid "Source file mappings"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.constraint,message:hrm_data_import.constraint_hrm_import_input_source_unique
+msgid "Source key already exists."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__source_record_id
+msgid "Source record ID"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__employee_count
+msgid "Source records"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__source_count
+msgid "Source rows"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,help:hrm_data_import.field_hrm_import_profile__source
+msgid "Source system ID, stable across mapping versions"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__sheets
+msgid "Source worksheet"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__standard_days
+msgid "Standard days"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__standard_days
+msgid "Standard paid days"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Start employment"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__state
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__state
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__state
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__state
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__state
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__state
+msgid "State"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__state
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_list
+msgid "Status"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Suspended"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_t
+msgid "T · PUBLIC HOLIDAYS"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__target
+msgid "Target"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__template_filename
+msgid "Template Filename"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__sample_data
+msgid "Template file"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__sample_filename
+msgid "Template filename"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_batch__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_input__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_line__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_mapping__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__tenant_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_salary_adjustment__tenant_id
+msgid "Tenant"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_workspace__departed_count
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Terminated"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Termination date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_details_form
+msgid "Terms"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__test_context
+msgid "Test Context"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_formula__test_result
+msgid "Test Result"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_formula_form
+msgid "Test formula"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__data_type__text
+msgid "Text"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_adjustment_form
+msgid ""
+"The amount REPLACES one component for one employee/month; it is not added to"
+" the old amount. Create a new adjustment for later corrections. The latest "
+"approved adjustment is used on recalculation. Lasting base salary changes "
+"require a contract addendum."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.payroll_item_details
+msgid ""
+"This is a calculated result for reconciliation. Official payslips are issued"
+" after payroll approval and finalization."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "To date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.payroll_item_report_list
+msgid "Total deductions"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.payroll_item_report_list
+msgid "Total gross pay"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__total_hours
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_day_list
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_month_list
+msgid "Total hours"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.payroll_item_report_list
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_excel_list
+msgid "Total net pay"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.attendance_month_list
+msgid "Total paid days"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.monthly_workspace_form
+msgid "Total performance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.payroll_item_report_list
+msgid "Total tax"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_u
+msgid "U · PAYROLL DAYS"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__uuid
+msgid "UUID"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "Unfinalized — for reconciliation."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_import__update_existing
+msgid "Update existing employees (blank cells keep current values)"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__cached_header
+msgid "Use cached Excel header text"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__batch_identity
+msgid "Use one revision and approval reference for the file"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model,name:hrm_data_import.model_res_users
+msgid "User"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_v
+msgid "V · MONTHLY BASE PAY"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.manual_input_form
+msgid "Validate and save"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__details
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_period__readiness
+msgid "Validation results"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_formula_form
+msgid ""
+"Variables: BASE_SALARY, STANDARD_DAYS, PAID_DAYS, PAID_HOURS, "
+"PERFORMANCE_AMOUNT and previously calculated component codes. Functions: IF,"
+" IFERROR, SUM, MIN, MAX, ROUND, AND, OR. Separate arguments with commas or "
+"semicolons."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__revision
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_import_profile__version
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__revision
+msgid "Version"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_demo_workspace_form
+msgid "View employees"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "View monthly attendance and payroll"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_w
+msgid "W · x 150"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_complete_form
+msgid "Work email"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_manual_input__regular_hours
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__hours
+msgid "Worked hours"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__workplace
+msgid "Workplace"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "Workplace:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_demo_source__workspace_id
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_line__workspace_id
+msgid "Workspace"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_x
+msgid "X · x 200"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.view_demo_workspace_form
+msgid "Xem log"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_y
+msgid "Y · x 300"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_day__year
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_attendance_month__year
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_monthly_workspace__year
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__salary_year
+msgid "Year"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payroll_item__xl_z
+msgid "Z · OVERTIME PAY"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-python
+#: code:addons/hrm_data_import/models/ui_language.py:0
+msgid "Zero without a source is not confirmed zero data."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__amount
+msgid "amount"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__approval_reference
+msgid "approval_reference"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__hrm_bank_branch
+msgid "bank_address → hrm_bank_branch"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__hrm_bank_name
+msgid "bank_name → hrm_bank_name"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__hrm_bank_number
+msgid "bank_number → hrm_bank_number"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__hrm_birth_date
+msgid "birthday → hrm_birth_date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__employee_code
+msgid "code → employee_code"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__component_code
+msgid "component_code"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_line__result__create
+msgid "create"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__currency
+msgid "currency"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__work_email
+msgid "email → work_email"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__employee_code
+msgid "employee_code"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__termination_date
+msgid "end_date → termination_date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__name
+msgid "full_name → name"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__hrm_identity_place
+msgid "identity_card_issue_by → hrm_identity_place"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__hrm_identity_date
+msgid "identity_card_issue_date → hrm_identity_date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__hrm_identity_number
+msgid "identity_card_number → hrm_identity_number"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__mobile_phone
+msgid "mobile_phone → mobile_phone"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__additional_note
+msgid "note → additional_note"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__work_phone
+msgid "phone_number → work_phone"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__project_code
+msgid "project_code"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__regular_hours
+msgid "regular_hours"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_line__result__reject
+msgid "reject"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__revision
+msgid "revision"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__shift_code
+msgid "shift_code"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__source_record_id
+msgid "source_record_id"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__hire_date
+msgid "start_date → hire_date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "to"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_line__result__unchanged
+msgid "unchanged"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_line__result__update
+msgid "update"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_import_mapping__target__work_date
+msgid "work_date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_employee_import_column__target__current_status
+msgid "working_status_id → current_status"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "— Calculation"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "— Code:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.salary_preview
+msgid "— Status"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_document
+msgid "— Status:"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_core
+msgid "Staff"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_time
+msgid "Time tracking"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_payroll.menu_hrm_payroll
+msgid "Payroll"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_foundation
+msgid "Business"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_root
+msgid "HR administration"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hr.menu_hr_root
+msgid "Native employee tools"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_employee
+msgid "Employee directory"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_staff_advanced
+msgid "Staff settings"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_manual_input
+#: model:ir.actions.act_window,name:hrm_data_import.action_manual_input
+msgid "Enter attendance"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_time_advanced
+msgid "Time settings"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_payroll_advanced
+msgid "Payroll settings and history"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_company_advanced
+msgid "Organization settings"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_payroll_manual_amounts
+#: model:ir.actions.act_window,name:hrm_data_import.action_payroll_manual_amounts
+msgid "Enter performance and pay"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_allowance_type
+#: model:ir.actions.act_window,name:hrm_data_import.action_allowance_type
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_allowance_form
+#: model:ir.actions.act_window,name:hrm_data_import.action_contract_allowance_settings
+msgid "Allowance settings"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_employee_contract__allowance_ids
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_allowance_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_allowance_print
+msgid "Allowances"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_contract_allowance__type_id
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_allowance_print
+msgid "Allowance type"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_contract_allowance__amount
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_allowance_print
+msgid "Monthly amount"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_allowance_type__tax_mode
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_contract_allowance__tax_mode
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Tax treatment"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_allowance_type__exempt_limit
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_contract_allowance__exempt_limit
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Monthly exemption limit"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_contract_allowance__tax_exempt_amount
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payslip_item__tax_exempt_amount
+msgid "Tax-exempt portion"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_contract_allowance__taxable_amount
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_payslip_item__taxable_amount
+msgid "Taxable portion"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Example: an allowance of 1,000,000 with an exemption limit of 730,000 has a taxable portion of 270,000."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_allowance_form
+msgid "On an addendum, enter only the allowances that change. Enter zero to stop an existing allowance during the addendum."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_allowance_type__tax_mode__taxable
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_allowance_version__tax_mode__taxable
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_contract_allowance__tax_mode__taxable
+msgid "Fully taxable"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_allowance_type__tax_mode__exempt
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_allowance_version__tax_mode__exempt
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_contract_allowance__tax_mode__exempt
+msgid "Fully exempt"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_allowance_type__tax_mode__capped
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_allowance_version__tax_mode__capped
+#: model:ir.model.fields.selection,name:hrm_data_import.selection__hrm_contract_allowance__tax_mode__capped
+msgid "Exempt up to a limit"
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Use an uppercase allowance code with letters, digits or underscores."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "The exemption limit must be a nonnegative amount."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "An allowance policy cannot be moved to another company."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "The allowance and contract must belong to the same company."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "The allowance amount must be nonnegative."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Use an addendum to change an approved contract allowance."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "An allowance addendum changes mid-period. Split the payroll period first."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Overlapping addenda change the same allowance in this period."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "A salary component duplicates the contract allowance code %(code)s."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_allowance_type__code
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_list
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Code"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_list
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Initial tax treatment"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_list
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Initial exemption limit"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+#: model:ir.model.fields,field_description:hrm_data_import.field_hrm_allowance_type__version_ids
+msgid "Policy history"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Add a row with an effective date, tax treatment and reason. Payroll uses the latest version effective at the start of its period. The initial settings apply before the first version."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_allowance_form
+msgid "Use Allowance settings to set tax treatment and effective dates. In a draft, add a row, choose the allowance type and enter the monthly amount. Use an addendum for an approved contract."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Reason"
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Add an effective-dated version to change the allowance policy."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Choose an effective date after the last allowance version."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Choose a date after payroll periods already calculated or finalized."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Saved allowance versions are read-only. Add a new version."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Saved allowance versions cannot be deleted."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "The allowance policy changes mid-period. Split the payroll period first."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.actions.act_window,name:hrm_data_import.action_contract_allowance_create
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_allowance_form
+msgid "Create allowance type"
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Choose a date after the payroll periods that already used this allowance."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "The allowance code cannot change after saving."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_allowance_form
+msgid "Create allowance addendum"
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/allowances.py:0
+msgid "Open an approved parent contract to add an allowance addendum."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.allowance_type_form
+msgid "Active"
+msgstr ""
+
+#. module: hrm_data_import
+#. odoo-javascript
+#: code:addons/hrm_data_import/static/src/js/allowance_type_form.js:0
+msgid "Allowance type created"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.company_departments_form
+msgid "Departments"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.department_quick_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.company_departments_form
+msgid "Department name"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.department_quick_form
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.department_quick_list
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.company_departments_form
+msgid "Parent department"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.department_quick_list
+#: model:ir.actions.act_window,name:hrm_data_import.action_add_child_department
+msgid "Add child department"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.department_quick_form
+msgid "Additional details"
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/quick_entry.py:0
+msgid "The management unit must match the company."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/quick_entry.py:0
+msgid "The parent must belong to the same company."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/quick_entry.py:0
+msgid "The child records must belong to the same company."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/quick_entry.py:0
+msgid "A record cannot be its own ancestor."
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_contract
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+msgid "Contracts"
+msgstr ""
+
+#. module: hrm_data_import
+#: model:ir.ui.menu,name:hrm_data_import.menu_employee_addendum
+#: model:ir.actions.act_window,name:hrm_data_import.action_employee_addendum
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+msgid "Addenda and renewals"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+msgid "Qualifications"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+msgid "Profile photo"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+msgid "Personal résumé"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+msgid "Degree"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+msgid "Institution"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+msgid "Field of study"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+msgid "Completion date"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+#: code:addons/hrm_data_import/models/employee_entry.py:0
+msgid "Upload a PDF, JPG, PNG or WebP résumé up to 10 MB."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/employee_entry.py:0
+msgid "The qualification must belong to the employee’s management unit."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/employee_entry.py:0
+msgid "Select the original contract before saving an addendum."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/employee_entry.py:0
+msgid "Use Addenda and renewals to create a linked addendum."
+msgstr ""
+
+#. module: hrm_data_import
+#: code:addons/hrm_data_import/models/employee_entry.py:0
+msgid "Enter a base salary greater than zero."
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_active_contract_ids
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_active_addendum_ids
+msgid "In effect"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_pending_contract_ids
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_pending_addendum_ids
+msgid "Awaiting action"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.employee_separate_contract_form
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_closed_contract_ids
+#: model:ir.model.fields,field_description:hrm_data_import.field_hr_employee__hrm_closed_addendum_ids
+msgid "Closed history"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_separate_entry_form
+msgid "Activate contract"
+msgstr ""
+
+#. module: hrm_data_import
+#: model_terms:ir.ui.view,arch_db:hrm_data_import.contract_separate_entry_form
+msgid "Close contract"
+msgstr ""

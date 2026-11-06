@@ -1,0 +1,788 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: HRM 20.0\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_attendance_form
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_ot_form
+msgid "Actions"
+msgstr "Thao tác"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__status__active
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_shift__status__active
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_schedule__status__active
+msgid "Active"
+msgstr "Đang hoạt động"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_adjustment_uuid_unique
+msgid "Adjustment UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_time
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_timesheet
+msgid "All employee attendance"
+msgstr "Bảng công toàn bộ nhân viên"
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_ot_form
+msgid "Approve"
+msgstr "Phê duyệt"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_adjustment__status__approved
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_overtime_request__status__approved
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_timesheet__status__approved
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__status__approved
+msgid "Approved"
+msgstr "Đã duyệt"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__approved_at
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__approved_at
+msgid "Approved At"
+msgstr "Duyệt lúc"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__approved_by_id
+msgid "Approved By"
+msgstr "Người duyệt"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__approved_minutes
+msgid "Approved Minutes"
+msgstr "Số phút đã duyệt"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_shift__status__archived
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_schedule__status__archived
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_attendance
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__attendance_id
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__entry_type__attendance
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_attendance
+msgid "Attendance"
+msgstr "Công"
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_attendance
+msgid "Attendance (SPEC §7.6)"
+msgstr "Attendance (SPEC §7.6)"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_uuid_unique
+msgid "Attendance UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_attendance_adjustment
+msgid "Attendance adjustment request (SPEC §7.7)"
+msgstr "Attendance adjustment request (SPEC §7.7)"
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_attendance_device
+msgid "Attendance device (SPEC §7.4)"
+msgstr "Attendance device (SPEC §7.4)"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__biometric
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__device_type__biometric
+msgid "Biometric"
+msgstr "Sinh trắc học"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__break_rules
+msgid "Break Rules"
+msgstr "Quy định nghỉ giữa ca"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__calculated
+msgid "Calculated"
+msgstr "Đã tính"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__calculation_version
+msgid "Calculation Version"
+msgstr "Phiên bản tính"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device_event__event_type__check_in
+msgid "Check In"
+msgstr "Vào ca"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__check_in_at
+msgid "Check In At"
+msgstr "Giờ vào ca"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device_event__event_type__check_out
+msgid "Check Out"
+msgstr "Ra ca"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__check_out_at
+msgid "Check Out At"
+msgstr "Giờ ra ca"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__code
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__code
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__company_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__company_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__configuration
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__create_uid
+msgid "Created by"
+msgstr "Người tạo"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__cross_midnight
+msgid "Cross Midnight"
+msgstr "Ca qua đêm"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__unit__day
+msgid "Day"
+msgstr "Ngày"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__device_id
+msgid "Device"
+msgstr "Thiết bị"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__device_type
+msgid "Device Type"
+msgstr "Loại thiết bị"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_device_uuid_unique
+msgid "Device UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_device_tenant_code_unique
+msgid "Device code must be unique per tenant."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý."
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_device_event_device_event_unique
+msgid "Device event must be unique per tenant+device+external id."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý."
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_device
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_device
+msgid "Devices"
+msgstr "Thiết bị chấm công"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_overtime_request__status__draft
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_timesheet__status__draft
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__status__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_work_entry_tenant_day_type_unique
+msgid "Duplicate work entry for the same source."
+msgstr "Đã có dữ liệu công cho cùng nguồn."
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__early_leave_minutes
+msgid "Early Leave Minutes"
+msgstr "Số phút về sớm"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__effective_from
+msgid "Effective From"
+msgstr "Hiệu lực từ"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__effective_to
+msgid "Effective To"
+msgstr "Hiệu lực đến"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__employee_id
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_shift_assignment
+msgid "Employee -> shift, effective-dated (SPEC §7.3)"
+msgstr "Employee -> shift, effective-dated (SPEC §7.3)"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__employee_external_ref
+msgid "Employee External Ref"
+msgstr "Mã nhân viên nguồn"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__end_at
+msgid "End At"
+msgstr "Kết thúc lúc"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__end_time
+msgid "End Time"
+msgstr "Giờ kết thúc"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__entry_type
+msgid "Entry Type"
+msgstr "Loại ghi nhận"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__event_time
+msgid "Event Time"
+msgstr "Thời điểm sự kiện"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__event_type
+msgid "Event Type"
+msgstr "Loại sự kiện"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__external_device_id
+msgid "External Device"
+msgstr "Thiết bị nguồn"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__external_event_id
+msgid "External Event"
+msgstr "Sự kiện nguồn"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__unit__hour
+msgid "Hour"
+msgstr "Giờ"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__import
+msgid "Import"
+msgstr "Nhập dữ liệu"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__status__inactive
+msgid "Inactive"
+msgstr "Ngừng hoạt động"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__ip_address
+msgid "Ip Address"
+msgstr "Địa chỉ IP"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__last_sync_at
+msgid "Last Sync At"
+msgstr "Đồng bộ lần cuối"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__write_uid
+msgid "Last Updated by"
+msgstr "Người cập nhật"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__write_date
+msgid "Last Updated on"
+msgstr "Ngày cập nhật"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__late_minutes
+msgid "Late Minutes"
+msgstr "Số phút đi trễ"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__entry_type__leave
+msgid "Leave"
+msgstr "Nghỉ phép"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_attendance_form
+msgid "Lock"
+msgstr "Khóa"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__locked
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__status__locked
+msgid "Locked"
+msgstr "Đã khóa"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__locked_at
+msgid "Locked At"
+msgstr "Khóa lúc"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__manual
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__entry_type__manual
+msgid "Manual"
+msgstr "Nhập tay"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__mobile
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__device_type__mobile
+msgid "Mobile"
+msgstr "Di động"
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_timesheet
+msgid "Monthly attendance and history"
+msgstr "Bảng công tháng và lịch sử"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__new_value
+msgid "New Value"
+msgstr "Giá trị mới"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__normalized
+msgid "Normalized"
+msgstr "Dữ liệu đã chuẩn hóa"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__old_value
+msgid "Old Value"
+msgstr "Giá trị cũ"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_tenant_employee_date_unique
+msgid "One attendance row per employee+day."
+msgstr "Mỗi nhân viên/ngày chỉ có một dòng chấm công."
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_ot
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__entry_type__overtime
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_ot
+msgid "Overtime"
+msgstr "Làm thêm giờ"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__overtime_minutes
+msgid "Overtime Minutes"
+msgstr "Số phút làm thêm"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_overtime_request_uuid_unique
+msgid "Overtime UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_overtime_request
+msgid "Overtime request (SPEC §7.8)"
+msgstr "Overtime request (SPEC §7.8)"
+
+#. module: hrm_time
+#: model:ir.module.module,summary:base.module_hrm_time
+msgid "P5 time: schedules, shifts, devices, attendance pipeline, overtime, work entries (master-skill §8)"
+msgstr "P5 time: schedules, shifts, devices, attendance pipeline, overtime, work entries (master-skill §8)"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__payload
+msgid "Payload"
+msgstr "Nội dung dữ liệu"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_adjustment__status__pending
+msgid "Pending"
+msgstr "Đang chờ"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__period_end
+msgid "Period End"
+msgstr "Đến ngày"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__period_start
+msgid "Period Start"
+msgstr "Từ ngày"
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_attendance_form
+msgid "Process"
+msgstr "Xử lý"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__processed_at
+msgid "Processed At"
+msgstr "Xử lý lúc"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__raw
+msgid "Raw"
+msgstr "Dữ liệu gốc"
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_attendance_device_event
+msgid "Raw device event, immutable (SPEC §7.5)"
+msgstr "Raw device event, immutable (SPEC §7.5)"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__reason
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__received_at
+msgid "Received At"
+msgstr "Nhận lúc"
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_ot_form
+msgid "Reject"
+msgstr "Từ chối"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_adjustment__status__rejected
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_overtime_request__status__rejected
+msgid "Rejected"
+msgstr "Đã từ chối"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__requested_by_id
+msgid "Requested By"
+msgstr "Người yêu cầu"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__requested_minutes
+msgid "Requested Minutes"
+msgstr "Số phút đề nghị"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__rules
+msgid "Rules"
+msgstr "Quy tắc"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_work_schedule_uuid_unique
+msgid "Schedule UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_work_schedule_tenant_company_code_unique
+msgid "Schedule code must be unique per tenant+company."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý và công ty."
+
+#. module: hrm_time
+#: model_terms:ir.actions.act_window,help:hrm_time.action_hrm_timesheet
+msgid "Select year/month on the left to see all employee attendance. Columns 01–31 show daily hours. Blank means no source; 0 means recorded zero hours; — means the day does not exist. Values come directly from saved Excel/web inputs."
+msgstr "Chọn năm/tháng bên trái để xem bảng công toàn bộ nhân viên. Mỗi cột 01–31 là giờ công ngày tương ứng. Trống là chưa có nguồn; 0 là đã ghi không có giờ; — là ngày không tồn tại. Công đọc trực tiếp từ nguồn Excel/web đã ghi."
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__shift_id
+msgid "Shift"
+msgstr "Ca làm việc"
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_shift
+msgid "Shift (SPEC §7.2)"
+msgstr "Shift (SPEC §7.2)"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_shift_uuid_unique
+msgid "Shift UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_shift_assignment_uuid_unique
+msgid "Shift assignment UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_shift_tenant_company_code_unique
+msgid "Shift code must be unique per tenant+company."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý và công ty."
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_shift
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_shift
+msgid "Shifts"
+msgstr "Ca làm việc"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__source
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__source_id
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__source_type
+msgid "Source Type"
+msgstr "Loại nguồn"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__start_at
+msgid "Start At"
+msgstr "Bắt đầu lúc"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__start_time
+msgid "Start Time"
+msgstr "Giờ bắt đầu"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__status
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_ot_form
+msgid "Submit"
+msgstr "Gửi duyệt"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_overtime_request__status__submitted
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_timesheet__status__submitted
+msgid "Submitted"
+msgstr "Đã gửi duyệt"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__submitted_at
+msgid "Submitted At"
+msgstr "Gửi duyệt lúc"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__tenant_id
+msgid "Tenant"
+msgstr "Đơn vị quản lý"
+
+#. module: hrm_time
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_time
+msgid "Time"
+msgstr "Chấm công"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_timesheet_uuid_unique
+msgid "Timesheet UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_timesheet
+msgid "Timesheet period rollup (SPEC §7.9)"
+msgstr "Timesheet period rollup (SPEC §7.9)"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__timezone
+msgid "Timezone"
+msgstr "Múi giờ"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__total_minutes
+msgid "Total Minutes"
+msgstr "Tổng số phút"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__unit
+msgid "Unit"
+msgstr "Đơn vị tính"
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_attendance_form
+msgid "Validate"
+msgstr "Kiểm tra"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__validated
+msgid "Validated"
+msgstr "Đã kiểm tra"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__version
+msgid "Version"
+msgstr "Phiên bản"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__web
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__device_type__web
+msgid "Web"
+msgstr "Trên web"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__weekly_hours
+msgid "Weekly Hours"
+msgstr "Số giờ mỗi tuần"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__work_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__work_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__work_date
+msgid "Work Date"
+msgstr "Ngày công"
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_work_entry
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_work_entry
+msgid "Work Entries"
+msgstr "Dữ liệu công"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__work_schedule_id
+msgid "Work Schedule"
+msgstr "Lịch làm việc"
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_work_entry
+msgid "Work entry (SPEC §7.10)"
+msgstr "Work entry (SPEC §7.10)"
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_work_entry_uuid_unique
+msgid "Work entry UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_work_schedule
+msgid "Work schedule (SPEC §7.1)"
+msgstr "Work schedule (SPEC §7.1)"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__worked_minutes
+msgid "Worked Minutes"
+msgstr "Số phút đã làm"
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__workflow_instance_id
+msgid "Workflow Instance"
+msgstr "Hồ sơ phê duyệt"

@@ -1,0 +1,7 @@
+<odoo>
+    <menuitem id="menu_hrm_workflow" name="Workflow" parent="hrm_base.menu_hrm_root" sequence="18"/>
+    <menuitem id="menu_hrm_wf_definition" parent="menu_hrm_workflow" action="action_hrm_wf_definition" sequence="10" name="Definitions"/>
+    <menuitem id="menu_hrm_wf_instance" parent="menu_hrm_workflow" action="action_hrm_wf_instance" sequence="20" name="Instances"/>
+    <menuitem id="menu_hrm_approval" parent="menu_hrm_workflow" action="action_hrm_approval" sequence="30" name="Approvals"/>
+    <menuitem id="menu_hrm_notification" parent="menu_hrm_workflow" action="action_hrm_notification" sequence="40" name="Notifications"/>
+</odoo>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_course_list" model="ir.ui.view">
+        <field name="name">hrm.course.list</field>
+        <field name="model">hrm.course</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="provider"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_course_form" model="ir.ui.view">
+        <field name="name">hrm.course.form</field>
+        <field name="model">hrm.course</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="code"/><field name="name"/>
+                <field name="description"/><field name="duration_minutes"/>
+                <field name="provider"/><field name="status"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_course" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">hrm.course</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_training_list" model="ir.ui.view">
+        <field name="name">hrm.training.list</field>
+        <field name="model">hrm.training</field>
+        <field name="arch" type="xml">
+            <list><field name="course_id"/><field name="start_at"/><field name="end_at"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_training_form" model="ir.ui.view">
+        <field name="name">hrm.training.form</field>
+        <field name="model">hrm.training</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="course_id"/>
+                    <field name="trainer_employee_id"/><field name="location_id"/>
+                    <field name="start_at"/><field name="end_at"/>
+                    <field name="capacity"/><field name="status"/>
+                </group>
+                <group string="Actions">
+                    <button name="action_open" string="Open" type="object"/>
+                    <button name="action_done" string="Done" type="object"/>
+                    <button name="action_cancel" string="Cancel" type="object"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_training" model="ir.actions.act_window">
+        <field name="name">Trainings</field>
+        <field name="res_model">hrm.training</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_enrollment_list" model="ir.ui.view">
+        <field name="name">hrm.training.enrollment.list</field>
+        <field name="model">hrm.training.enrollment</field>
+        <field name="arch" type="xml">
+            <list><field name="training_id"/><field name="employee_id"/><field name="score"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_enrollment" model="ir.actions.act_window">
+        <field name="name">Enrollments</field>
+        <field name="res_model">hrm.training.enrollment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_certification_list" model="ir.ui.view">
+        <field name="name">hrm.certification.list</field>
+        <field name="model">hrm.certification</field>
+        <field name="arch" type="xml">
+            <list><field name="name"/><field name="employee_id"/><field name="issuer"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_certification" model="ir.actions.act_window">
+        <field name="name">Certifications</field>
+        <field name="res_model">hrm.certification</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

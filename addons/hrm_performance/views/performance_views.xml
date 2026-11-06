@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_cycle_list" model="ir.ui.view">
+        <field name="name">hrm.performance.cycle.list</field>
+        <field name="model">hrm.performance.cycle</field>
+        <field name="arch" type="xml">
+            <list><field name="name"/><field name="period_start"/><field name="period_end"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_cycle_form" model="ir.ui.view">
+        <field name="name">hrm.performance.cycle.form</field>
+        <field name="model">hrm.performance.cycle</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="company_id"/>
+                    <field name="name"/><field name="period_start"/>
+                    <field name="period_end"/><field name="status"/>
+                </group>
+                <group string="Actions">
+                    <button name="action_open" string="Open" type="object"/>
+                    <button name="action_review" string="Review" type="object"/>
+                    <button name="action_calibrate" string="Calibrate" type="object"/>
+                    <button name="action_finalize" string="Finalize" type="object"/>
+                    <button name="action_close" string="Close" type="object"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_cycle" model="ir.actions.act_window">
+        <field name="name">Cycles</field>
+        <field name="res_model">hrm.performance.cycle</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_goal_list" model="ir.ui.view">
+        <field name="name">hrm.goal.list</field>
+        <field name="model">hrm.goal</field>
+        <field name="arch" type="xml">
+            <list><field name="title"/><field name="employee_id"/><field name="progress"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_goal_form" model="ir.ui.view">
+        <field name="name">hrm.goal.form</field>
+        <field name="model">hrm.goal</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="employee_id"/><field name="cycle_id"/>
+                <field name="title"/><field name="weight"/>
+                <field name="target_value"/><field name="actual_value"/>
+                <field name="progress" readonly="1"/><field name="status"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_goal" model="ir.actions.act_window">
+        <field name="name">Goals</field>
+        <field name="res_model">hrm.goal</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_appraisal_list" model="ir.ui.view">
+        <field name="name">hrm.appraisal.list</field>
+        <field name="model">hrm.appraisal</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="cycle_id"/><field name="overall_score"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_appraisal_form" model="ir.ui.view">
+        <field name="name">hrm.appraisal.form</field>
+        <field name="model">hrm.appraisal</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="employee_id"/>
+                    <field name="cycle_id"/><field name="reviewer_employee_id"/>
+                    <field name="overall_score" readonly="1"/><field name="status"/>
+                    <field name="comments"/>
+                </group>
+                <group string="Actions">
+                    <button name="action_submit" string="Submit" type="object"/>
+                    <button name="action_calibrate" string="Calibrate" type="object"/>
+                    <button name="action_finalize" string="Finalize" type="object"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_appraisal" model="ir.actions.act_window">
+        <field name="name">Appraisals</field>
+        <field name="res_model">hrm.appraisal</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_feedback_list" model="ir.ui.view">
+        <field name="name">hrm.feedback.360.list</field>
+        <field name="model">hrm.feedback.360</field>
+        <field name="arch" type="xml">
+            <list><field name="appraisal_id"/><field name="reviewer_employee_id"/><field name="relationship_type"/><field name="score"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_feedback" model="ir.actions.act_window">
+        <field name="name">360 Feedback</field>
+        <field name="res_model">hrm.feedback.360</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

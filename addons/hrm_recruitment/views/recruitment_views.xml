@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============ CANDIDATE: list day du + search + form notebook ============ -->
+    <record id="view_hrm_candidate_search" model="ir.ui.view">
+        <field name="name">hrm.candidate.search</field>
+        <field name="model">hrm.candidate</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="candidate_code" string="Ma UV"/>
+                <field name="first_name" string="Ten"/>
+                <field name="last_name" string="Ho"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="source"/>
+                <filter string="Moi" name="f_new" domain="[('status','=','new')]"/>
+                <filter string="Dang Sang loc" name="f_screening" domain="[('status','=','screening')]"/>
+                <filter string="Phong van" name="f_interview" domain="[('status','=','interview')]"/>
+                <filter string="Offer" name="f_offer" domain="[('status','=','offer')]"/>
+                <filter string="Da tuyen" name="f_hired" domain="[('status','=','hired')]"/>
+                <filter string="Loai" name="f_rejected" domain="[('status','=','rejected')]"/>
+                <group expand="0" string="Nhom theo">
+                    <filter string="Trang thai" name="g_status" context="{'group_by':'status'}"/>
+                    <filter string="Nguon" name="g_source" context="{'group_by':'source'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_hrm_candidate_list" model="ir.ui.view">
+        <field name="name">hrm.candidate.list</field>
+        <field name="model">hrm.candidate</field>
+        <field name="arch" type="xml">
+            <list editable="bottom" decoration-muted="status=='rejected'" decoration-success="status=='hired'">
+                <field name="candidate_code" string="Ma UV"/>
+                <field name="last_name" string="Ho"/>
+                <field name="first_name" string="Ten"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="source" string="Nguon"/>
+                <field name="status" string="Trang thai" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_hrm_candidate_form" model="ir.ui.view">
+        <field name="name">hrm.candidate.form</field>
+        <field name="model">hrm.candidate</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="status" widget="statusbar" statusbar_visible="new,screening,interview,offer,hired"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Da tuyen" bg_color="bg-success" attrs="{'invisible': [('status','!=','hired')]}"/>
+                    <div class="oe_title">
+                        <label for="candidate_code" string="Ma ung vien"/>
+                        <h1><field name="candidate_code" placeholder="VD: UV-0011"/></h1>
+                    </div>
+                    <group>
+                        <group string="Thong tin ca nhan">
+                            <field name="tenant_id" string="Tenant" required="1"/>
+                            <field name="first_name" string="Ten"/>
+                            <field name="last_name" string="Ho va ten dem"/>
+                            <field name="email" widget="email"/>
+                            <field name="phone" widget="phone"/>
+                            <field name="source" string="Nguon (TopCV/Referral...)"/>
+                        </group>
+                        <group string="Xu ly tuyen dung">
+                            <field name="status" string="Trang thai"/>
+                            <field name="person_id" readonly="1" string="Person (tu dong khi nhan viec)"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Don ung tuyen">
+                            <field name="application_ids" nolabel="1">
+                                <list>
+                                    <field name="requisition_id"/>
+                                    <field name="current_stage_id"/>
+                                    <field name="applied_at"/>
+                                    <field name="status"/>
+                                </list>
+                            </field>
+                            <p class="text-muted">Them don: mo menu Ung vien -&gt; Don ung tuyen -&gt; Tao, chon ung vien nay.</p>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hrm_candidate" model="ir.actions.act_window">
+        <field name="name">Ung vien</field>
+        <field name="res_model">hrm.candidate</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_hrm_candidate_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Chua co ung vien. Nhan <b>Tao</b> de them UV-0011...
+            </p>
+            <p>Demo san co: UV-0001 den UV-0010 du trang thai Moi -&gt; Da tuyen.</p>
+        </field>
+    </record>
+
+    <!-- ============ REQUISITION ============ -->
+    <record id="view_hrm_requisition_search" model="ir.ui.view">
+        <field name="name">hrm.job.requisition.search</field>
+        <field name="model">hrm.job.requisition</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="job_id"/>
+                <field name="department_id"/>
+                <filter string="Nhap" name="f_draft" domain="[('status','=','draft')]"/>
+                <filter string="Dang mo" name="f_open" domain="[('status','=','open')]"/>
+                <filter string="Da tuyen du" name="f_filled" domain="[('status','=','filled')]"/>
+                <group expand="0" string="Nhom theo">
+                    <filter string="Phong ban" name="g_dept" context="{'group_by':'department_id'}"/>
+                    <filter string="Trang thai" name="g_status" context="{'group_by':'status'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_hrm_requisition_list" model="ir.ui.view">
+        <field name="name">hrm.job.requisition.list</field>
+        <field name="model">hrm.job.requisition</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="job_id" string="Vi tri"/>
+                <field name="department_id" string="Phong"/>
+                <field name="approved_headcount" string="SL duyet"/>
+                <field name="status" widget="badge"/>
+                <field name="target_hire_date" string="Can truoc ngay"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_hrm_requisition_form" model="ir.ui.view">
+        <field name="name">hrm.job.requisition.form</field>
+        <field name="model">hrm.job.requisition</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <header>
+                    <button name="action_submit" string="Gui duyet" type="object" class="btn-primary" attrs="{'invisible': [('status','!=','draft')]}"/>
+                    <button name="action_approve" string="Duyet" type="object" class="btn-success" attrs="{'invisible': [('status','!=','pending_approval')]}"/>
+                    <button name="action_open" string="Mo tuyen" type="object" attrs="{'invisible': [('status','!=','approved')]}"/>
+                    <button name="action_fill" string="Da tuyen du" type="object" attrs="{'invisible': [('status','!=','open')]}"/>
+                    <button name="action_cancel" string="Huy" type="object" attrs="{'invisible': [('status','in',['filled','cancelled'])]}"/>
+                    <field name="status" widget="statusbar" statusbar_visible="draft,pending_approval,approved,open,filled"/>
+                </header>
+                <group>
+                    <group string="Nhu cau">
+                        <field name="tenant_id" required="1"/>
+                        <field name="company_id" required="1"/>
+                        <field name="department_id" required="1"/>
+                        <field name="position_id"/>
+                        <field name="job_id" required="1"/>
+                    </group>
+                    <group string="Ke hoach">
+                        <field name="requested_by_id" string="Nguoi de xuat"/>
+                        <field name="approved_headcount" string="So luong duyet"/>
+                        <field name="target_hire_date" string="Can truoc ngay"/>
+                        <field name="description" string="Mo ta"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Don ung tuyen">
+                        <field name="application_ids" nolabel="1">
+                            <list><field name="candidate_id"/><field name="current_stage_id"/><field name="status"/><field name="applied_at"/></list>
+                        </field>
+                    </page>
+                </notebook>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_requisition" model="ir.actions.act_window">
+        <field name="name">Nhu cau tuyen dung</field>
+        <field name="res_model">hrm.job.requisition</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_hrm_requisition_search"/>
+    </record>
+
+    <!-- ============ APPLICATION ============ -->
+    <record id="view_hrm_application_search" model="ir.ui.view">
+        <field name="name">hrm.application.search</field>
+        <field name="model">hrm.application</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="candidate_id"/>
+                <field name="requisition_id"/>
+                <filter string="Moi" name="f_new" domain="[('status','=','new')]"/>
+                <filter string="Dang xu ly" name="f_prog" domain="[('status','=','in_progress')]"/>
+                <filter string="Da Offer" name="f_offered" domain="[('status','=','offered')]"/>
+                <filter string="Da tuyen" name="f_hired" domain="[('status','=','hired')]"/>
+                <group expand="0" string="Nhom theo">
+                    <filter string="Dot tuyen" name="g_req" context="{'group_by':'requisition_id'}"/>
+                    <filter string="Trang thai" name="g_status" context="{'group_by':'status'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_hrm_application_list" model="ir.ui.view">
+        <field name="name">hrm.application.list</field>
+        <field name="model">hrm.application</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="candidate_id" string="Ung vien"/>
+                <field name="requisition_id" string="Dot tuyen"/>
+                <field name="current_stage_id" string="Giai doan"/>
+                <field name="status" widget="badge"/>
+                <field name="applied_at" string="Ngay nop"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_hrm_application_form" model="ir.ui.view">
+        <field name="name">hrm.application.form</field>
+        <field name="model">hrm.application</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <header><field name="status" widget="statusbar"/></header>
+                <group>
+                    <group string="Ho so">
+                        <field name="tenant_id" required="1"/>
+                        <field name="candidate_id" required="1"/>
+                        <field name="requisition_id" required="1"/>
+                        <field name="current_stage_id"/>
+                    </group>
+                    <group string="Xu ly">
+                        <field name="source"/>
+                        <field name="status"/>
+                        <field name="rejection_reason" placeholder="Ly do loai / rut..."/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Phong van"><field name="interview_ids" nolabel="1"><list><field name="interviewer_employee_id"/><field name="scheduled_at"/><field name="status"/></list></field></page>
+                    <page string="Offer"><field name="offer_ids" nolabel="1"><list><field name="offer_no"/><field name="base_salary"/><field name="status"/></list></field></page>
+                </notebook>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_application" model="ir.actions.act_window">
+        <field name="name">Don ung tuyen</field>
+        <field name="res_model">hrm.application</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_hrm_application_search"/>
+    </record>
+
+    <record id="view_hrm_interview_list" model="ir.ui.view">
+        <field name="name">hrm.interview.list</field>
+        <field name="model">hrm.interview</field>
+        <field name="arch" type="xml">
+            <list><field name="application_id"/><field name="interviewer_employee_id"/><field name="scheduled_at"/><field name="status" widget="badge"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_interview_form" model="ir.ui.view">
+        <field name="name">hrm.interview.form</field>
+        <field name="model">hrm.interview</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <header>
+                    <button name="action_done" string="Hoan thanh" type="object" class="btn-primary" attrs="{'invisible': [('status','!=','scheduled')]}"/>
+                    <button name="action_cancel" string="Huy" type="object" attrs="{'invisible': [('status','!=','scheduled')]}"/>
+                    <field name="status" widget="statusbar"/>
+                </header>
+                <group>
+                    <field name="tenant_id"/><field name="application_id"/>
+                    <field name="interviewer_employee_id"/><field name="scheduled_at"/>
+                    <field name="duration_minutes"/><field name="location"/>
+                    <field name="meeting_url"/><field name="status"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_interview" model="ir.actions.act_window">
+        <field name="name">Phong van</field>
+        <field name="res_model">hrm.interview</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_offer_list" model="ir.ui.view">
+        <field name="name">hrm.offer.list</field>
+        <field name="model">hrm.offer</field>
+        <field name="arch" type="xml">
+            <list><field name="offer_no" string="So Offer"/><field name="application_id"/><field name="base_salary" string="Luong"/><field name="status" widget="badge"/><field name="start_date" string="Ngay nhan viec"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_offer_form" model="ir.ui.view">
+        <field name="name">hrm.offer.form</field>
+        <field name="model">hrm.offer</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <header>
+                    <button name="action_submit" string="Gui duyet" type="object" class="btn-primary" attrs="{'invisible': [('status','!=','draft')]}"/>
+                    <button name="action_send" string="Gui Offer" type="object" class="btn-success" attrs="{'invisible': [('status','not in',['pending_approval','draft'])]}"/>
+                    <button name="action_accept" string="Ung vien Dong y -&gt; Tao Nhan vien" type="object" class="btn-success" attrs="{'invisible': [('status','!=','sent')]}"/>
+                    <button name="action_decline" string="Tu choi" type="object" attrs="{'invisible': [('status','!=','sent')]}"/>
+                    <button name="action_expire" string="Het han" type="object" attrs="{'invisible': [('status','!=','sent')]}"/>
+                    <field name="status" widget="statusbar"/>
+                </header>
+                <group>
+                    <group string="Offer">
+                        <field name="tenant_id" required="1"/>
+                        <field name="application_id" required="1"/>
+                        <field name="offer_no" placeholder="OFFER-2026-..."/>
+                        <field name="base_salary"/>
+                        <field name="currency_code" placeholder="VND"/>
+                    </group>
+                    <group string="Hieu luc">
+                        <field name="start_date"/>
+                        <field name="expires_at"/>
+                        <field name="status"/>
+                        <field name="employee_id" readonly="1" string="Nhan vien (sinh tu dong)"/>
+                    </group>
+                </group>
+                <div class="alert alert-info" role="alert">
+                    Nhan <b>Dong y</b>: he thong tu tao Person + Nhan vien + Phan cong (Assignment),
+                    Don chuyen sang Hired, Ung vien chuyen sang Hired.
+                </div>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_offer" model="ir.actions.act_window">
+        <field name="name">Thu viec (Offer)</field>
+        <field name="res_model">hrm.offer</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

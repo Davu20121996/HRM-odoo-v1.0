@@ -1,0 +1,7 @@
+<odoo>
+    <menuitem id="menu_hrm_performance" name="Performance" parent="hrm_base.menu_hrm_root" sequence="35"/>
+    <menuitem id="menu_hrm_cycle" parent="menu_hrm_performance" action="action_hrm_cycle" sequence="10" name="Cycles"/>
+    <menuitem id="menu_hrm_goal" parent="menu_hrm_performance" action="action_hrm_goal" sequence="20" name="Goals"/>
+    <menuitem id="menu_hrm_appraisal" parent="menu_hrm_performance" action="action_hrm_appraisal" sequence="30" name="Appraisals"/>
+    <menuitem id="menu_hrm_feedback" parent="menu_hrm_performance" action="action_hrm_feedback" sequence="40" name="360 Feedback"/>
+</odoo>

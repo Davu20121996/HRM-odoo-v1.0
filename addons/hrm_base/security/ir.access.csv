@@ -1,0 +1,29 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_tenant_user,hrm.tenant user,hrm.tenant,hrm_base.group_hrm_user,r,"[('id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_tenant_admin,hrm.tenant admin,hrm.tenant,hrm_base.group_hrm_admin,crud,
+access_hrm_company_user,hrm.company user,hrm.company,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_company_admin,hrm.company admin,hrm.company,hrm_base.group_hrm_admin,crud,
+access_hrm_business_unit_user,hrm.business.unit user,hrm.business.unit,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_business_unit_admin,hrm.business.unit admin,hrm.business.unit,hrm_base.group_hrm_admin,crud,
+access_hrm_department_user,hrm.department user,hrm.department,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_department_admin,hrm.department admin,hrm.department,hrm_base.group_hrm_admin,crud,
+access_hrm_location_user,hrm.location user,hrm.location,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_location_admin,hrm.location admin,hrm.location,hrm_base.group_hrm_admin,crud,
+access_hrm_cost_center_user,hrm.cost.center user,hrm.cost.center,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_cost_center_admin,hrm.cost.center admin,hrm.cost.center,hrm_base.group_hrm_admin,crud,
+access_hrm_role_user,hrm.role user,hrm.role,hrm_base.group_hrm_user,r,
+access_hrm_role_admin,hrm.role admin,hrm.role,hrm_base.group_hrm_admin,crud,
+access_hrm_permission_user,hrm.permission user,hrm.permission,hrm_base.group_hrm_user,r,
+access_hrm_permission_admin,hrm.permission admin,hrm.permission,hrm_base.group_hrm_admin,crud,
+access_hrm_role_permission_user,hrm.role.permission user,hrm.role.permission,hrm_base.group_hrm_user,r,
+access_hrm_role_permission_admin,hrm.role.permission admin,hrm.role.permission,hrm_base.group_hrm_admin,crud,
+access_hrm_user_role_user,hrm.user.role user,hrm.user.role,hrm_base.group_hrm_user,r,
+access_hrm_user_role_admin,hrm.user.role admin,hrm.user.role,hrm_base.group_hrm_admin,crud,
+access_hrm_role_scope_user,hrm.role.scope user,hrm.role.scope,hrm_base.group_hrm_user,r,
+access_hrm_role_scope_admin,hrm.role.scope admin,hrm.role.scope,hrm_base.group_hrm_admin,crud,
+access_hrm_audit_user,hrm.audit.log user,hrm.audit.log,hrm_base.group_hrm_user,r,"['|', ('tenant_id', '=', False), ('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_audit_admin,hrm.audit.log admin,hrm.audit.log,hrm_base.group_hrm_admin,cr,
+access_hrm_configuration_user,hrm.configuration user,hrm.configuration,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_configuration_admin,hrm.configuration admin,hrm.configuration,hrm_base.group_hrm_admin,crud,
+access_hrm_feature_flag_user,hrm.feature.flag user,hrm.feature.flag,hrm_base.group_hrm_user,r,"['|', ('tenant_id', '=', False), ('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_feature_flag_admin,hrm.feature.flag admin,hrm.feature.flag,hrm_base.group_hrm_admin,crud,

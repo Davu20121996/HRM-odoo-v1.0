@@ -1,0 +1,49 @@
+# Data (không commit DB và filestore)
+data/
+*.log
+*.pid
+
+# Env local
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv
+node_modules/
+*.egg-info/
+dist/
+build/
+
+# Odoo
+*.pyc
+*.pyo
+.odoo/
+filestore/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Docker volumes (nếu dùng bind mount)
+pgdata/
+odoo-data/
+.backups/
+.qa_tools/
+docs/qa/frames/
+docs/qa/**/frames/
+
+# Local HR demo deliverables contain private source records
+outputs/
+docs/qa/smb-clean/

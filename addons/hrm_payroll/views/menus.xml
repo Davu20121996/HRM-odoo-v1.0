@@ -1,0 +1,9 @@
+<odoo>
+    <menuitem id="menu_hrm_payroll" name="Payroll" parent="hrm_base.menu_hrm_root" sequence="30"/>
+    <menuitem id="menu_hrm_structure" parent="menu_hrm_payroll" action="action_hrm_structure" sequence="10" name="Salary Structures"/>
+    <menuitem id="menu_hrm_period" parent="menu_hrm_payroll" action="action_hrm_period" sequence="20" name="Periods"/>
+    <menuitem id="menu_hrm_payroll_runs" parent="menu_hrm_payroll" action="action_hrm_payroll" sequence="30" name="Payroll Runs"/>
+    <menuitem id="menu_hrm_payslip" parent="menu_hrm_payroll" action="action_hrm_payslip" sequence="40" name="Payslips"/>
+    <menuitem id="menu_hrm_bonus" parent="menu_hrm_payroll" action="action_hrm_bonus" sequence="50" name="Bonuses"/>
+    <menuitem id="menu_hrm_deduction" parent="menu_hrm_payroll" action="action_hrm_deduction" sequence="60" name="Deductions"/>
+</odoo>

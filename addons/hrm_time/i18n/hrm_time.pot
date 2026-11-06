@@ -1,0 +1,835 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hrm_time
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0-20260928\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 03:46+0000\n"
+"PO-Revision-Date: 2026-11-05 03:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__api
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__device_type__api
+msgid "API"
+msgstr ""
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_attendance_form
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_ot_form
+msgid "Actions"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__status__active
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_shift__status__active
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_schedule__status__active
+msgid "Active"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_adjustment_uuid_unique
+msgid "Adjustment UUID must be unique."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_timesheet
+msgid "All employee attendance"
+msgstr ""
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_ot_form
+msgid "Approve"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_adjustment__status__approved
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_overtime_request__status__approved
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_timesheet__status__approved
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__status__approved
+msgid "Approved"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__approved_at
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__approved_at
+msgid "Approved At"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__approved_by_id
+msgid "Approved By"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__approved_minutes
+msgid "Approved Minutes"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_shift__status__archived
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_schedule__status__archived
+msgid "Archived"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_attendance
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__attendance_id
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__entry_type__attendance
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_attendance
+msgid "Attendance"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_attendance
+msgid "Attendance (SPEC §7.6)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_uuid_unique
+msgid "Attendance UUID must be unique."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_attendance_adjustment
+msgid "Attendance adjustment request (SPEC §7.7)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_attendance_device
+msgid "Attendance device (SPEC §7.4)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__biometric
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__device_type__biometric
+msgid "Biometric"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__break_rules
+msgid "Break Rules"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__calculated
+msgid "Calculated"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__calculation_version
+msgid "Calculation Version"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device_event__event_type__check_in
+msgid "Check In"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__check_in_at
+msgid "Check In At"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device_event__event_type__check_out
+msgid "Check Out"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__check_out_at
+msgid "Check Out At"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__code
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__code
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__code
+msgid "Code"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__company_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__company_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__company_id
+msgid "Company"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__configuration
+msgid "Configuration"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__create_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__create_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__cross_midnight
+msgid "Cross Midnight"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__unit__day
+msgid "Day"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__device_id
+msgid "Device"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__device_type
+msgid "Device Type"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_device_uuid_unique
+msgid "Device UUID must be unique."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_device_tenant_code_unique
+msgid "Device code must be unique per tenant."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_device_event_device_event_unique
+msgid "Device event must be unique per tenant+device+external id."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_device
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_device
+msgid "Devices"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__display_name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_overtime_request__status__draft
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_timesheet__status__draft
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__status__draft
+msgid "Draft"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_work_entry_tenant_day_type_unique
+msgid "Duplicate work entry for the same source."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__early_leave_minutes
+msgid "Early Leave Minutes"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__effective_from
+msgid "Effective From"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__effective_to
+msgid "Effective To"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__employee_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__employee_id
+msgid "Employee"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_shift_assignment
+msgid "Employee -> shift, effective-dated (SPEC §7.3)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__employee_external_ref
+msgid "Employee External Ref"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__end_at
+msgid "End At"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__end_time
+msgid "End Time"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__entry_type
+msgid "Entry Type"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__event_time
+msgid "Event Time"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__event_type
+msgid "Event Type"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__external_device_id
+msgid "External Device"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__external_event_id
+msgid "External Event"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.module.module,shortdesc:base.module_hrm_time
+msgid "HRM Time (P5)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__unit__hour
+msgid "Hour"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__id
+msgid "ID"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__import
+msgid "Import"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__status__inactive
+msgid "Inactive"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__ip_address
+msgid "Ip Address"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__last_sync_at
+msgid "Last Sync At"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__write_uid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__write_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__late_minutes
+msgid "Late Minutes"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__entry_type__leave
+msgid "Leave"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__location_id
+msgid "Location"
+msgstr ""
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_attendance_form
+msgid "Lock"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__locked
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__status__locked
+msgid "Locked"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__locked_at
+msgid "Locked At"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__manual
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__entry_type__manual
+msgid "Manual"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__mobile
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__device_type__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_timesheet
+msgid "Monthly attendance and history"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__name
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__name
+msgid "Name"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__new_value
+msgid "New Value"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__normalized
+msgid "Normalized"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__old_value
+msgid "Old Value"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_attendance_tenant_employee_date_unique
+msgid "One attendance row per employee+day."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_ot
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_work_entry__entry_type__overtime
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_ot
+msgid "Overtime"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__overtime_minutes
+msgid "Overtime Minutes"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_overtime_request_uuid_unique
+msgid "Overtime UUID must be unique."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_overtime_request
+msgid "Overtime request (SPEC §7.8)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.module.module,summary:base.module_hrm_time
+msgid ""
+"P5 time: schedules, shifts, devices, attendance pipeline, overtime, work "
+"entries (master-skill §8)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__payload
+msgid "Payload"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_adjustment__status__pending
+msgid "Pending"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__period_end
+msgid "Period End"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__period_start
+msgid "Period Start"
+msgstr ""
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_attendance_form
+msgid "Process"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__processed_at
+msgid "Processed At"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__device_type__rfid
+msgid "RFID"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__raw
+msgid "Raw"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_attendance_device_event
+msgid "Raw device event, immutable (SPEC §7.5)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__reason
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__reason
+msgid "Reason"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__received_at
+msgid "Received At"
+msgstr ""
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_ot_form
+msgid "Reject"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_adjustment__status__rejected
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_overtime_request__status__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__requested_by_id
+msgid "Requested By"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__requested_minutes
+msgid "Requested Minutes"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__rules
+msgid "Rules"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_work_schedule_uuid_unique
+msgid "Schedule UUID must be unique."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_work_schedule_tenant_company_code_unique
+msgid "Schedule code must be unique per tenant+company."
+msgstr ""
+
+#. module: hrm_time
+#: model_terms:ir.actions.act_window,help:hrm_time.action_hrm_timesheet
+msgid ""
+"Select year/month on the left to see all employee attendance. Columns 01–31 "
+"show daily hours. Blank means no source; 0 means recorded zero hours; — "
+"means the day does not exist. Values come directly from saved Excel/web "
+"inputs."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,help:hrm_time.field_hrm_overtime_request__workflow_instance_id
+msgid "Set when the approval runs through the P3 engine."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__shift_id
+msgid "Shift"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_shift
+msgid "Shift (SPEC §7.2)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_shift_uuid_unique
+msgid "Shift UUID must be unique."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_shift_assignment_uuid_unique
+msgid "Shift assignment UUID must be unique."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_shift_tenant_company_code_unique
+msgid "Shift code must be unique per tenant+company."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_shift
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_shift
+msgid "Shifts"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__source
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__source_id
+msgid "Source"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__source_type
+msgid "Source Type"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__start_at
+msgid "Start At"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__start_time
+msgid "Start Time"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__status
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__status
+msgid "Status"
+msgstr ""
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_ot_form
+msgid "Submit"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_overtime_request__status__submitted
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_timesheet__status__submitted
+msgid "Submitted"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__submitted_at
+msgid "Submitted At"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device_event__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__tenant_id
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__tenant_id
+msgid "Tenant"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_time
+msgid "Time"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_timesheet_uuid_unique
+msgid "Timesheet UUID must be unique."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_timesheet
+msgid "Timesheet period rollup (SPEC §7.9)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__timezone
+msgid "Timezone"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__total_minutes
+msgid "Total Minutes"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__uuid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__uuid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__uuid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__uuid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__uuid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__uuid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__uuid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__uuid
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__uuid
+msgid "UUID"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__unit
+msgid "Unit"
+msgstr ""
+
+#. module: hrm_time
+#: model_terms:ir.ui.view,arch_db:hrm_time.view_hrm_attendance_form
+msgid "Validate"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__status__validated
+msgid "Validated"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_adjustment__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance_device__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift_assignment__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_timesheet__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__version
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__version
+msgid "Version"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance__source__web
+#: model:ir.model.fields.selection,name:hrm_time.selection__hrm_attendance_device__device_type__web
+msgid "Web"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_schedule__weekly_hours
+msgid "Weekly Hours"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__work_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__work_date
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_work_entry__work_date
+msgid "Work Date"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.actions.act_window,name:hrm_time.action_hrm_work_entry
+#: model:ir.ui.menu,name:hrm_time.menu_hrm_work_entry
+msgid "Work Entries"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_shift__work_schedule_id
+msgid "Work Schedule"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_work_entry
+msgid "Work entry (SPEC §7.10)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.constraint,message:hrm_time.constraint_hrm_work_entry_uuid_unique
+msgid "Work entry UUID must be unique."
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model,name:hrm_time.model_hrm_work_schedule
+msgid "Work schedule (SPEC §7.1)"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_attendance__worked_minutes
+msgid "Worked Minutes"
+msgstr ""
+
+#. module: hrm_time
+#: model:ir.model.fields,field_description:hrm_time.field_hrm_overtime_request__workflow_instance_id
+msgid "Workflow Instance"
+msgstr ""

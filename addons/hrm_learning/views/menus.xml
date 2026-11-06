@@ -1,0 +1,7 @@
+<odoo>
+    <menuitem id="menu_hrm_learning" name="Learning" parent="hrm_base.menu_hrm_root" sequence="37"/>
+    <menuitem id="menu_hrm_course" parent="menu_hrm_learning" action="action_hrm_course" sequence="10" name="Courses"/>
+    <menuitem id="menu_hrm_training" parent="menu_hrm_learning" action="action_hrm_training" sequence="20" name="Trainings"/>
+    <menuitem id="menu_hrm_enrollment" parent="menu_hrm_learning" action="action_hrm_enrollment" sequence="30" name="Enrollments"/>
+    <menuitem id="menu_hrm_certification" parent="menu_hrm_learning" action="action_hrm_certification" sequence="40" name="Certifications"/>
+</odoo>

@@ -1,0 +1,11 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_wf_definition_user,definition user,hrm.workflow.definition,hrm_base.group_hrm_user,r,
+access_hrm_wf_definition_admin,definition admin,hrm.workflow.definition,hrm_base.group_hrm_admin,crud,
+access_hrm_wf_step_user,step user,hrm.workflow.step,hrm_base.group_hrm_user,r,
+access_hrm_wf_step_admin,step admin,hrm.workflow.step,hrm_base.group_hrm_admin,crud,
+access_hrm_wf_instance_user,instance user,hrm.workflow.instance,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_wf_instance_admin,instance admin,hrm.workflow.instance,hrm_base.group_hrm_admin,crud,
+access_hrm_approval_user,approval user,hrm.approval.request,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_approval_admin,approval admin,hrm.approval.request,hrm_base.group_hrm_admin,crud,
+access_hrm_notification_user,notification user,hrm.notification,hrm_base.group_hrm_user,ru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_notification_admin,notification admin,hrm.notification,hrm_base.group_hrm_admin,crud,

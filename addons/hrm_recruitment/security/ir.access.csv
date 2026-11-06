@@ -1,0 +1,15 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_candidate_user,candidate user,hrm.candidate,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_candidate_admin,candidate admin,hrm.candidate,hrm_base.group_hrm_admin,crud,
+access_hrm_stage_user,stage user,hrm.recruitment.stage,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_stage_admin,stage admin,hrm.recruitment.stage,hrm_base.group_hrm_admin,crud,
+access_hrm_requisition_user,requisition user,hrm.job.requisition,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_requisition_admin,requisition admin,hrm.job.requisition,hrm_base.group_hrm_admin,crud,
+access_hrm_application_user,application user,hrm.application,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_application_admin,application admin,hrm.application,hrm_base.group_hrm_admin,crud,
+access_hrm_interview_user,interview user,hrm.interview,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_interview_admin,interview admin,hrm.interview,hrm_base.group_hrm_admin,crud,
+access_hrm_evaluation_user,evaluation user,hrm.interview.evaluation,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_evaluation_admin,evaluation admin,hrm.interview.evaluation,hrm_base.group_hrm_admin,crud,
+access_hrm_offer_user,offer user,hrm.offer,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_offer_admin,offer admin,hrm.offer,hrm_base.group_hrm_admin,crud,

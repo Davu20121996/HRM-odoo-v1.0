@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_audit_log_tree" model="ir.ui.view">
+        <field name="name">hrm.audit.log.tree</field>
+        <field name="model">hrm.audit.log</field>
+        <field name="arch" type="xml">
+            <list create="false" delete="false">
+                <field name="create_date"/><field name="action"/>
+                <field name="entity_type"/><field name="actor_user_id"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_hrm_audit_log_form" model="ir.ui.view">
+        <field name="name">hrm.audit.log.form</field>
+        <field name="model">hrm.audit.log</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false">
+                <sheet><group>
+                    <field name="tenant_id"/><field name="action"/>
+                    <field name="entity_type"/><field name="entity_uuid"/>
+                    <field name="actor_user_id"/><field name="correlation_id"/>
+                </group></sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_hrm_audit_log" model="ir.actions.act_window">
+        <field name="name">Audit Log</field>
+        <field name="res_model">hrm.audit.log</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_configuration_tree" model="ir.ui.view">
+        <field name="name">hrm.configuration.tree</field>
+        <field name="model">hrm.configuration</field>
+        <field name="arch" type="xml">
+            <list><field name="config_key"/><field name="scope_type"/><field name="scope_code"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_configuration" model="ir.actions.act_window">
+        <field name="name">Configuration</field>
+        <field name="res_model">hrm.configuration</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_feature_flag_tree" model="ir.ui.view">
+        <field name="name">hrm.feature.flag.tree</field>
+        <field name="model">hrm.feature.flag</field>
+        <field name="arch" type="xml">
+            <list><field name="key"/><field name="enabled"/><field name="tenant_id"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_feature_flag" model="ir.actions.act_window">
+        <field name="name">Feature Flags</field>
+        <field name="res_model">hrm.feature.flag</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

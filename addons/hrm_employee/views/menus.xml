@@ -1,0 +1,22 @@
+<odoo>
+    <menuitem id="menu_hrm_core" name="Core HR" parent="hrm_base.menu_hrm_root" sequence="15"/>
+
+    <menuitem id="menu_hrm_person" parent="menu_hrm_core" action="action_hrm_person" sequence="10" name="Persons"/>
+    <menuitem id="menu_hrm_employee" parent="menu_hrm_core" action="action_hr_employee_hrm" sequence="20" name="Employees"/>
+
+    <menuitem id="menu_hrm_catalog" name="Catalogue" parent="menu_hrm_core" sequence="30"/>
+    <menuitem id="menu_hrm_job" parent="menu_hrm_catalog" action="action_hrm_job" sequence="10" name="Jobs"/>
+    <menuitem id="menu_hrm_grade" parent="menu_hrm_catalog" action="action_hrm_grade" sequence="20" name="Grades"/>
+    <menuitem id="menu_hrm_position" parent="menu_hrm_catalog" action="action_hrm_position" sequence="30" name="Positions"/>
+    <menuitem id="menu_hrm_reporting_line" parent="menu_hrm_catalog" action="action_hrm_reporting_line" sequence="40" name="Reporting Lines"/>
+    <menuitem id="menu_hrm_contract_type" parent="menu_hrm_catalog" action="action_hrm_contract_type" sequence="50" name="Contract Types"/>
+
+    <menuitem id="menu_hrm_employment" name="Employment" parent="menu_hrm_core" sequence="40"/>
+    <menuitem id="menu_hrm_contract" parent="menu_hrm_employment" action="action_hrm_employee_contract" sequence="10" name="Contracts"/>
+    <menuitem id="menu_hrm_assignment" parent="menu_hrm_employment" action="action_hrm_employee_assignment" sequence="20" name="Assignments"/>
+    <menuitem id="menu_hrm_probation" parent="menu_hrm_employment" action="action_hrm_probation" sequence="25" name="Probations"/>
+    <menuitem id="menu_hrm_promotion" parent="menu_hrm_employment" action="action_hrm_promotion" sequence="26" name="Promotions"/>
+    <menuitem id="menu_hrm_transfer" parent="menu_hrm_employment" action="action_hrm_transfer" sequence="27" name="Transfers"/>
+    <menuitem id="menu_hrm_salary_history" parent="menu_hrm_employment" action="action_hrm_salary_history" sequence="30" name="Salary History"/>
+    <menuitem id="menu_hrm_status_history" parent="menu_hrm_employment" action="action_hrm_employment_status_history" sequence="40" name="Status History"/>
+</odoo>

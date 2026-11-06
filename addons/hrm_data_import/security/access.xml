@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="group_import_operator" model="res.groups">
+    <field name="name">HRM Data Entry and Formula Editor</field>
+    <field name="implied_ids" eval="[(4, ref('hrm_base.group_hrm_user'))]" />
+  </record>
+  <record id="group_import_approver" model="res.groups">
+    <field name="name">HRM Mapping and Formula Approver</field>
+    <field name="implied_ids" eval="[(4, ref('group_import_operator'))]" />
+  </record>
+  <record id="access_profile" model="ir.access">
+    <field name="name">hrm.import.profile</field>
+    <field name="model_id" ref="model_hrm_import_profile" />
+    <field name="group_id" ref="group_import_operator" />
+    <field name="operation">crud</field>
+  </record>
+  <record id="rule_profile" model="ir.access">
+    <field name="name">Tenant hrm.import.profile</field>
+    <field name="model_id" ref="model_hrm_import_profile" />
+    <field name="domain">[('tenant_id', 'in', user.hrm_owned_tenant_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="access_mapping" model="ir.access">
+    <field name="name">hrm.import.mapping</field>
+    <field name="model_id" ref="model_hrm_import_mapping" />
+    <field name="group_id" ref="group_import_operator" />
+    <field name="operation">crud</field>
+  </record>
+  <record id="rule_mapping" model="ir.access">
+    <field name="name">Tenant hrm.import.mapping</field>
+    <field name="model_id" ref="model_hrm_import_mapping" />
+    <field name="domain">[('tenant_id', 'in', user.hrm_owned_tenant_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="access_batch" model="ir.access">
+    <field name="name">hrm.import.batch</field>
+    <field name="model_id" ref="model_hrm_import_batch" />
+    <field name="group_id" ref="group_import_operator" />
+    <field name="operation">cru</field>
+  </record>
+  <record id="rule_batch" model="ir.access">
+    <field name="name">Tenant hrm.import.batch</field>
+    <field name="model_id" ref="model_hrm_import_batch" />
+    <field name="domain">[('tenant_id', 'in', user.hrm_owned_tenant_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="access_line" model="ir.access">
+    <field name="name">hrm.import.line</field>
+    <field name="model_id" ref="model_hrm_import_line" />
+    <field name="group_id" ref="group_import_operator" />
+    <field name="operation">r</field>
+  </record>
+  <record id="rule_line" model="ir.access">
+    <field name="name">Tenant hrm.import.line</field>
+    <field name="model_id" ref="model_hrm_import_line" />
+    <field name="domain">[('tenant_id', 'in', user.hrm_owned_tenant_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="access_input" model="ir.access">
+    <field name="name">hrm.import.input</field>
+    <field name="model_id" ref="model_hrm_import_input" />
+    <field name="group_id" ref="group_import_operator" />
+    <field name="operation">r</field>
+  </record>
+  <record id="rule_input" model="ir.access">
+    <field name="name">Tenant hrm.import.input</field>
+    <field name="model_id" ref="model_hrm_import_input" />
+    <field name="domain">[('tenant_id', 'in', user.hrm_owned_tenant_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="access_formula" model="ir.access">
+    <field name="name">hrm.payroll.formula</field>
+    <field name="model_id" ref="model_hrm_payroll_formula" />
+    <field name="group_id" ref="group_import_operator" />
+    <field name="operation">crud</field>
+  </record>
+  <record id="rule_formula" model="ir.access">
+    <field name="name">Tenant hrm.payroll.formula</field>
+    <field name="model_id" ref="model_hrm_payroll_formula" />
+    <field name="domain">[('tenant_id', 'in', user.hrm_owned_tenant_ids.ids)]</field>
+    <field name="operation">crud</field>
+  </record>
+  <record id="hrm_base.group_hrm_admin" model="res.groups">
+    <field name="implied_ids" eval="[(4, ref('group_import_approver'))]" />
+  </record>
+  <record id="rule_payroll_audit_privacy" model="ir.access">
+    <field name="name">Giới hạn log lương nhạy cảm</field>
+    <field name="model_id" ref="hrm_base.model_hrm_audit_log" />
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)] if user.has_group('hrm_data_import.group_import_operator') else [('entity_type', 'not in', ['hrm.import.batch', 'hrm.import.profile', 'hrm.payroll.formula', 'hrm.payroll'])]</field>
+    <field name="operation">crud</field>
+  </record>
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- HRM tab on the standard employee form -->
+    <record id="view_hr_employee_form_hrm" model="ir.ui.view">
+        <field name="name">hr.employee.form.hrm</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="HRM" name="hrm">
+                    <group>
+                        <field name="tenant_id"/><field name="person_id"/>
+                        <field name="employee_code"/>
+                        <field name="hire_date"/><field name="termination_date"/>
+                        <field name="current_status"/><field name="status_reason"/>
+                        <field name="current_assignment_id" readonly="1"/>
+                        <field name="current_contract_id" readonly="1"/>
+                    </group>
+                    <group string="Actions">
+                        <button name="action_onboard" string="Onboard" type="object"/>
+                        <button name="action_activate" string="Activate" type="object"/>
+                        <button name="action_suspend" string="Suspend" type="object"/>
+                        <button name="action_terminate" string="Terminate" type="object"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_hr_employee_hrm" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

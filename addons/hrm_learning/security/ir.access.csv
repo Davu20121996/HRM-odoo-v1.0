@@ -1,0 +1,15 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_skill_user,skill user,hrm.skill,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_skill_admin,skill admin,hrm.skill,hrm_base.group_hrm_admin,crud,
+access_hrm_course_user,course user,hrm.course,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_course_admin,course admin,hrm.course,hrm_base.group_hrm_admin,crud,
+access_hrm_training_user,training user,hrm.training,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_training_admin,training admin,hrm.training,hrm_base.group_hrm_admin,crud,
+access_hrm_training_plan_user,plan user,hrm.training.plan,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_training_plan_admin,plan admin,hrm.training.plan,hrm_base.group_hrm_admin,crud,
+access_hrm_enrollment_user,enrollment user,hrm.training.enrollment,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_enrollment_admin,enrollment admin,hrm.training.enrollment,hrm_base.group_hrm_admin,crud,
+access_hrm_certification_user,certification user,hrm.certification,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_certification_admin,certification admin,hrm.certification,hrm_base.group_hrm_admin,crud,
+access_hrm_skill_matrix_user,matrix user,hrm.skill.matrix,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_skill_matrix_admin,matrix admin,hrm.skill.matrix,hrm_base.group_hrm_admin,crud,

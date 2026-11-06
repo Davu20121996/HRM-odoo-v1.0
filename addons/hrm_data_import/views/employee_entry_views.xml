@@ -1,0 +1,154 @@
+<odoo>
+  <record id="hrm_employee.action_hrm_employee_contract" model="ir.actions.act_window">
+    <field name="domain">[('parent_id', '=', False)]</field>
+    <field name="context">{'contract_entry_kind': 'contract', 'default_parent_id': False}</field>
+  </record>
+  <record id="hrm_employee.menu_hrm_contract" model="ir.ui.menu">
+    <field name="name">Contracts</field>
+  </record>
+  <record id="action_employee_addendum" model="ir.actions.act_window">
+    <field name="name">Addenda and renewals</field>
+    <field name="res_model">hrm.employee.contract</field>
+    <field name="view_mode">list,form</field>
+    <field name="search_view_id" ref="hrm_employee.view_hrm_employee_contract_search"/>
+    <field name="domain">[('parent_id', '!=', False)]</field>
+    <field name="context">{'contract_entry_kind': 'appendix'}</field>
+  </record>
+  <menuitem id="menu_employee_addendum" name="Addenda and renewals" parent="hrm_employee.menu_hrm_core"
+            action="action_employee_addendum" sequence="4" groups="group_import_operator"/>
+  <record id="employee_separate_contract_form" model="ir.ui.view">
+    <field name="name">hr.employee.separate.contract.form</field>
+    <field name="model">hr.employee</field>
+    <field name="inherit_id" ref="employee_complete_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//div[hasclass('oe_title')]" position="before">
+        <field name="image_1920" widget="image" class="oe_avatar" string="Profile photo"
+               options="{'preview_image': 'image_128'}"/>
+      </xpath>
+      <xpath expr="//page[field[@name='hrm_contract_ids']]" position="replace">
+        <page name="main_contracts" string="Contracts">
+          <button name="action_new_employee_contract" type="object" string="Thêm hợp đồng mới"
+                  class="btn btn-primary mb-2" invisible="not id or not hrm_company_id"
+                  groups="hrm_data_import.group_import_operator"/>
+          <p>Hệ thống lấy nội dung từ hợp đồng đang hiệu lực hoặc hợp đồng gần nhất. Để chọn bản khác, mở hợp đồng đó rồi bấm Tạo hợp đồng mới từ bản này.</p>
+          <separator string="Đang có hiệu lực"/>
+          <field name="hrm_active_contract_ids" nolabel="1" context="{'contract_entry_kind': 'contract', 'default_employee_id': id, 'default_company_id': hrm_company_id, 'default_tenant_id': tenant_id, 'refresh_employee_contract_groups': True}">
+            <list create="0" delete="0" default_order="start_date desc, id desc">
+              <field name="contract_no"/>
+              <field name="entry_type"/>
+              <field name="parent_id" string="Hợp đồng gốc"/>
+              <field name="start_date"/><field name="end_date"/>
+              <field name="base_salary" digits="[19,0]"/>
+              <field name="status" widget="badge" decoration-success="status == 'active'"
+                     decoration-warning="status in ('pending_approval', 'approved')" decoration-muted="status == 'expired'"/>
+              <button name="action_renew_from_contract" type="object" string="Tái ký" invisible="parent_id"
+                      class="btn btn-outline-primary btn-sm" groups="hrm_data_import.group_import_operator"/>
+            </list>
+          </field>
+          <separator string="Chờ xử lý"/>
+          <field name="hrm_pending_contract_ids" nolabel="1" context="{'contract_entry_kind': 'contract', 'default_employee_id': id, 'default_company_id': hrm_company_id, 'default_tenant_id': tenant_id, 'refresh_employee_contract_groups': True}">
+            <list delete="0" default_order="start_date desc, id desc">
+              <field name="contract_no"/>
+              <field name="entry_type"/>
+              <field name="parent_id" string="Hợp đồng gốc"/>
+              <field name="start_date"/><field name="end_date"/>
+              <field name="base_salary" digits="[19,0]"/>
+              <field name="status" widget="badge" decoration-success="status == 'active'"
+                     decoration-warning="status in ('pending_approval', 'approved')" decoration-muted="status == 'expired'"/>
+            </list>
+          </field>
+          <separator string="Lịch sử đã đóng"/>
+          <field name="hrm_closed_contract_ids" nolabel="1" context="{'contract_entry_kind': 'contract', 'default_employee_id': id, 'default_company_id': hrm_company_id, 'default_tenant_id': tenant_id, 'refresh_employee_contract_groups': True}">
+            <list create="0" delete="0" default_order="start_date desc, id desc">
+              <field name="contract_no"/>
+              <field name="entry_type"/>
+              <field name="parent_id" string="Hợp đồng gốc"/>
+              <field name="start_date"/><field name="end_date"/>
+              <field name="base_salary" digits="[19,0]"/>
+              <field name="status" widget="badge" decoration-success="status == 'active'"
+                     decoration-warning="status in ('pending_approval', 'approved')" decoration-muted="status == 'expired'"/>
+            </list>
+          </field>
+        </page>
+        <page name="qualifications" string="Qualifications" groups="hrm_data_import.group_import_operator">
+          <field name="hrm_education_ids">
+            <list editable="bottom">
+              <field name="degree" string="Degree"/><field name="institution" string="Institution"/>
+              <field name="field_of_study" string="Field of study"/><field name="end_date" string="Completion date"/>
+            </list>
+          </field>
+        </page>
+        <page name="resume" string="Personal résumé" groups="hrm_data_import.group_import_operator">
+          <group>
+            <field name="hrm_resume_filename" invisible="1"/>
+            <field name="hrm_resume" string="Personal résumé" filename="hrm_resume_filename"
+                   options="{'accepted_file_extensions': '.pdf,.jpg,.jpeg,.png,.webp'}"/>
+          </group>
+          <p>Upload a PDF, JPG, PNG or WebP résumé up to 10 MB.</p>
+        </page>
+      </xpath>
+    </field>
+  </record>
+  <record id="contract_separate_entry_form" model="ir.ui.view">
+    <field name="name">hrm.employee.contract.separate.entry.form</field>
+    <field name="model">hrm.employee.contract</field>
+    <field name="inherit_id" ref="contract_details_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//group[button[@name='action_submit']]" position="after">
+        <button name="action_new_contract_from_existing" type="object" string="Tạo hợp đồng mới từ bản này"
+                class="btn btn-secondary mb-2" invisible="not id or parent_id"
+                groups="hrm_data_import.group_import_operator"/>
+      </xpath>
+      <field name="status" position="attributes">
+        <attribute name="readonly">1</attribute>
+      </field>
+      <button name="action_submit" position="attributes">
+        <attribute name="invisible">status != 'draft' or not id</attribute>
+      </button>
+      <button name="action_approve" position="attributes">
+        <attribute name="invisible">status != 'pending_approval'</attribute>
+        <attribute name="groups">hrm_data_import.group_import_approver</attribute>
+      </button>
+      <button name="action_activate" position="attributes">
+        <attribute name="string">Activate contract</attribute>
+        <attribute name="confirm">Kích hoạt hồ sơ này sẽ đóng hồ sơ đang hiệu lực của nhân viên. Lương sẽ lấy hồ sơ mới theo ngày hiệu lực.</attribute>
+        <attribute name="invisible">status != 'approved'</attribute>
+        <attribute name="groups">hrm_data_import.group_import_approver</attribute>
+      </button>
+      <button name="action_expire" position="attributes">
+        <attribute name="string">Close contract</attribute>
+        <attribute name="invisible">status != 'active'</attribute>
+      </button>
+      <xpath expr="//group[button[@name='action_submit']]" position="attributes">
+        <attribute name="invisible">status == 'expired' or not id</attribute>
+      </xpath>
+      <field name="employee_id" position="before">
+        <field name="parent_id" position="move"/>
+      </field>
+      <field name="employee_id" position="after">
+        <field name="contract_department_id"/>
+        <field name="contract_position_id"/>
+      </field>
+      <field name="parent_id" position="attributes">
+        <attribute name="invisible">not parent_id and context.get('contract_entry_kind') != 'appendix'</attribute>
+        <attribute name="required">context.get('contract_entry_kind') == 'appendix'</attribute>
+        <attribute name="string">Hợp đồng gốc</attribute>
+        <attribute name="readonly">status in ('approved', 'active', 'expired') or context.get('lock_renewal_parent')</attribute>
+        <attribute name="force_save">1</attribute>
+        <attribute name="domain">[('company_id', '=', company_id), ('parent_id', '=', False)] + ([('employee_id', '=', employee_id)] if employee_id else [])</attribute>
+      </field>
+      <field name="structure_id" position="before">
+        <field name="base_salary" position="move"/>
+        <field name="currency_code" position="move"/>
+      </field>
+      <field name="base_salary" position="attributes">
+        <attribute name="required">1</attribute>
+        <attribute name="readonly">status in ('approved', 'active', 'expired') or (parent_id and not changes_salary)</attribute>
+        <attribute name="force_save">1</attribute>
+      </field>
+      <xpath expr="//page[field[@name='appendix_ids']]" position="attributes">
+        <attribute name="invisible">parent_id or context.get('contract_entry_kind') == 'appendix'</attribute>
+      </xpath>
+    </field>
+  </record>
+</odoo>

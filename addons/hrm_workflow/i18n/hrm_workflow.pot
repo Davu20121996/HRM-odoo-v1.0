@@ -1,0 +1,483 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hrm_workflow
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0-20260928\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 03:46+0000\n"
+"PO-Revision-Date: 2026-11-05 03:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_definition__status__active
+msgid "Active"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__approval_ids
+msgid "Approval"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.constraint,message:hrm_workflow.constraint_hrm_approval_request_uuid_unique
+msgid "Approval UUID must be unique."
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model,name:hrm_workflow.model_hrm_approval_request
+msgid "Approval request (SPEC §12.4)"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.actions.act_window,name:hrm_workflow.action_hrm_approval
+#: model:ir.ui.menu,name:hrm_workflow.menu_hrm_approval
+msgid "Approvals"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_approval_request__decision__approved
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_approval_request__status__approved
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_instance__status__approved
+msgid "Approved"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__approver_employee_id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__approver_employee_id
+msgid "Approver Employee"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__approver_role_id
+msgid "Approver Role"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__approver_type
+msgid "Approver Type"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__approver_user_id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__approver_user_id
+msgid "Approver User"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_definition__status__archived
+msgid "Archived"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_approval_request__decision__cancelled
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_approval_request__status__cancelled
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_instance__status__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__channel
+msgid "Channel"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__code
+msgid "Code"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__comment
+msgid "Comment"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__completed_at
+msgid "Completed At"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__configuration
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__configuration
+msgid "Configuration"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__create_uid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__create_uid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__create_uid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__create_uid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__create_date
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__create_date
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__create_date
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__create_date
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__current_state
+msgid "Current State"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__decided_at
+msgid "Decided At"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__decision
+msgid "Decision"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__definition_id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__definition_id
+msgid "Definition"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.constraint,message:hrm_workflow.constraint_hrm_workflow_definition_uuid_unique
+msgid "Definition UUID must be unique."
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.actions.act_window,name:hrm_workflow.action_hrm_wf_definition
+#: model:ir.ui.menu,name:hrm_workflow.menu_hrm_wf_definition
+msgid "Definitions"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_step__approver_type__direct_manager
+msgid "Direct Manager"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__display_name
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__display_name
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__display_name
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__display_name
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_definition__status__draft
+msgid "Draft"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_notification__channel__email
+msgid "Email"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__entity_id
+msgid "Entity"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__entity_type
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__entity_type
+msgid "Entity Type"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__entity_uuid
+msgid "Entity Uuid"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_notification__status__failed
+msgid "Failed"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.module.module,shortdesc:base.module_hrm_workflow
+msgid "HRM Workflow (P3)"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__id
+msgid "ID"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_notification__channel__in_app
+msgid "In App"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_instance__status__in_progress
+msgid "In Progress"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__instance_id
+msgid "Instance"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.constraint,message:hrm_workflow.constraint_hrm_workflow_instance_uuid_unique
+msgid "Instance UUID must be unique."
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.actions.act_window,name:hrm_workflow.action_hrm_wf_instance
+#: model:ir.ui.menu,name:hrm_workflow.menu_hrm_wf_instance
+msgid "Instances"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__write_uid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__write_uid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__write_uid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__write_uid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__write_date
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__write_date
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__write_date
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__write_date
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,help:hrm_workflow.field_hrm_workflow_definition__entity_type
+msgid "Model the workflow governs, e.g. hrm.leave.request."
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__name
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__name
+msgid "Name"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model,name:hrm_workflow.model_hrm_notification
+msgid "Notification (SPEC §14)"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.constraint,message:hrm_workflow.constraint_hrm_notification_uuid_unique
+msgid "Notification UUID must be unique."
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.actions.act_window,name:hrm_workflow.action_hrm_notification
+#: model:ir.ui.menu,name:hrm_workflow.menu_hrm_notification
+msgid "Notifications"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.module.module,summary:base.module_hrm_workflow
+msgid "P3 shared workflow/approval engine + notifications (master-skill §8)"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__payload
+msgid "Payload"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_approval_request__decision__pending
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_approval_request__status__pending
+msgid "Pending"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_notification__channel__push
+msgid "Push"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_notification__status__queued
+msgid "Queued"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_notification__status__read
+msgid "Read"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__read_at
+msgid "Read At"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__recipient_user_id
+msgid "Recipient User"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_approval_request__decision__rejected
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_approval_request__status__rejected
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_instance__status__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_step__approver_type__role
+msgid "Role"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_notification__channel__sms
+msgid "SMS"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__scheduled_at
+msgid "Scheduled At"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_notification__status__sent
+msgid "Sent"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__sent_at
+msgid "Sent At"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__sequence_no
+msgid "Sequence No"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_step__approver_type__specific_employee
+msgid "Specific Employee"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_workflow_step__approver_type__specific_user
+msgid "Specific User"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__started_at
+msgid "Started At"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__started_by_id
+msgid "Started By"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__status
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__status
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__status
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__status
+msgid "Status"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__step_id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__step_ids
+msgid "Step"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__step_code
+msgid "Step Code"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.constraint,message:hrm_workflow.constraint_hrm_workflow_step_uuid_unique
+msgid "Step UUID must be unique."
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.constraint,message:hrm_workflow.constraint_hrm_workflow_step_definition_step_unique
+msgid "Step code must be unique per definition."
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__subject
+msgid "Subject"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__template_code
+msgid "Template Code"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__tenant_id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__tenant_id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__tenant_id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__tenant_id
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__tenant_id
+msgid "Tenant"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__uuid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__uuid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__uuid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__uuid
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__uuid
+msgid "UUID"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_approval_request__version
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_notification__version
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_definition__version
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_instance__version
+#: model:ir.model.fields,field_description:hrm_workflow.field_hrm_workflow_step__version
+msgid "Version"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.fields.selection,name:hrm_workflow.selection__hrm_notification__channel__webhook
+msgid "Webhook"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.ui.menu,name:hrm_workflow.menu_hrm_workflow
+msgid "Workflow"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model.constraint,message:hrm_workflow.constraint_hrm_workflow_definition_tenant_code_version_unique
+msgid "Workflow code+version must be unique per tenant."
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model,name:hrm_workflow.model_hrm_workflow_definition
+msgid "Workflow definition (SPEC §12.1)"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model,name:hrm_workflow.model_hrm_workflow_instance
+msgid "Workflow instance (SPEC §12.2)"
+msgstr ""
+
+#. module: hrm_workflow
+#: model:ir.model,name:hrm_workflow.model_hrm_workflow_step
+msgid "Workflow step (SPEC §12.3)"
+msgstr ""

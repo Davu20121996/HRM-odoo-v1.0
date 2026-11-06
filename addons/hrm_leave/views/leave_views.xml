@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_leave_type_list" model="ir.ui.view">
+        <field name="name">hrm.leave.type.list</field>
+        <field name="model">hrm.leave.type</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="paid"/><field name="unit"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_leave_type" model="ir.actions.act_window">
+        <field name="name">Leave Types</field>
+        <field name="res_model">hrm.leave.type</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_allocation_list" model="ir.ui.view">
+        <field name="name">hrm.leave.allocation.list</field>
+        <field name="model">hrm.leave.allocation</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="leave_type_id"/><field name="allocated_quantity"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_allocation_form" model="ir.ui.view">
+        <field name="name">hrm.leave.allocation.form</field>
+        <field name="model">hrm.leave.allocation</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="employee_id"/>
+                    <field name="leave_type_id"/><field name="period_start"/>
+                    <field name="period_end"/><field name="allocated_quantity"/>
+                    <field name="status"/>
+                </group>
+                <group string="Actions">
+                    <button name="action_activate" string="Activate" type="object"/>
+                    <button name="action_cancel" string="Cancel" type="object"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_allocation" model="ir.actions.act_window">
+        <field name="name">Allocations</field>
+        <field name="res_model">hrm.leave.allocation</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_leave_request_list" model="ir.ui.view">
+        <field name="name">hrm.leave.request.list</field>
+        <field name="model">hrm.leave.request</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="leave_type_id"/><field name="requested_quantity"/><field name="status"/><field name="start_at"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_leave_request_form" model="ir.ui.view">
+        <field name="name">hrm.leave.request.form</field>
+        <field name="model">hrm.leave.request</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="employee_id"/>
+                    <field name="leave_type_id"/><field name="start_at"/>
+                    <field name="end_at"/><field name="requested_quantity"/>
+                    <field name="reason"/><field name="status"/>
+                </group>
+                <group string="Actions">
+                    <button name="action_submit" string="Submit" type="object"/>
+                    <button name="action_approve" string="Approve" type="object"/>
+                    <button name="action_reject" string="Reject" type="object"/>
+                    <button name="action_take" string="Mark Taken" type="object"/>
+                    <button name="action_cancel" string="Cancel" type="object"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_leave_request" model="ir.actions.act_window">
+        <field name="name">Leave Requests</field>
+        <field name="res_model">hrm.leave.request</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_ledger_list" model="ir.ui.view">
+        <field name="name">hrm.leave.balance.ledger.list</field>
+        <field name="model">hrm.leave.balance.ledger</field>
+        <field name="arch" type="xml">
+            <list create="false"><field name="employee_id"/><field name="leave_type_id"/><field name="transaction_type"/><field name="quantity"/><field name="balance_after"/><field name="occurred_at"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_ledger" model="ir.actions.act_window">
+        <field name="name">Balance Ledger</field>
+        <field name="res_model">hrm.leave.balance.ledger</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,130 @@
+<odoo>
+  <record id="employee_project_read" model="ir.access">
+    <field name="name">Xem dự án nhân sự</field>
+    <field name="model_id" ref="model_hrm_employee_project"/>
+    <field name="group_id" ref="hrm_base.group_hrm_user"/>
+    <field name="operation">r</field>
+  </record>
+  <record id="employee_project_access" model="ir.access">
+    <field name="name">Quản lý dự án nhân sự</field>
+    <field name="model_id" ref="model_hrm_employee_project"/>
+    <field name="group_id" ref="group_import_operator"/>
+    <field name="operation">cru</field>
+  </record>
+  <record id="employee_project_company_scope" model="ir.access">
+    <field name="name">Dự án theo công ty</field>
+    <field name="model_id" ref="model_hrm_employee_project"/>
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="employee_assignment_log_access" model="ir.access">
+    <field name="name">Xem lịch sử phân công</field>
+    <field name="model_id" ref="model_hrm_employee_assignment_log"/>
+    <field name="group_id" ref="group_import_operator"/>
+    <field name="operation">r</field>
+  </record>
+  <record id="employee_assignment_log_company_scope" model="ir.access">
+    <field name="name">Lịch sử phân công theo công ty</field>
+    <field name="model_id" ref="model_hrm_employee_assignment_log"/>
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="employee_assignment_wizard_access" model="ir.access">
+    <field name="name">Popup phân công nhân viên</field>
+    <field name="model_id" ref="model_hrm_employee_assignment_wizard"/>
+    <field name="group_id" ref="group_import_operator"/>
+    <field name="operation">crud</field>
+  </record>
+
+  <record id="employee_project_form" model="ir.ui.view">
+    <field name="name">hrm.employee.project.form</field>
+    <field name="model">hrm.employee.project</field>
+    <field name="arch" type="xml">
+      <form string="Thêm dự án">
+        <group><field name="company_id" readonly="1"/><field name="name"/></group>
+      </form>
+    </field>
+  </record>
+
+  <record id="employee_assignment_popup" model="ir.ui.view">
+    <field name="name">hrm.employee.assignment.wizard.form</field>
+    <field name="model">hrm.employee.assignment.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Phân công nhân viên">
+        <group>
+          <field name="employee_id" options="{'no_open': True}"/>
+          <field name="company_id" invisible="1"/>
+          <field name="assignment_id" invisible="1"/>
+          <field name="department_id" required="1" domain="[('company_id', '=', company_id), ('status', '=', 'active')]"
+                 context="{'default_company_id': company_id, 'lock_department_company': True, 'form_view_ref': 'hrm_base.view_hrm_department_form'}"
+                 options="{'no_quick_create': True, 'no_open': True}"/>
+          <field name="position_id" domain="[('company_id', '=', company_id), ('department_id', '=', department_id), ('status', '=', 'active')]"
+                 options="{'no_create': True, 'no_open': True}" invisible="new_position" required="not new_position"/>
+          <field name="new_position"/>
+          <field name="position_title" invisible="not new_position" required="new_position" placeholder="Ví dụ Kế toán trưởng"/>
+          <field name="project_ids" widget="many2many_tags" domain="[('company_id', '=', company_id)]"
+                 context="{'default_company_id': company_id, 'form_view_ref': 'hrm_data_import.employee_project_form'}"
+                 options="{'no_quick_create': True, 'no_open': True}"/>
+          <field name="reason" required="assignment_id" invisible="not assignment_id" placeholder="Mô tả thông tin nhập sai và lý do điều chỉnh"/>
+        </group>
+        <footer>
+          <button name="action_apply" type="object" string="Lưu phân công" class="btn-primary"/>
+          <button string="Hủy" special="cancel" class="btn-secondary"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+
+  <record id="employee_assignment_profile" model="ir.ui.view">
+    <field name="name">hr.employee.hrm.assignment.profile</field>
+    <field name="model">hr.employee</field>
+    <field name="inherit_id" ref="employee_complete_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//header" position="inside">
+        <button name="action_assignment_popup" type="object" string="Phân công" invisible="not id or not hrm_company_id or current_status in ('terminated', 'alumni')"
+                groups="hrm_data_import.group_import_operator"/>
+        <button name="action_reactivate_employee" type="object" string="Kích hoạt lại" class="oe_highlight"
+                invisible="not id or not hrm_company_id or current_status not in ('terminated', 'alumni')"
+                confirm="Kích hoạt lại hồ sơ để nhân viên có thể được phân công?"
+                groups="hrm_data_import.group_import_operator"/>
+      </xpath>
+      <xpath expr="//notebook" position="inside">
+        <page name="assignment_history" string="Phân công và lịch sử" groups="hrm_data_import.group_import_operator">
+          <group string="Phân công hiện tại">
+            <field name="hrm_assignment_department"/>
+            <field name="hrm_assignment_position"/>
+            <field name="hrm_assignment_projects" widget="many2many_tags"/>
+          </group>
+          <separator string="Lịch sử thay đổi"/>
+          <field name="hrm_assignment_log_ids" readonly="1">
+            <list create="0" edit="0" delete="0">
+              <field name="create_date" string="Thời điểm"/>
+              <field name="actor_id"/>
+              <field name="previous_actor_id"/>
+              <field name="reason"/>
+              <field name="before"/>
+              <field name="after"/>
+            </list>
+          </field>
+        </page>
+      </xpath>
+    </field>
+  </record>
+
+  <record id="employee_assignment_list" model="ir.ui.view">
+    <field name="name">hr.employee.hrm.assignment.list</field>
+    <field name="model">hr.employee</field>
+    <field name="inherit_id" ref="employee_complete_list"/>
+    <field name="arch" type="xml">
+      <field name="name" position="after">
+        <button name="action_assignment_popup" type="object" string="Phân công" class="btn btn-outline-primary btn-sm"
+                invisible="not hrm_company_id or current_status in ('terminated', 'alumni')" groups="hrm_data_import.group_import_operator"/>
+      </field>
+      <field name="hrm_company_id" position="after">
+        <field name="hrm_assignment_department" optional="show" groups="hrm_data_import.group_import_operator"/>
+        <field name="hrm_assignment_position" optional="show" groups="hrm_data_import.group_import_operator"/>
+        <field name="hrm_assignment_projects" widget="many2many_tags" optional="show" groups="hrm_data_import.group_import_operator"/>
+      </field>
+    </field>
+  </record>
+</odoo>

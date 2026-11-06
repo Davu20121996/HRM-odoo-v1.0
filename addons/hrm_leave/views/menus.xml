@@ -1,0 +1,7 @@
+<odoo>
+    <menuitem id="menu_hrm_leave" name="Leave" parent="hrm_base.menu_hrm_root" sequence="27"/>
+    <menuitem id="menu_hrm_leave_type" parent="menu_hrm_leave" action="action_hrm_leave_type" sequence="10" name="Leave Types"/>
+    <menuitem id="menu_hrm_allocation" parent="menu_hrm_leave" action="action_hrm_allocation" sequence="20" name="Allocations"/>
+    <menuitem id="menu_hrm_leave_request" parent="menu_hrm_leave" action="action_hrm_leave_request" sequence="30" name="Leave Requests"/>
+    <menuitem id="menu_hrm_ledger" parent="menu_hrm_leave" action="action_hrm_ledger" sequence="40" name="Balance Ledger"/>
+</odoo>

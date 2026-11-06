@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_structure_list" model="ir.ui.view">
+        <field name="name">hrm.salary.structure.list</field>
+        <field name="model">hrm.salary.structure</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="currency_code"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_structure_form" model="ir.ui.view">
+        <field name="name">hrm.salary.structure.form</field>
+        <field name="model">hrm.salary.structure</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="company_id"/>
+                    <field name="code"/><field name="name"/>
+                    <field name="currency_code"/><field name="status"/>
+                    <field name="effective_from"/><field name="effective_to"/>
+                </group>
+                <field name="component_ids">
+                    <list><field name="sequence_no"/><field name="code"/><field name="name"/><field name="component_type"/><field name="calculation_type"/></list>
+                </field>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_structure" model="ir.actions.act_window">
+        <field name="name">Salary Structures</field>
+        <field name="res_model">hrm.salary.structure</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_period_list" model="ir.ui.view">
+        <field name="name">hrm.payroll.period.list</field>
+        <field name="model">hrm.payroll.period</field>
+        <field name="arch" type="xml">
+            <list><field name="period_code"/><field name="period_start"/><field name="period_end"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_period" model="ir.actions.act_window">
+        <field name="name">Periods</field>
+        <field name="res_model">hrm.payroll.period</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_payroll_list" model="ir.ui.view">
+        <field name="name">hrm.payroll.list</field>
+        <field name="model">hrm.payroll</field>
+        <field name="arch" type="xml">
+            <list><field name="period_id"/><field name="run_no"/><field name="status"/><field name="started_at"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_payroll_form" model="ir.ui.view">
+        <field name="name">hrm.payroll.form</field>
+        <field name="model">hrm.payroll</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="company_id"/>
+                    <field name="period_id"/><field name="run_no"/>
+                    <field name="status"/>
+                </group>
+                <group string="Actions">
+                    <button name="action_start" string="Start" type="object"/>
+                    <button name="action_calculate" string="Calculate" type="object"/>
+                    <button name="action_review" string="To Review" type="object"/>
+                    <button name="action_approve" string="Approve" type="object"/>
+                    <button name="action_finalize" string="Finalize" type="object"/>
+                    <button name="action_mark_paid" string="Mark Paid" type="object"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_payroll" model="ir.actions.act_window">
+        <field name="name">Payroll Runs</field>
+        <field name="res_model">hrm.payroll</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_payslip_list" model="ir.ui.view">
+        <field name="name">hrm.payslip.list</field>
+        <field name="model">hrm.payslip</field>
+        <field name="arch" type="xml">
+            <list><field name="payslip_no"/><field name="employee_id"/><field name="net_amount"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_payslip" model="ir.actions.act_window">
+        <field name="name">Payslips</field>
+        <field name="res_model">hrm.payslip</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_bonus_list" model="ir.ui.view">
+        <field name="name">hrm.bonus.list</field>
+        <field name="model">hrm.bonus</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="bonus_type"/><field name="amount"/><field name="effective_date"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_bonus" model="ir.actions.act_window">
+        <field name="name">Bonuses</field>
+        <field name="res_model">hrm.bonus</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_deduction_list" model="ir.ui.view">
+        <field name="name">hrm.deduction.list</field>
+        <field name="model">hrm.deduction</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="deduction_type"/><field name="amount"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_deduction" model="ir.actions.act_window">
+        <field name="name">Deductions</field>
+        <field name="res_model">hrm.deduction</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

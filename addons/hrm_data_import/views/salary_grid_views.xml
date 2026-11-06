@@ -1,0 +1,8 @@
+<odoo>
+  <record id="action_salary_month_grid" model="ir.actions.client">
+    <field name="name">Bảng nhập lương theo tháng</field>
+    <field name="tag">hrm_salary_grid</field>
+  </record>
+  <menuitem id="menu_salary_month_grid" name="Bảng nhập lương theo tháng" parent="hrm_payroll.menu_hrm_payroll"
+            action="action_salary_month_grid" sequence="0" groups="group_import_operator"/>
+</odoo>

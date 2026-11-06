@@ -1,0 +1,22 @@
+{
+    "name": "HRM Base (P1 Foundation)",
+    "version": "20.0.1.0.0",
+    "summary": "P1 Foundation: tenant, organization, RBAC+scope, audit, configuration (master-skill §8)",
+    "author": "HRM",
+    "license": "LGPL-3",
+    "depends": ["base"],
+    "data": [
+        "security/security.xml",
+        "security/ir.access.csv",
+        "views/tenant_views.xml",
+        "views/organization_views.xml",
+        "views/rbac_views.xml",
+        "views/platform_views.xml",
+        "views/menus.xml",
+        "views/apps_action.xml",
+    ],
+    "post_init_hook": "_post_init_hook",
+    "demo": ['data/demo_foundation.xml', 'data/demo_platform.xml', 'data/demo10_base.xml'],
+    "installable": True,
+    "application": True,
+}

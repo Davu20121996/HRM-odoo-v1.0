@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_person_list" model="ir.ui.view">
+        <field name="name">hrm.person.list</field>
+        <field name="model">hrm.person</field>
+        <field name="arch" type="xml">
+            <list><field name="display_name"/><field name="person_code"/><field name="date_of_birth"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_person_form" model="ir.ui.view">
+        <field name="name">hrm.person.form</field>
+        <field name="model">hrm.person</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="person_code"/>
+                <field name="first_name"/><field name="middle_name"/><field name="last_name"/>
+                <field name="preferred_name"/><field name="date_of_birth"/>
+                <field name="gender"/><field name="nationality_code"/>
+                <field name="marital_status"/><field name="status"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_person" model="ir.actions.act_window">
+        <field name="name">Persons</field>
+        <field name="res_model">hrm.person</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

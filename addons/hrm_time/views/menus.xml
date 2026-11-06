@@ -1,0 +1,9 @@
+<odoo>
+    <menuitem id="menu_hrm_time" name="Time" parent="hrm_base.menu_hrm_root" sequence="25"/>
+    <menuitem id="menu_hrm_shift" parent="menu_hrm_time" action="action_hrm_shift" sequence="10" name="Shifts"/>
+    <menuitem id="menu_hrm_device" parent="menu_hrm_time" action="action_hrm_device" sequence="20" name="Devices"/>
+    <menuitem id="menu_hrm_attendance" parent="menu_hrm_time" action="action_hrm_attendance" sequence="30" name="Attendance"/>
+    <menuitem id="menu_hrm_ot" parent="menu_hrm_time" action="action_hrm_ot" sequence="40" name="Overtime"/>
+    <menuitem id="menu_hrm_timesheet" parent="menu_hrm_time" action="action_hrm_timesheet" sequence="50" name="Timesheets"/>
+    <menuitem id="menu_hrm_work_entry" parent="menu_hrm_time" action="action_hrm_work_entry" sequence="60" name="Work Entries"/>
+</odoo>

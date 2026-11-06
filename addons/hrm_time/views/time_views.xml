@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_shift_list" model="ir.ui.view">
+        <field name="name">hrm.shift.list</field>
+        <field name="model">hrm.shift</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="start_time"/><field name="end_time"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_shift_form" model="ir.ui.view">
+        <field name="name">hrm.shift.form</field>
+        <field name="model">hrm.shift</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="company_id"/>
+                <field name="work_schedule_id"/><field name="code"/><field name="name"/>
+                <field name="start_time"/><field name="end_time"/>
+                <field name="cross_midnight"/><field name="status"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_shift" model="ir.actions.act_window">
+        <field name="name">Shifts</field>
+        <field name="res_model">hrm.shift</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_device_list" model="ir.ui.view">
+        <field name="name">hrm.attendance.device.list</field>
+        <field name="model">hrm.attendance.device</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="device_type"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_device" model="ir.actions.act_window">
+        <field name="name">Devices</field>
+        <field name="res_model">hrm.attendance.device</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_attendance_list" model="ir.ui.view">
+        <field name="name">hrm.attendance.list</field>
+        <field name="model">hrm.attendance</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="work_date"/><field name="worked_minutes"/><field name="late_minutes"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_attendance_form" model="ir.ui.view">
+        <field name="name">hrm.attendance.form</field>
+        <field name="model">hrm.attendance</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="employee_id"/>
+                    <field name="work_date"/><field name="source"/>
+                    <field name="check_in_at"/><field name="check_out_at"/>
+                    <field name="worked_minutes"/><field name="late_minutes"/>
+                    <field name="early_leave_minutes"/><field name="overtime_minutes"/>
+                    <field name="status"/>
+                </group>
+                <group string="Actions">
+                    <button name="action_process" string="Process" type="object"/>
+                    <button name="action_validate" string="Validate" type="object"/>
+                    <button name="action_lock" string="Lock" type="object"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_attendance" model="ir.actions.act_window">
+        <field name="name">Attendance</field>
+        <field name="res_model">hrm.attendance</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_ot_list" model="ir.ui.view">
+        <field name="name">hrm.overtime.request.list</field>
+        <field name="model">hrm.overtime.request</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="work_date"/><field name="requested_minutes"/><field name="approved_minutes"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_ot_form" model="ir.ui.view">
+        <field name="name">hrm.overtime.request.form</field>
+        <field name="model">hrm.overtime.request</field>
+        <field name="arch" type="xml">
+            <form><sheet>
+                <group>
+                    <field name="tenant_id"/><field name="employee_id"/>
+                    <field name="work_date"/><field name="start_at"/><field name="end_at"/>
+                    <field name="requested_minutes"/><field name="approved_minutes"/>
+                    <field name="reason"/><field name="status"/>
+                </group>
+                <group string="Actions">
+                    <button name="action_submit" string="Submit" type="object"/>
+                    <button name="action_approve" string="Approve" type="object"/>
+                    <button name="action_reject" string="Reject" type="object"/>
+                </group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_ot" model="ir.actions.act_window">
+        <field name="name">Overtime</field>
+        <field name="res_model">hrm.overtime.request</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_timesheet_list" model="ir.ui.view">
+        <field name="name">hrm.timesheet.list</field>
+        <field name="model">hrm.timesheet</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="period_start"/><field name="period_end"/><field name="total_minutes"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_timesheet" model="ir.actions.act_window">
+        <field name="name">Timesheets</field>
+        <field name="res_model">hrm.timesheet</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_work_entry_list" model="ir.ui.view">
+        <field name="name">hrm.work.entry.list</field>
+        <field name="model">hrm.work.entry</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="work_date"/><field name="entry_type"/><field name="quantity"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_work_entry" model="ir.actions.act_window">
+        <field name="name">Work Entries</field>
+        <field name="res_model">hrm.work.entry</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

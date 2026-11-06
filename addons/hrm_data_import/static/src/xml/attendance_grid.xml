@@ -1,0 +1,101 @@
+<templates xml:space="preserve">
+  <t t-name="hrm_data_import.AttendanceGrid">
+    <div class="o_action h-100 d-flex flex-column bg-white p-3">
+      <h2>Bảng nhập công theo tháng</h2>
+      <div t-if="!this.state.grid.periods.length" class="alert alert-info" role="status">Chưa có kỳ công. Hãy tạo kỳ cho tháng cần chấm.</div>
+      <t t-else="">
+        <div class="d-flex gap-2 align-items-center flex-wrap mb-2">
+          <label for="hrm_attendance_grid_period">Tháng và công ty</label>
+          <select id="hrm_attendance_grid_period" class="form-select w-auto" t-on-change="(event) => this.changePeriod(event)" t-att-disabled="this.state.busy || Object.keys(this.state.edits).length">
+            <option t-foreach="this.state.grid.periods" t-as="period" t-key="period.id" t-att-value="period.id" t-att-selected="period.id === this.state.grid.period_id" t-esc="period.label"/>
+          </select>
+          <button class="btn btn-primary" t-on-click="() => this.save()" t-att-disabled="this.state.busy || !Object.keys(this.state.edits).length">Lưu công</button>
+          <button class="btn btn-secondary" t-on-click="() => this.load(this.state.grid.period_id)" t-att-disabled="this.state.busy">Tải lại bảng</button>
+          <button t-if="this.state.grid.manage_symbols &amp;&amp; !this.state.grid.locked" type="button" class="btn btn-outline-secondary"
+                  t-on-click="() => this.setLock(true)" t-att-disabled="this.state.busy || Object.keys(this.state.edits).length">Khóa nhập công</button>
+          <button t-if="this.state.batchId" class="btn btn-link" t-on-click="() => this.openLog()" t-att-disabled="this.state.busy">Xem log</button>
+        </div>
+        <div t-if="this.state.message" t-att-class="'alert py-2 ' + (this.state.error ? 'alert-danger' : 'alert-success')" role="status" t-esc="this.state.message"/>
+        <div t-if="this.state.grid.locked" class="alert alert-info py-2" role="status">
+          <t t-if="this.state.grid.lock_mode === 'final'">Kỳ lương đã duyệt, chốt hoặc thanh toán. Bảng công ở chế độ xem.</t>
+          <t t-elif="this.state.grid.lock_mode === 'payroll'">Kỳ đã tính lương. Sau khi mở lại và sửa công, cần tính lại lương.</t>
+          <t t-else="">Kỳ này đang khóa nhập công.</t>
+          <t t-if="this.state.grid.manage_symbols">
+            <button t-if="this.state.grid.lock_mode === 'manual'" type="button" class="btn btn-sm btn-outline-primary ms-2"
+                    t-on-click="() => this.setLock(false)" t-att-disabled="this.state.busy">Mở khóa nhập công</button>
+          </t>
+          <button t-if="this.state.grid.lock_mode === 'payroll'" type="button" class="btn btn-sm btn-outline-primary ms-2"
+                  t-on-click="() => this.openSalaryGrid()">Sang bảng lương để mở khóa</button>
+        </div>
+        <p class="mb-2">Nhập ký hiệu hoặc dán một vùng từ Excel hay Google Sheets. Ô xám lấy từ nguồn khác hoặc nằm ngoài thời gian làm việc. Nhập <strong>0</strong> để ghi ngày không có giờ.</p>
+        <div class="d-flex flex-wrap gap-2 mb-2">
+          <div t-foreach="Object.entries(this.state.grid.symbols)" t-as="symbol" t-key="symbol[0]" class="d-flex align-items-center gap-1 border rounded px-2">
+            <span><strong t-esc="symbol[0]"/> · <t t-esc="symbol[1][0]"/>h thường + <t t-esc="symbol[1][1]"/>h tăng ca</span>
+            <t t-if="this.state.grid.manage_symbols &amp;&amp; symbol[0] !== '0'">
+              <button type="button" class="btn btn-sm btn-link" t-att-aria-label="'Sửa ký hiệu ' + symbol[0]" t-on-click="() => this.openSymbol('edit', symbol[0])" t-att-disabled="this.state.busy">Sửa</button>
+              <button type="button" class="btn btn-sm btn-link text-danger" t-att-aria-label="'Xóa ký hiệu ' + symbol[0]" t-on-click="() => this.openSymbol('delete', symbol[0])" t-att-disabled="this.state.busy">Xóa</button>
+            </t>
+          </div>
+          <button t-if="this.state.grid.manage_symbols" type="button" class="btn btn-sm btn-outline-primary"
+                  t-on-click="() => this.openSymbol('add')" t-att-disabled="this.state.busy">Thêm ký hiệu</button>
+        </div>
+        <datalist id="hrm_grid_symbol_choices">
+          <option t-foreach="Object.keys(this.state.grid.symbols)" t-as="symbol" t-key="symbol" t-att-value="symbol"/>
+        </datalist>
+        <form t-if="this.state.symbolForm" class="border rounded bg-light p-2 mb-2" t-on-submit="(event) => this.submitSymbol(event)">
+          <t t-if="this.state.symbolForm.operation === 'delete'">
+            <p>Bỏ ký hiệu <strong t-esc="this.state.symbolForm.code"/> khỏi danh mục? Giờ ở các ô đã lưu vẫn giữ nguyên.</p>
+          </t>
+          <div t-else="" class="d-flex flex-wrap gap-2 mb-2">
+            <label>Ký hiệu <input class="form-control form-control-sm" required="required" maxlength="16"
+                    t-att-value="this.state.symbolForm.code" t-on-input="(event) => this.state.symbolForm.code = event.target.value" t-att-readonly="this.state.symbolForm.operation === 'edit' || this.state.busy"/></label>
+            <label>Giờ thường <input class="form-control form-control-sm" type="number" min="0" max="24" step="0.01" required="required"
+                    t-att-value="this.state.symbolForm.regular" t-on-input="(event) => this.state.symbolForm.regular = event.target.value" t-att-disabled="this.state.busy"/></label>
+            <label>Giờ tăng ca <input class="form-control form-control-sm" type="number" min="0" max="24" step="0.01" required="required"
+                    t-att-value="this.state.symbolForm.overtime" t-on-input="(event) => this.state.symbolForm.overtime = event.target.value" t-att-disabled="this.state.busy"/></label>
+          </div>
+          <button class="btn btn-primary btn-sm me-2" type="submit" t-att-disabled="this.state.busy"
+                  t-esc="this.state.symbolForm.operation === 'delete' ? 'Xóa ký hiệu' : 'Lưu ký hiệu'"/>
+          <button class="btn btn-secondary btn-sm" type="button" t-att-disabled="this.state.busy"
+                  t-on-click="() => this.state.symbolForm = null">Hủy</button>
+        </form>
+        <div class="overflow-auto flex-grow-1">
+          <table class="table table-sm table-bordered text-nowrap align-middle">
+            <thead class="sticky-top bg-light">
+              <tr>
+                <th class="position-sticky start-0 bg-light">Nhân viên</th>
+                <th>Phòng ban</th><th>Dự án</th>
+                <th>Giờ thường</th><th>Tăng ca</th><th>Tổng giờ</th><th>Ngày công</th>
+                <th t-foreach="this.state.grid.dates" t-as="day" t-key="day.key" t-esc="day.label"/>
+              </tr>
+            </thead>
+            <tbody>
+              <tr t-foreach="this.state.grid.rows" t-as="row" t-key="row.id">
+                <t t-set="hours" t-value="this.total(row)"/>
+                <th scope="row" class="position-sticky start-0 bg-white"><t t-esc="row.code"/> · <t t-esc="row.name"/></th>
+                <td t-esc="row.department"/><td t-esc="row.projects"/>
+                <td t-esc="this.fmt(hours.regular)"/><td t-esc="this.fmt(hours.overtime)"/>
+                <td t-esc="this.fmt(hours.total)"/><td t-esc="this.fmt(hours.days)"/>
+                <td t-foreach="this.state.grid.dates" t-as="day" t-key="day.key" class="p-0">
+                  <t t-set="cell" t-value="row.cells[day.key]"/>
+                  <input t-if="this.editable(row, day.key)" class="form-control form-control-sm rounded-0 border-0 text-uppercase"
+                         style="width: 6rem" maxlength="16" list="hrm_grid_symbol_choices" t-att-value="this.code(row, day.key)" t-att-disabled="this.state.busy"
+                         t-att-aria-label="row.name + ' ' + day.label"
+                         t-att-title="cell ? this.fmt(cell.regular) + 'h + ' + this.fmt(cell.overtime) + 'h' : ''"
+                         t-on-input="(event) => this.onInput(row, day.key, event)" t-on-paste="(event) => this.onPaste(row, day.key, event)"/>
+                  <span t-else="" class="d-block bg-light px-2" style="min-width: 6rem">
+                    <t t-if="cell" t-esc="cell.code || this.fmt(cell.regular) + 'h' + (cell.overtime ? ' +' + this.fmt(cell.overtime) + 'h' : '')"/>
+                    <t t-else="">—</t>
+                  </span>
+                  <button t-if="this.state.grid.manage_symbols &amp;&amp; this.unknownCode(row, day.key)"
+                          type="button" class="btn btn-sm btn-link" t-att-disabled="this.state.busy"
+                          t-on-click="() => this.openSymbol('add', this.unknownCode(row, day.key))">Thêm mã</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </t>
+    </div>
+  </t>
+</templates>

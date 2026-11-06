@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem id="menu_hrm_integration" name="Integration" parent="hrm_base.menu_hrm_root" sequence="40"/>
+    <menuitem id="menu_hrm_outbox" parent="menu_hrm_integration" action="action_hrm_outbox" sequence="10" name="Event Outbox"/>
+    <menuitem id="menu_hrm_endpoint" parent="menu_hrm_integration" action="action_hrm_endpoint" sequence="20" name="Webhook Endpoints"/>
+    <menuitem id="menu_hrm_delivery" parent="menu_hrm_integration" action="action_hrm_delivery" sequence="30" name="Deliveries"/>
+    <menuitem id="menu_hrm_import" parent="menu_hrm_integration" action="action_hrm_import" sequence="40" name="Import Jobs"/>
+    <menuitem id="menu_hrm_connection" parent="menu_hrm_integration" action="action_hrm_connection" sequence="50" name="Connections"/>
+    <menuitem id="menu_hrm_idempotency" parent="menu_hrm_integration" action="action_hrm_idempotency" sequence="60" name="Idempotency Keys"/>
+    <menuitem id="menu_hrm_api_token" parent="menu_hrm_integration" action="action_hrm_api_token" sequence="70" name="API Tokens"/>
+</odoo>

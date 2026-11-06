@@ -1,0 +1,19 @@
+{
+  "project": "odoo-hrm-v1.0",
+  "type": "odoo",
+  "version": "17.0",
+  "paths": {
+    "addons": "addons/hrm_theme",
+    "config": "config/odoo.conf",
+    "data": "data"
+  },
+  "commands": {
+    "start": "docker compose up -d",
+    "stop": "docker compose down",
+    "restart": "docker compose restart odoo",
+    "logs": "docker compose logs -f odoo",
+    "upgrade": "docker compose exec odoo odoo -u hrm_theme --stop-after-init -d hrm-odoo --db_host=db --db_user=odoo --db_password=odoo",
+    "shell": "docker compose exec odoo bash"
+  },
+  "skills": ["odoo", "odoo-17.0", "odoo-owl"]
+}

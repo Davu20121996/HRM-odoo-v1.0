@@ -1,0 +1,15 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_leave_type_user,leave type user,hrm.leave.type,hrm_base.group_hrm_user,r,
+access_hrm_leave_type_admin,leave type admin,hrm.leave.type,hrm_base.group_hrm_admin,crud,
+access_hrm_leave_policy_user,policy user,hrm.leave.policy,hrm_base.group_hrm_user,r,
+access_hrm_leave_policy_admin,policy admin,hrm.leave.policy,hrm_base.group_hrm_admin,crud,
+access_hrm_leave_rule_user,rule user,hrm.leave.policy.rule,hrm_base.group_hrm_user,r,
+access_hrm_leave_rule_admin,rule admin,hrm.leave.policy.rule,hrm_base.group_hrm_admin,crud,
+access_hrm_allocation_user,allocation user,hrm.leave.allocation,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_allocation_admin,allocation admin,hrm.leave.allocation,hrm_base.group_hrm_admin,crud,
+access_hrm_leave_request_user,request user,hrm.leave.request,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_leave_request_admin,request admin,hrm.leave.request,hrm_base.group_hrm_admin,crud,
+access_hrm_leave_approval_user,approval user,hrm.leave.approval,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_leave_approval_admin,approval admin,hrm.leave.approval,hrm_base.group_hrm_admin,cr,
+access_hrm_ledger_user,ledger user,hrm.leave.balance.ledger,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_ledger_admin,ledger admin,hrm.leave.balance.ledger,hrm_base.group_hrm_admin,cr,

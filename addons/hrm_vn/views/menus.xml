@@ -1,0 +1,8 @@
+<odoo>
+    <menuitem id="menu_hrm_vn" name="Vietnam" parent="hrm_base.menu_hrm_root" sequence="90"/>
+    <menuitem id="menu_hrm_vn_identifier" parent="menu_hrm_vn" action="action_hrm_person_identifier" sequence="10" name="Identifiers"/>
+    <menuitem id="menu_hrm_vn_insurance" parent="menu_hrm_vn" action="action_hrm_insurance_rule" sequence="20" name="Insurance Rules"/>
+    <menuitem id="menu_hrm_vn_tax" parent="menu_hrm_vn" action="action_hrm_tax_rule" sequence="30" name="Tax Rules"/>
+    <menuitem id="menu_hrm_vn_payroll" parent="menu_hrm_vn" action="action_hrm_payroll_rule" sequence="40" name="Payroll Rules"/>
+    <menuitem id="menu_hrm_vn_statutory" parent="menu_hrm_vn" action="action_hrm_statutory_rule" sequence="50" name="Statutory Rules"/>
+</odoo>

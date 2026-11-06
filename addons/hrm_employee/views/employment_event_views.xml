@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_probation_list" model="ir.ui.view">
+        <field name="name">hrm.probation.list</field>
+        <field name="model">hrm.probation</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="contract_id"/><field name="start_date"/><field name="planned_end_date"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_probation_form" model="ir.ui.view">
+        <field name="name">hrm.probation.form</field>
+        <field name="model">hrm.probation</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="employee_id"/><field name="contract_id"/>
+                <field name="start_date"/><field name="planned_end_date"/><field name="actual_end_date"/>
+                <field name="result"/><field name="status"/><field name="notes"/>
+            </group>
+            <group string="Actions">
+                <button name="action_start" string="Start" type="object"/>
+                <button name="action_pass" string="Pass" type="object"/>
+                <button name="action_fail" string="Fail" type="object"/>
+                <button name="action_extend" string="Extend" type="object"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_probation" model="ir.actions.act_window">
+        <field name="name">Probations</field>
+        <field name="res_model">hrm.probation</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_promotion_list" model="ir.ui.view">
+        <field name="name">hrm.promotion.list</field>
+        <field name="model">hrm.promotion</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="to_position_id"/><field name="effective_date"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_promotion_form" model="ir.ui.view">
+        <field name="name">hrm.promotion.form</field>
+        <field name="model">hrm.promotion</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="employee_id"/>
+                <field name="from_assignment_id"/><field name="to_position_id"/>
+                <field name="from_grade_id"/><field name="to_grade_id"/>
+                <field name="effective_date"/><field name="reason"/><field name="status"/>
+            </group>
+            <group string="Actions">
+                <button name="action_approve" string="Approve" type="object"/>
+                <button name="action_done" string="Apply" type="object"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_promotion" model="ir.actions.act_window">
+        <field name="name">Promotions</field>
+        <field name="res_model">hrm.promotion</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_transfer_list" model="ir.ui.view">
+        <field name="name">hrm.transfer.list</field>
+        <field name="model">hrm.transfer</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="from_company_id"/><field name="to_company_id"/><field name="effective_date"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_transfer_form" model="ir.ui.view">
+        <field name="name">hrm.transfer.form</field>
+        <field name="model">hrm.transfer</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="employee_id"/>
+                <field name="from_company_id"/><field name="to_company_id"/>
+                <field name="from_department_id"/><field name="to_department_id"/>
+                <field name="from_position_id"/><field name="to_position_id"/>
+                <field name="effective_date"/><field name="reason"/><field name="status"/>
+            </group>
+            <group string="Actions">
+                <button name="action_approve" string="Approve" type="object"/>
+                <button name="action_done" string="Apply" type="object"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_transfer" model="ir.actions.act_window">
+        <field name="name">Transfers</field>
+        <field name="res_model">hrm.transfer</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

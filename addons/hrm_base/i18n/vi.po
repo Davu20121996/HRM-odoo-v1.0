@@ -1,0 +1,956 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: HRM 20.0\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__action
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__action
+msgid "Action"
+msgstr "Thao tác"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_business_unit__status__active
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_company__status__active
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_configuration__status__active
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_cost_center__status__active
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_department__status__active
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_location__status__active
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role__status__active
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_tenant__status__active
+#: model:ir.model.fields.selection,name:hrm_base.selection__res_users__hrm_status__active
+msgid "Active"
+msgstr "Đang hoạt động"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__actor_employee_ref
+msgid "Actor Employee Ref"
+msgstr "Nhân viên thực hiện"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__actor_user_id
+msgid "Actor User"
+msgstr "Tài khoản thực hiện"
+
+#. module: hrm_base
+#: model:ir.model.fields,help:hrm_base.field_res_users__hrm_tenant_id
+msgid "Adapter for SPEC §13.1 user_account (passwords stay in Odoo auth)."
+msgstr "Adapter for SPEC §13.1 user_account (passwords stay in Odoo auth)."
+
+#. module: hrm_base
+#: model:ir.model.fields,help:hrm_base.field_hrm_company__res_company_id
+msgid "Adapter link to the Odoo company (master-skill §7)."
+msgstr "Adapter link to the Odoo company (master-skill §7)."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__address_line1
+msgid "Address Line1"
+msgstr "Địa chỉ dòng 1"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__address_line2
+msgid "Address Line2"
+msgstr "Địa chỉ dòng 2"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_audit_log
+msgid "Append-only audit log (SPEC §16)."
+msgstr "Append-only audit log (SPEC §16)."
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__approve
+msgid "Approve"
+msgstr "Phê duyệt"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_business_unit__status__archived
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_company__status__archived
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_configuration__status__archived
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_cost_center__status__archived
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_department__status__archived
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_location__status__archived
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role__status__archived
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_audit_log
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_audit
+msgid "Audit Log"
+msgstr "Nhật ký thao tác"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__business_unit_id
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_ref__hrm_business_unit
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_type__business_unit
+msgid "Business Unit"
+msgstr "Đơn vị kinh doanh"
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_business_unit
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_business_unit
+msgid "Business Units"
+msgstr "Đơn vị kinh doanh"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_business_unit
+msgid "Business unit (SPEC §3.3)"
+msgstr "Business unit (SPEC §3.3)"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_business_unit_uuid_unique
+msgid "Business unit UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_business_unit_tenant_company_code_unique
+msgid "Business unit code must be unique per tenant+company."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý và công ty."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__child_ids
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__child_ids
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__child_ids
+msgid "Child"
+msgstr "Con"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__city
+msgid "City"
+msgstr "Tỉnh/thành phố"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__close
+msgid "Close"
+msgstr "Đóng"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_tenant__status__closed
+msgid "Closed"
+msgstr "Đã đóng"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__code
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__code
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__code
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__code
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__code
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__code
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__code
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_company
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__company_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__company_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__company_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__company_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__company_ids
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_configuration__scope_type__company
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_ref__hrm_company
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_type__company
+msgid "Company"
+msgstr "Công ty"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_company_uuid_unique
+msgid "Company UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_company_tenant_code_unique
+msgid "Company code must be unique per tenant."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý."
+
+#. module: hrm_base
+#: model:ir.model.fields,help:hrm_base.field_hrm_configuration__scope_code
+msgid "Company code or module name. Empty for tenant scope."
+msgstr "Mã công ty hoặc tên phân hệ. Để trống cho phạm vi đơn vị quản lý."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__config_key
+msgid "Config Key"
+msgstr "Mã cấu hình"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__config_value
+msgid "Config Value"
+msgstr "Giá trị cấu hình"
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_configuration
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__configuration
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__configuration
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_configuration
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_configuration_uuid_unique
+msgid "Configuration UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_configuration_tenant_scope_key_unique
+msgid "Configuration key must be unique per tenant+scope."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__correlation_id
+msgid "Correlation"
+msgstr "Mã liên kết"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__cost_center_id
+msgid "Cost Center"
+msgstr "Trung tâm chi phí"
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_cost_center
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_cost_center
+msgid "Cost Centers"
+msgstr "Trung tâm chi phí"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_cost_center
+msgid "Cost center (SPEC §3.6)"
+msgstr "Cost center (SPEC §3.6)"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_cost_center_uuid_unique
+msgid "Cost center UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_cost_center_tenant_company_code_unique
+msgid "Cost center code must be unique per tenant+company."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý và công ty."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__country_code
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__country_code
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__country_code
+msgid "Country Code"
+msgstr "Mã quốc gia"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__create
+msgid "Create"
+msgstr "Tạo mới"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_permission__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__create_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__create_uid
+msgid "Created by"
+msgstr "Người tạo"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_permission__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__create_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__currency_code
+msgid "Currency Code"
+msgstr "Tiền tệ"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_role_scope
+msgid "Data scope of a role (SPEC §13.6)."
+msgstr "Data scope of a role (SPEC §13.6)."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__default_currency
+msgid "Default Currency"
+msgstr "Tiền tệ mặc định"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__delete
+msgid "Delete"
+msgstr "Xóa"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_ref__hrm_department
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_type__department
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_department_uuid_unique
+msgid "Department UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_department_tenant_company_code_unique
+msgid "Department code must be unique per tenant+company."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý và công ty."
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_department
+msgid "Department, effective-dated (SPEC §3.4)"
+msgstr "Department, effective-dated (SPEC §3.4)"
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_department
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_department
+msgid "Departments"
+msgstr "Phòng ban"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_type__direct_reports
+msgid "Direct Reports"
+msgstr "Nhân viên cấp dưới"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_base_mixin__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_permission__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__display_name
+#: model:ir.model.fields,field_description:hrm_base.field_res_users__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__effective_from
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__effective_from
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__effective_from
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__effective_from
+msgid "Effective From"
+msgstr "Hiệu lực từ"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__effective_to
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__effective_to
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__effective_to
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__effective_to
+msgid "Effective To"
+msgstr "Hiệu lực đến"
+
+#. module: hrm_base
+#: model:ir.model.fields,help:hrm_base.field_hrm_feature_flag__tenant_id
+msgid "Empty = platform-wide flag."
+msgstr "Để trống để áp dụng toàn hệ thống."
+
+#. module: hrm_base
+#: model:ir.model.fields,help:hrm_base.field_hrm_role_scope__scope_ref
+msgid "Empty for SELF / DIRECT_REPORTS scopes."
+msgstr "Để trống cho phạm vi bản thân hoặc nhân viên cấp dưới."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__enabled
+msgid "Enabled"
+msgstr "Bật"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__entity_id
+msgid "Entity"
+msgstr "Đối tượng"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__entity_type
+msgid "Entity Type"
+msgstr "Loại đối tượng"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__entity_uuid
+msgid "Entity Uuid"
+msgstr "Mã định danh đối tượng"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__export
+msgid "Export"
+msgstr "Xuất dữ liệu"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_location__location_type__factory
+msgid "Factory"
+msgstr "Nhà máy"
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_feature_flag
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_feature_flag
+msgid "Feature Flags"
+msgstr "Tính năng tùy chọn"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_feature_flag_uuid_unique
+msgid "Feature flag UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_feature_flag
+msgid "Feature flag for gradual rollout (SPEC §17.2)."
+msgstr "Feature flag for gradual rollout (SPEC §17.2)."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_feature_flag_tenant_key_unique
+msgid "Feature flag key must be unique per tenant."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý."
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__finalize
+msgid "Finalize"
+msgstr "Chốt lương"
+
+#. module: hrm_base
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_foundation
+msgid "Foundation"
+msgstr "Tổ chức"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_permission
+msgid "Globally defined permission (SPEC §13.3)."
+msgstr "Globally defined permission (SPEC §13.3)."
+
+#. module: hrm_base
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_root
+msgid "HRM"
+msgstr "Quản lý nhân sự"
+
+#. module: hrm_base
+#: model:res.groups,name:hrm_base.group_hrm_admin
+msgid "HRM Admin"
+msgstr "Quản trị nhân sự"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_res_users__hrm_tenant_ids
+msgid "HRM Tenants"
+msgstr "Đơn vị quản lý"
+
+#. module: hrm_base
+#: model:res.groups,name:hrm_base.group_hrm_user
+msgid "HRM User"
+msgstr "Người dùng nhân sự"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_res_users__hrm_status
+msgid "Hrm Status"
+msgstr "Trạng thái nhân sự"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_base_mixin__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_permission__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__id
+#: model:ir.model.fields,field_description:hrm_base.field_res_users__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__import
+msgid "Import"
+msgstr "Nhập dữ liệu"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__ip_address
+msgid "Ip Address"
+msgstr "Địa chỉ IP"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__is_system
+msgid "Is System"
+msgstr "Thuộc hệ thống"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__key
+msgid "Key"
+msgstr "Mã khóa"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_permission__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__write_uid
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__write_uid
+msgid "Last Updated by"
+msgstr "Người cập nhật"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_permission__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__write_date
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__write_date
+msgid "Last Updated on"
+msgstr "Ngày cập nhật"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__legal_name
+msgid "Legal Name"
+msgstr "Tên pháp lý"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__locale
+msgid "Locale"
+msgstr "Định dạng khu vực"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__location_type
+msgid "Location Type"
+msgstr "Loại địa điểm"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_location_uuid_unique
+msgid "Location UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_location_tenant_company_code_unique
+msgid "Location code must be unique per tenant+company."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý và công ty."
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_location
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_location
+msgid "Locations"
+msgstr "Địa điểm"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__login
+msgid "Login"
+msgstr "Tên đăng nhập"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__manager_user_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__manager_user_id
+msgid "Manager User"
+msgstr "Tài khoản quản lý"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__metadata
+msgid "Metadata"
+msgstr "Thông tin chi tiết"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_configuration__scope_type__module
+msgid "Module"
+msgstr "Phân hệ"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__name
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__new_value
+msgid "New Value"
+msgstr "Giá trị mới"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_location__location_type__office
+msgid "Office"
+msgstr "Văn phòng"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__old_value
+msgid "Old Value"
+msgstr "Giá trị cũ"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_company
+msgid "Operating company inside a tenant (SPEC §3.2)"
+msgstr "Operating company inside a tenant (SPEC §3.2)"
+
+#. module: hrm_base
+#: model:ir.module.module,summary:base.module_hrm_base
+msgid "P1 Foundation: tenant, organization, RBAC+scope, audit, configuration (master-skill §8)"
+msgstr "P1 Foundation: tenant, organization, RBAC+scope, audit, configuration (master-skill §8)"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__parent_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__parent_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__parent_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__parent_id
+msgid "Parent"
+msgstr "Đơn vị cấp trên"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__parent_company_id
+msgid "Parent Company"
+msgstr "Công ty mẹ"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__permission_ids
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_permission__permission_id
+msgid "Permission"
+msgstr "Quyền"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_permission_code_unique
+msgid "Permission code must be unique."
+msgstr "Mã phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_permission
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_permission
+msgid "Permissions"
+msgstr "Quyền truy cập"
+
+#. module: hrm_base
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_platform
+msgid "Platform"
+msgstr "Hệ thống"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__postal_code
+msgid "Postal Code"
+msgstr "Mã bưu chính"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_res_users__hrm_tenant_id
+msgid "Primary HRM Tenant"
+msgstr "Đơn vị quản lý chính"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__registration_no
+msgid "Registration No"
+msgstr "Số đăng ký"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__reject
+msgid "Reject"
+msgstr "Từ chối"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_location__location_type__remote
+msgid "Remote"
+msgstr "Từ xa"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__request_id
+msgid "Request"
+msgstr "Yêu cầu"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__res_company_id
+msgid "Res Company"
+msgstr "Công ty hệ thống"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_permission__resource
+msgid "Resource"
+msgstr "Tài nguyên"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_permission__role_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__role_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__role_id
+msgid "Role"
+msgstr "Vai trò"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_role
+msgid "Role (SPEC §13.2). tenant NULL = platform/system role."
+msgstr "Role (SPEC §13.2). tenant NULL = platform/system role."
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_role_permission
+msgid "Role <-> permission link (SPEC §13.4)."
+msgstr "Role <-> permission link (SPEC §13.4)."
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_role_scope
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_role_scope
+msgid "Role Scopes"
+msgstr "Phạm vi vai trò"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_role_uuid_unique
+msgid "Role UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_role_code_unique
+msgid "Role code must be unique."
+msgstr "Mã phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_role_scope_uuid_unique
+msgid "Role scope UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_role_permission_role_permission_unique
+msgid "Role-permission link must be unique."
+msgstr "Mã phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_role
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_role
+msgid "Roles"
+msgstr "Vai trò"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_tenant
+msgid "SaaS tenant boundary (SPEC §3.1)"
+msgstr "SaaS tenant boundary (SPEC §3.1)"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__scope_code
+msgid "Scope Code"
+msgstr "Mã phạm vi"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__scope_ref
+msgid "Scope Ref"
+msgstr "Tham chiếu phạm vi"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__scope_type
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__scope_type
+msgid "Scope Type"
+msgstr "Loại phạm vi"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_configuration
+msgid "Scoped product configuration (SPEC §17.1)."
+msgstr "Scoped product configuration (SPEC §17.1)."
+
+#. module: hrm_base
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_security
+msgid "Security"
+msgstr "Phân quyền"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_type__self
+msgid "Self"
+msgstr "Bản thân"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__settings
+msgid "Settings"
+msgstr "Thiết lập"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_location__location_type__site
+msgid "Site"
+msgstr "Cơ sở"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__slug
+msgid "Slug"
+msgstr "Mã đường dẫn"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__status
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__status
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__status
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__status
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__status
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__status
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__status
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__status
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_company__status__suspended
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_tenant__status__suspended
+#: model:ir.model.fields.selection,name:hrm_base.selection__res_users__hrm_status__suspended
+msgid "Suspended"
+msgstr "Tạm ngưng"
+
+#. module: hrm_base
+#: model_terms:ir.ui.view,arch_db:hrm_base.view_hrm_tenant_form
+msgid "Technical"
+msgstr "Kỹ thuật"
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__tenant_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__tenant_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__tenant_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__tenant_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__tenant_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__tenant_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__tenant_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__tenant_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__tenant_id
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__tenant_id
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_configuration__scope_type__tenant
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_ref__hrm_tenant
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_role_scope__scope_type__tenant
+msgid "Tenant"
+msgstr "Đơn vị quản lý"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_tenant_uuid_unique
+msgid "Tenant UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_tenant_code_unique
+msgid "Tenant code must be unique."
+msgstr "Mã phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_tenant_slug_unique
+msgid "Tenant slug must be unique."
+msgstr "Mã phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_tenant
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_tenant
+msgid "Tenants"
+msgstr "Đơn vị quản lý"
+
+#. module: hrm_base
+#: model:ir.model.fields,help:hrm_base.field_res_users__hrm_tenant_ids
+msgid "Tenants this user may access. Drives tenant record rules."
+msgstr "Đơn vị quản lý mà tài khoản được truy cập. Dùng để kiểm soát dữ liệu."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__timezone
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__timezone
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__timezone
+msgid "Timezone"
+msgstr "Múi giờ"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_tenant__status__trial
+msgid "Trial"
+msgstr "Dùng thử"
+
+#. module: hrm_base
+#: model:ir.model.fields.selection,name:hrm_base.selection__hrm_audit_log__action__update
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_res_users
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_user_role__user_id
+msgid "User"
+msgstr "Tài khoản"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_user_role
+msgid "User <-> role assignment, effective-dated (SPEC §13.5)."
+msgstr "User <-> role assignment, effective-dated (SPEC §13.5)."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_audit_log__user_agent
+msgid "User Agent"
+msgstr "Thông tin trình duyệt"
+
+#. module: hrm_base
+#: model:ir.actions.act_window,name:hrm_base.action_hrm_user_role
+#: model:ir.ui.menu,name:hrm_base.menu_hrm_user_role
+msgid "User Roles"
+msgstr "Vai trò tài khoản"
+
+#. module: hrm_base
+#: model:ir.model.constraint,message:hrm_base.constraint_hrm_user_role_user_role_from_unique
+msgid "User-role-effective_from must be unique."
+msgstr "Mã phải duy nhất."
+
+#. module: hrm_base
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_base_mixin__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_business_unit__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_company__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_configuration__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_cost_center__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_department__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_feature_flag__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_location__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_role_scope__version
+#: model:ir.model.fields,field_description:hrm_base.field_hrm_tenant__version
+msgid "Version"
+msgstr "Phiên bản"
+
+#. module: hrm_base
+#: model:ir.model,name:hrm_base.model_hrm_location
+msgid "Work location (SPEC §3.5)"
+msgstr "Work location (SPEC §3.5)"

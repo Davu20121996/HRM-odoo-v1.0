@@ -1,0 +1,71 @@
+<templates xml:space="preserve">
+  <t t-name="hrm_data_import.SalaryGrid">
+    <div class="o_action h-100 d-flex flex-column bg-white p-3">
+      <h2>Bảng nhập lương theo tháng</h2>
+      <div t-if="!this.state.grid.periods.length" class="alert alert-info" role="status">Chưa có kỳ lương.</div>
+      <t t-else="">
+        <div class="d-flex gap-2 align-items-center flex-wrap mb-2">
+          <label for="hrm_salary_grid_period">Tháng và công ty</label>
+          <select id="hrm_salary_grid_period" class="form-select w-auto" t-on-change="(event) => this.selectPeriod(event)"
+                  t-att-disabled="this.state.busy || Object.keys(this.state.edits).length">
+            <option t-foreach="this.state.grid.periods" t-as="period" t-key="period.id" t-att-value="period.id"
+                    t-att-selected="period.id === this.state.grid.period_id" t-esc="period.label"/>
+          </select>
+          <button t-if="this.editable" class="btn btn-secondary" type="button" t-on-click="() => this.execute('calculate')"
+                  t-att-disabled="this.state.busy || Object.keys(this.state.edits).length">Tính theo công thức</button>
+          <button t-if="this.editable &amp;&amp; this.state.grid.manage" class="btn btn-primary" type="button"
+                  t-on-click="() => this.request('save')" t-att-disabled="this.state.busy || !Object.keys(this.state.edits).length">Lưu và tính lại</button>
+          <button t-if="this.editable &amp;&amp; this.state.grid.manage" class="btn btn-outline-secondary" type="button"
+                  t-on-click="() => this.request('lock')" t-att-disabled="this.state.busy || Object.keys(this.state.edits).length">Khóa lương</button>
+          <button t-if="this.state.grid.mode === 'payroll' &amp;&amp; this.state.grid.manage" class="btn btn-outline-primary" type="button"
+                  t-on-click="() => this.request('unlock')" t-att-disabled="this.state.busy">Mở khóa lương</button>
+          <button t-if="Object.keys(this.state.edits).length" class="btn btn-link" type="button"
+                  t-on-click="() => this.state.edits = {}" t-att-disabled="this.state.busy">Hủy sửa ô</button>
+        </div>
+        <div t-if="!this.editable" class="alert alert-info py-2" role="status">
+          <t t-if="this.state.grid.mode === 'final'">Kỳ đã duyệt, chốt hoặc thanh toán.</t>
+          <t t-else="">Lương đang khóa. Công của kỳ này cũng đang khóa.</t>
+        </div>
+        <div t-if="this.state.message" t-att-class="'alert py-2 ' + (this.state.error ? 'alert-danger' : 'alert-success')" role="status" t-esc="this.state.message"/>
+        <form t-if="this.state.operation" class="border rounded p-2 mb-2" t-on-submit="(event) => this.submit(event)">
+          <p t-if="this.state.operation === 'unlock'">Mở lại kỳ để sửa công và lương. Kết quả hiện tại được ghi lịch sử và cần tính lại.</p>
+          <label class="d-block mb-2">Lý do
+            <input class="form-control" required="required" t-att-value="this.state.reason"
+                   t-on-input="(event) => this.state.reason = event.target.value"/>
+          </label>
+          <button type="submit" class="btn btn-primary btn-sm me-2" t-att-disabled="this.state.busy">Xác nhận</button>
+          <button type="button" class="btn btn-secondary btn-sm" t-att-disabled="this.state.busy"
+                  t-on-click="() => this.state.operation = ''">Hủy</button>
+        </form>
+        <p>Excel chỉ cấp dữ liệu công và tiền hiệu quả. Lương cơ bản và phụ cấp lấy từ hợp đồng đang hiệu lực. Số nhập tay có lý do được ưu tiên cho ô đó. Xóa số nhập tay rồi lưu để trở về cách tính tự động.</p>
+        <div class="overflow-auto flex-grow-1">
+          <table class="table table-sm table-bordered text-nowrap align-middle">
+            <thead class="sticky-top bg-light"><tr>
+              <th class="position-sticky start-0 bg-light">Nhân viên</th><th>Phòng ban</th><th>Dự án</th>
+              <th t-foreach="this.state.grid.columns" t-as="column" t-key="column.id" t-esc="column.label"/>
+              <th>Phụ cấp hợp đồng</th><th>Tổng thu nhập</th><th>Bảo hiểm NLĐ</th><th>Tổng khấu trừ</th><th>Thuế TNCN</th><th>Thực nhận</th>
+            </tr></thead>
+            <tbody><tr t-foreach="this.state.grid.rows" t-as="row" t-key="row.id">
+              <th scope="row" class="position-sticky start-0 bg-white"><t t-esc="row.label"/>
+                <div t-if="row.error" class="small text-danger text-wrap" t-esc="row.error"/>
+              </th>
+              <td t-esc="row.department"/><td t-esc="row.projects"/>
+              <td t-foreach="this.state.grid.columns" t-as="column" t-key="column.id">
+                <t t-set="cell" t-value="row.values[column.id]"/>
+                <input t-if="cell &amp;&amp; row.editable &amp;&amp; this.editable &amp;&amp; this.state.grid.manage" type="number" step="0.0001"
+                       t-att-class="'form-control form-control-sm ' + (cell.manual ? 'border-warning' : '')"
+                       style="min-width: 9rem" t-att-value="this.input(row, column)" t-att-placeholder="this.money(cell.value)"
+                       t-att-aria-label="row.label + ' ' + column.label" t-att-disabled="this.state.busy"
+                       t-on-input="(event) => this.edit(row, column, event.target.value)"/>
+                <span t-else="" t-esc="this.money(cell?.value)"/>
+              </td>
+              <td t-esc="this.money(row.allowances)"/><td t-esc="this.money(row.gross)"/>
+              <td t-esc="this.money(row.insurance)"/><td t-esc="this.money(row.deduction)"/>
+              <td t-esc="this.money(row.tax)"/><td t-esc="this.money(row.net)"/>
+            </tr></tbody>
+          </table>
+        </div>
+      </t>
+    </div>
+  </t>
+</templates>

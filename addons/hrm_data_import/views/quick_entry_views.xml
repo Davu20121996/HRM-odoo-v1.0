@@ -1,0 +1,179 @@
+<odoo>
+  <record id="action_add_child_department" model="ir.actions.act_window">
+    <field name="name">Add child department</field>
+    <field name="res_model">hrm.department</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="hrm_base.view_hrm_department_form"/>
+    <field name="target">new</field>
+  </record>
+  <record id="department_quick_list" model="ir.ui.view">
+    <field name="name">hrm.department.quick.list</field>
+    <field name="model">hrm.department</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_department_tree"/>
+    <field name="arch" type="xml">
+      <xpath expr="//list" position="attributes"><attribute name="js_class">hrm_organization_list</attribute></xpath>
+      <field name="code" position="attributes"><attribute name="optional">hide</attribute></field>
+      <field name="company_id" position="after">
+        <field name="parent_id" string="Parent department"/>
+        <button name="action_add_child_department" type="object" string="Add child department"
+                groups="hrm_base.group_hrm_admin"/>
+      </field>
+    </field>
+  </record>
+  <record id="department_quick_form" model="ir.ui.view">
+    <field name="name">hrm.department.quick.form</field>
+    <field name="model">hrm.department</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_department_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/group" position="replace">
+        <group>
+          <field name="name" string="Department name"/>
+          <field name="company_id" options="{'no_create': True}" readonly="context.get('lock_department_company')" force_save="1"/>
+          <field name="parent_id" string="Parent department" domain="[('company_id', '=', company_id)]"
+                 options="{'no_create': True}" readonly="context.get('lock_parent_department')" force_save="1"/>
+        </group>
+        <details class="mb-3">
+          <summary>Additional details</summary>
+          <group>
+            <field name="code" readonly="1" invisible="not id"/>
+            <field name="manager_user_id"/>
+            <field name="business_unit_id" domain="[('company_id', '=', company_id)]"/>
+            <field name="cost_center_id" domain="[('company_id', '=', company_id)]"/>
+            <field name="status"/>
+            <field name="effective_from"/><field name="effective_to"/>
+          </group>
+        </details>
+      </xpath>
+    </field>
+  </record>
+  <record id="company_departments_form" model="ir.ui.view">
+    <field name="name">hrm.company.departments.form</field>
+    <field name="model">hrm.company</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_company_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet" position="inside">
+        <notebook invisible="not id">
+          <page string="Departments" name="company_departments">
+            <field name="department_ids" context="{'default_company_id': id, 'lock_department_company': True, 'form_view_ref': 'hrm_base.view_hrm_department_form'}">
+              <list>
+                <field name="name" string="Department name"/>
+                <field name="parent_id" string="Parent department"/>
+                <field name="status"/>
+              </list>
+            </field>
+          </page>
+        </notebook>
+      </xpath>
+    </field>
+  </record>
+  <record id="employee_company_quick_form" model="ir.ui.view">
+    <field name="name">hr.employee.company.quick.form</field>
+    <field name="model">hr.employee</field>
+    <field name="inherit_id" ref="employee_complete_form"/>
+    <field name="arch" type="xml">
+      <field name="tenant_id" position="attributes">
+        <attribute name="invisible">1</attribute><attribute name="force_save">1</attribute>
+      </field>
+    </field>
+  </record>
+  <record id="contract_company_quick_form" model="ir.ui.view">
+    <field name="name">hrm.employee.contract.company.quick.form</field>
+    <field name="model">hrm.employee.contract</field>
+    <field name="inherit_id" ref="hrm_employee.view_hrm_employee_contract_form"/>
+    <field name="arch" type="xml">
+      <field name="tenant_id" position="attributes">
+        <attribute name="invisible">1</attribute><attribute name="force_save">1</attribute>
+      </field>
+      <field name="employee_id" position="attributes">
+        <attribute name="domain">[('hrm_company_id', '=', company_id)]</attribute>
+      </field>
+    </field>
+  </record>
+  <record id="period_company_quick_form" model="ir.ui.view">
+    <field name="name">hrm.payroll.period.company.quick.form</field>
+    <field name="model">hrm.payroll.period</field>
+    <field name="inherit_id" ref="view_period_input_form"/>
+    <field name="arch" type="xml">
+      <field name="tenant_id" position="attributes">
+        <attribute name="invisible">1</attribute><attribute name="force_save">1</attribute>
+      </field>
+    </field>
+  </record>
+  <record id="manual_company_quick_form" model="ir.ui.view">
+    <field name="name">hrm.manual.input.company.quick.form</field>
+    <field name="model">hrm.manual.input</field>
+    <field name="inherit_id" ref="manual_input_form"/>
+    <field name="arch" type="xml">
+      <field name="tenant_id" position="attributes"><attribute name="invisible">1</attribute></field>
+    </field>
+  </record>
+  <record id="business_unit_quick_list" model="ir.ui.view">
+    <field name="name">hrm.business.unit.quick.list</field>
+    <field name="model">hrm.business.unit</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_business_unit_tree"/>
+    <field name="arch" type="xml">
+      <xpath expr="//list" position="attributes"><attribute name="js_class">hrm_organization_list</attribute></xpath>
+      <field name="code" position="attributes"><attribute name="optional">hide</attribute></field>
+    </field>
+  </record>
+  <record id="business_unit_quick_form" model="ir.ui.view">
+    <field name="name">hrm.business.unit.quick.form</field>
+    <field name="model">hrm.business.unit</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_business_unit_form"/>
+    <field name="arch" type="xml">
+      <field name="tenant_id" position="replace"/>
+      <field name="code" position="attributes">
+        <attribute name="invisible">not id</attribute><attribute name="readonly">1</attribute>
+      </field>
+      <field name="parent_id" position="attributes">
+        <attribute name="domain">[('company_id', '=', company_id)]</attribute>
+      </field>
+    </field>
+  </record>
+  <record id="location_quick_list" model="ir.ui.view">
+    <field name="name">hrm.location.quick.list</field>
+    <field name="model">hrm.location</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_location_tree"/>
+    <field name="arch" type="xml">
+      <xpath expr="//list" position="attributes"><attribute name="js_class">hrm_organization_list</attribute></xpath>
+      <field name="code" position="attributes"><attribute name="optional">hide</attribute></field>
+    </field>
+  </record>
+  <record id="location_quick_form" model="ir.ui.view">
+    <field name="name">hrm.location.quick.form</field>
+    <field name="model">hrm.location</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_location_form"/>
+    <field name="arch" type="xml">
+      <field name="tenant_id" position="replace"/>
+      <field name="code" position="attributes">
+        <attribute name="invisible">not id</attribute><attribute name="readonly">1</attribute>
+      </field>
+      <field name="parent_id" position="attributes">
+        <attribute name="domain">[('company_id', '=', company_id)]</attribute>
+      </field>
+    </field>
+  </record>
+  <record id="cost_center_quick_list" model="ir.ui.view">
+    <field name="name">hrm.cost.center.quick.list</field>
+    <field name="model">hrm.cost.center</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_cost_center_tree"/>
+    <field name="arch" type="xml">
+      <xpath expr="//list" position="attributes"><attribute name="js_class">hrm_organization_list</attribute></xpath>
+      <field name="code" position="attributes"><attribute name="optional">hide</attribute></field>
+    </field>
+  </record>
+  <record id="cost_center_quick_form" model="ir.ui.view">
+    <field name="name">hrm.cost.center.quick.form</field>
+    <field name="model">hrm.cost.center</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_cost_center_form"/>
+    <field name="arch" type="xml">
+      <field name="tenant_id" position="replace"/>
+      <field name="code" position="attributes">
+        <attribute name="invisible">not id</attribute><attribute name="readonly">1</attribute>
+      </field>
+      <field name="parent_id" position="attributes">
+        <attribute name="domain">[('company_id', '=', company_id)]</attribute>
+      </field>
+    </field>
+  </record>
+</odoo>

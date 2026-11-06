@@ -1,0 +1,21 @@
+{
+    "name": "HRM Employee (P2 Core HR)",
+    "version": "20.0.1.0.0",
+    "summary": "P2 Core HR: person, employee, org catalogue, contract, assignment, salary/status history (master-skill §8)",
+    "author": "HRM",
+    "license": "LGPL-3",
+    "depends": ["hrm_base", "hr", "hrm_workflow"],
+    "data": [
+        "security/ir.access.csv",
+        "views/person_views.xml",
+        "views/employee_views.xml",
+        "views/catalog_views.xml",
+        "views/employment_views.xml",
+        "views/employment_event_views.xml",
+        "views/menus.xml",
+    ],
+    "post_init_hook": "_post_init_hook",
+    "demo": ['data/demo_catalog.xml', 'data/demo_people.xml', 'data/demo10_people.xml', 'data/demo_workflow_employee_links.xml'],
+    "installable": True,
+    "application": True,
+}

@@ -1,0 +1,21 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_structure_user,structure user,hrm.salary.structure,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_structure_admin,structure admin,hrm.salary.structure,hrm_base.group_hrm_admin,crud,
+access_hrm_component_user,component user,hrm.salary.component,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_component_admin,component admin,hrm.salary.component,hrm_base.group_hrm_admin,crud,
+access_hrm_emp_salary_user,salary user,hrm.employee.salary,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_emp_salary_admin,salary admin,hrm.employee.salary,hrm_base.group_hrm_admin,crud,
+access_hrm_period_user,period user,hrm.payroll.period,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_period_admin,period admin,hrm.payroll.period,hrm_base.group_hrm_admin,crud,
+access_hrm_payroll_user,run user,hrm.payroll,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_payroll_admin,run admin,hrm.payroll,hrm_base.group_hrm_admin,crud,
+access_hrm_payroll_item_user,item user,hrm.payroll.item,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_payroll_item_admin,item admin,hrm.payroll.item,hrm_base.group_hrm_admin,crud,
+access_hrm_payslip_user,payslip user,hrm.payslip,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_payslip_admin,payslip admin,hrm.payslip,hrm_base.group_hrm_admin,crud,
+access_hrm_payslip_item_user,line user,hrm.payslip.item,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_payslip_item_admin,line admin,hrm.payslip.item,hrm_base.group_hrm_admin,crud,
+access_hrm_bonus_user,bonus user,hrm.bonus,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_bonus_admin,bonus admin,hrm.bonus,hrm_base.group_hrm_admin,crud,
+access_hrm_deduction_user,deduction user,hrm.deduction,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_deduction_admin,deduction admin,hrm.deduction,hrm_base.group_hrm_admin,crud,

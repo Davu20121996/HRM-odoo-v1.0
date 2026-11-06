@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="d10_cand_11" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0011</field>
+        <field name="first_name">Khanh</field>
+        <field name="last_name">Nguyen Van</field>
+        <field name="email">khanh.nv@example.com</field>
+        <field name="phone">0901000011</field>
+        <field name="source">TopCV</field>
+        <field name="status">new</field>
+    </record>
+    <record id="d10_cand_12" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0012</field>
+        <field name="first_name">Linh</field>
+        <field name="last_name">Tran Thi</field>
+        <field name="email">linh.tt@example.com</field>
+        <field name="phone">0901000012</field>
+        <field name="source">VietnamWorks</field>
+        <field name="status">screening</field>
+    </record>
+    <record id="d10_cand_13" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0013</field>
+        <field name="first_name">Phuong</field>
+        <field name="last_name">Le Van</field>
+        <field name="email">phuong.lv@example.com</field>
+        <field name="phone">0901000013</field>
+        <field name="source">Referral</field>
+        <field name="status">interview</field>
+    </record>
+    <record id="d10_cand_14" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0014</field>
+        <field name="first_name">Thanh</field>
+        <field name="last_name">Pham Thi</field>
+        <field name="email">thanh.pt@example.com</field>
+        <field name="phone">0901000014</field>
+        <field name="source">Facebook</field>
+        <field name="status">new</field>
+    </record>
+    <record id="d10_cand_15" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0015</field>
+        <field name="first_name">Hung</field>
+        <field name="last_name">Vo Van</field>
+        <field name="email">hung.vv@example.com</field>
+        <field name="phone">0901000015</field>
+        <field name="source">LinkedIn</field>
+        <field name="status">offer</field>
+    </record>
+    <record id="d10_cand_16" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0016</field>
+        <field name="first_name">Ngoc</field>
+        <field name="last_name">Do Thi</field>
+        <field name="email">ngoc.dt@example.com</field>
+        <field name="phone">0901000016</field>
+        <field name="source">TopCV</field>
+        <field name="status">screening</field>
+    </record>
+    <record id="d10_cand_17" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0017</field>
+        <field name="first_name">Khoa</field>
+        <field name="last_name">Hoang Van</field>
+        <field name="email">khoa.hv@example.com</field>
+        <field name="phone">0901000017</field>
+        <field name="source">Website</field>
+        <field name="status">rejected</field>
+    </record>
+    <record id="d10_cand_18" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0018</field>
+        <field name="first_name">Trang</field>
+        <field name="last_name">Bui Thi</field>
+        <field name="email">trang.bt@example.com</field>
+        <field name="phone">0901000018</field>
+        <field name="source">Referral</field>
+        <field name="status">new</field>
+    </record>
+    <record id="d10_cand_19" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0019</field>
+        <field name="first_name">Duc</field>
+        <field name="last_name">Dang Van</field>
+        <field name="email">duc.dv@example.com</field>
+        <field name="phone">0901000019</field>
+        <field name="source">TopCV</field>
+        <field name="status">interview</field>
+    </record>
+    <record id="d10_cand_20" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0020</field>
+        <field name="first_name">Yen</field>
+        <field name="last_name">Ngo Thi</field>
+        <field name="email">yen.nt@example.com</field>
+        <field name="phone">0901000020</field>
+        <field name="source">VietnamWorks</field>
+        <field name="status">hired</field>
+    </record>
+    <record id="d10_req_01" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_sales"/>
+        <field name="job_id" ref="hrm_employee.demo_job_sales"/>
+        <field name="approved_headcount">2</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">Tuyen sale mien Nam</field>
+        <field name="status">draft</field>
+    </record>
+    <record id="d10_req_02" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_it"/>
+        <field name="job_id" ref="hrm_employee.demo_job_dev"/>
+        <field name="position_id" ref="hrm_employee.demo_pos_dev01"/>
+        <field name="approved_headcount">1</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">Bo sung Dev Q4</field>
+        <field name="status">pending_approval</field>
+    </record>
+    <record id="d10_req_03" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_it"/>
+        <field name="job_id" ref="hrm_employee.demo_job_tester"/>
+        <field name="position_id" ref="hrm_employee.demo_pos_test01"/>
+        <field name="approved_headcount">1</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">Tester du an moi</field>
+        <field name="status">approved</field>
+    </record>
+    <record id="d10_req_04" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_hr"/>
+        <field name="job_id" ref="hrm_employee.demo_job_hr"/>
+        <field name="position_id" ref="hrm_employee.demo_pos_hr01"/>
+        <field name="approved_headcount">1</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">HRBP mien Bac</field>
+        <field name="status">open</field>
+    </record>
+    <record id="d10_req_05" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_it"/>
+        <field name="job_id" ref="hrm_employee.demo_job_dev"/>
+        <field name="position_id" ref="hrm_employee.demo_pos_dev_sr"/>
+        <field name="approved_headcount">1</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">Senior Dev blockchain</field>
+        <field name="status">open</field>
+    </record>
+    <record id="d10_req_06" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_sales"/>
+        <field name="job_id" ref="hrm_employee.demo_job_sales"/>
+        <field name="approved_headcount">3</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">Mo rong doi sale HN</field>
+        <field name="status">open</field>
+    </record>
+    <record id="d10_req_07" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_it"/>
+        <field name="job_id" ref="hrm_employee.demo_job_tester"/>
+        <field name="position_id" ref="hrm_employee.demo_pos_test01"/>
+        <field name="approved_headcount">2</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">Dot tester Q2 (da xong)</field>
+        <field name="status">filled</field>
+    </record>
+    <record id="d10_req_08" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_hr"/>
+        <field name="job_id" ref="hrm_employee.demo_job_hr"/>
+        <field name="position_id" ref="hrm_employee.demo_pos_hr01"/>
+        <field name="approved_headcount">1</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">Tam hoan C&amp;B</field>
+        <field name="status">cancelled</field>
+    </record>
+    <record id="d10_req_09" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_it"/>
+        <field name="job_id" ref="hrm_employee.demo_job_dev"/>
+        <field name="position_id" ref="hrm_employee.demo_pos_dev01"/>
+        <field name="approved_headcount">2</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">Dev mobile app</field>
+        <field name="status">open</field>
+    </record>
+    <record id="d10_req_10" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_sales"/>
+        <field name="job_id" ref="hrm_employee.demo_job_sales"/>
+        <field name="approved_headcount">1</field>
+        <field name="target_hire_date">2026-06-30</field>
+        <field name="description">Sale ke hoach 2027</field>
+        <field name="status">draft</field>
+    </record>
+    <record id="d10_app_01" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_11"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_05"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_screen"/>
+        <field name="applied_at">2026-09-06 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">new</field>
+    </record>
+    <record id="d10_app_02" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_12"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_05"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_screen"/>
+        <field name="applied_at">2026-09-07 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">new</field>
+    </record>
+    <record id="d10_app_03" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_13"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_03"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_interview"/>
+        <field name="applied_at">2026-09-08 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">in_progress</field>
+    </record>
+    <record id="d10_app_04" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_14"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_06"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_screen"/>
+        <field name="applied_at">2026-09-09 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">new</field>
+    </record>
+    <record id="d10_app_05" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_15"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_04"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_offer"/>
+        <field name="applied_at">2026-09-10 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">offered</field>
+    </record>
+    <record id="d10_app_06" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_16"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_01"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_screen"/>
+        <field name="applied_at">2026-09-11 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">new</field>
+    </record>
+    <record id="d10_app_07" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_17"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_09"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_rejected"/>
+        <field name="applied_at">2026-09-12 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">rejected</field>
+    </record>
+    <record id="d10_app_08" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_18"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_06"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_screen"/>
+        <field name="applied_at">2026-09-13 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">new</field>
+    </record>
+    <record id="d10_app_09" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_19"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_05"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_interview"/>
+        <field name="applied_at">2026-09-14 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">in_progress</field>
+    </record>
+    <record id="d10_app_10" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.d10_cand_20"/>
+        <field name="requisition_id" ref="hrm_recruitment.d10_req_10"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_screen"/>
+        <field name="applied_at">2026-09-15 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">new</field>
+    </record>
+    <record id="d10_app_11" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="hrm_recruitment.demo_cand_02"/>
+        <field name="requisition_id" ref="hrm_recruitment.demo_req_dev"/>
+        <field name="current_stage_id" ref="hrm_recruitment.demo_stage_interview"/>
+        <field name="applied_at">2026-09-16 08:00:00</field>
+        <field name="source">TopCV</field>
+        <field name="status">in_progress</field>
+    </record>
+    <record id="d10_iv_01" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_03"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_04"/>
+        <field name="scheduled_at">2026-09-11 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 1 - HCM-HQ</field>
+        <field name="status">done</field>
+    </record>
+    <record id="d10_iv_02" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_09"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_05"/>
+        <field name="scheduled_at">2026-09-12 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 2 - HCM-HQ</field>
+        <field name="status">done</field>
+    </record>
+    <record id="d10_iv_03" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_02"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_03"/>
+        <field name="scheduled_at">2026-09-13 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 3 - HCM-HQ</field>
+        <field name="status">done</field>
+    </record>
+    <record id="d10_iv_04" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_04"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_04"/>
+        <field name="scheduled_at">2026-09-14 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 4 - HCM-HQ</field>
+        <field name="status">done</field>
+    </record>
+    <record id="d10_iv_05" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_06"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_05"/>
+        <field name="scheduled_at">2026-09-15 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 5 - HCM-HQ</field>
+        <field name="status">cancelled</field>
+    </record>
+    <record id="d10_iv_06" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_08"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_03"/>
+        <field name="scheduled_at">2026-09-16 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 6 - HCM-HQ</field>
+        <field name="status">scheduled</field>
+    </record>
+    <record id="d10_iv_07" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_10"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_04"/>
+        <field name="scheduled_at">2026-09-17 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 7 - HCM-HQ</field>
+        <field name="status">scheduled</field>
+    </record>
+    <record id="d10_iv_08" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_11"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_05"/>
+        <field name="scheduled_at">2026-09-18 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 8 - HCM-HQ</field>
+        <field name="status">scheduled</field>
+    </record>
+    <record id="d10_iv_09" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_01"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.d10_emp_07"/>
+        <field name="scheduled_at">2026-09-19 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 9 - HCM-HQ</field>
+        <field name="status">scheduled</field>
+    </record>
+    <record id="d10_iv_10" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_05"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.d10_emp_08"/>
+        <field name="scheduled_at">2026-09-20 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop 10 - HCM-HQ</field>
+        <field name="status">scheduled</field>
+    </record>
+    <record id="d10_eval_01" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_01"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.demo_emp_04"/>
+        <field name="score">7.0</field>
+        <field name="recommendation">hire</field>
+        <field name="comments">Danh gia vong 1</field>
+        <field name="submitted_at">2026-09-11 12:00:00</field>
+    </record>
+    <record id="d10_eval_02" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_02"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.demo_emp_05"/>
+        <field name="score">8.0</field>
+        <field name="recommendation">maybe</field>
+        <field name="comments">Danh gia vong 2</field>
+        <field name="submitted_at">2026-09-12 12:00:00</field>
+    </record>
+    <record id="d10_eval_03" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_03"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.demo_emp_03"/>
+        <field name="score">9.0</field>
+        <field name="recommendation">no_hire</field>
+        <field name="comments">Danh gia vong 3</field>
+        <field name="submitted_at">2026-09-13 12:00:00</field>
+    </record>
+    <record id="d10_eval_04" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_04"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.demo_emp_04"/>
+        <field name="score">6.0</field>
+        <field name="recommendation">hire</field>
+        <field name="comments">Danh gia vong 4</field>
+        <field name="submitted_at">2026-09-14 12:00:00</field>
+    </record>
+    <record id="d10_eval_05" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_05"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.demo_emp_05"/>
+        <field name="score">7.0</field>
+        <field name="recommendation">maybe</field>
+        <field name="comments">Danh gia vong 5</field>
+        <field name="submitted_at">2026-09-15 12:00:00</field>
+    </record>
+    <record id="d10_eval_06" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_06"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.demo_emp_03"/>
+        <field name="score">8.0</field>
+        <field name="recommendation">hire</field>
+        <field name="comments">Danh gia vong 6</field>
+        <field name="submitted_at">2026-09-16 12:00:00</field>
+    </record>
+    <record id="d10_eval_07" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_07"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.demo_emp_04"/>
+        <field name="score">9.0</field>
+        <field name="recommendation">no_hire</field>
+        <field name="comments">Danh gia vong 7</field>
+    </record>
+    <record id="d10_eval_08" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_08"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.demo_emp_05"/>
+        <field name="score">6.0</field>
+        <field name="recommendation">maybe</field>
+        <field name="comments">Danh gia vong 8</field>
+    </record>
+    <record id="d10_eval_09" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_09"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.d10_emp_07"/>
+        <field name="score">7.0</field>
+        <field name="recommendation">hire</field>
+        <field name="comments">Danh gia vong 9</field>
+    </record>
+    <record id="d10_eval_10" model="hrm.interview.evaluation">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="interview_id" ref="hrm_recruitment.d10_iv_10"/>
+        <field name="evaluator_employee_id" ref="hrm_employee.d10_emp_08"/>
+        <field name="score">8.0</field>
+        <field name="recommendation">maybe</field>
+        <field name="comments">Danh gia vong 10</field>
+    </record>
+    <record id="d10_offer_01" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_01"/>
+        <field name="offer_no">OFFER-2026-1001</field>
+        <field name="issued_at">2026-09-11 09:00:00</field>
+        <field name="base_salary">13000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">draft</field>
+    </record>
+    <record id="d10_offer_02" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_02"/>
+        <field name="offer_no">OFFER-2026-1002</field>
+        <field name="issued_at">2026-09-12 09:00:00</field>
+        <field name="base_salary">14000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">draft</field>
+    </record>
+    <record id="d10_offer_03" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_03"/>
+        <field name="offer_no">OFFER-2026-1003</field>
+        <field name="issued_at">2026-09-13 09:00:00</field>
+        <field name="base_salary">15000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">pending_approval</field>
+    </record>
+    <record id="d10_offer_04" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_04"/>
+        <field name="offer_no">OFFER-2026-1004</field>
+        <field name="issued_at">2026-09-14 09:00:00</field>
+        <field name="base_salary">16000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">pending_approval</field>
+    </record>
+    <record id="d10_offer_05" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_05"/>
+        <field name="offer_no">OFFER-2026-1005</field>
+        <field name="issued_at">2026-09-15 09:00:00</field>
+        <field name="base_salary">17000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">sent</field>
+    </record>
+    <record id="d10_offer_06" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_06"/>
+        <field name="offer_no">OFFER-2026-1006</field>
+        <field name="issued_at">2026-09-16 09:00:00</field>
+        <field name="base_salary">18000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">sent</field>
+    </record>
+    <record id="d10_offer_07" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_09"/>
+        <field name="offer_no">OFFER-2026-1007</field>
+        <field name="issued_at">2026-09-17 09:00:00</field>
+        <field name="base_salary">19000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">accepted</field>
+    </record>
+    <record id="d10_offer_08" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_11"/>
+        <field name="offer_no">OFFER-2026-1008</field>
+        <field name="issued_at">2026-09-18 09:00:00</field>
+        <field name="base_salary">20000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">accepted</field>
+    </record>
+    <record id="d10_offer_09" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_07"/>
+        <field name="offer_no">OFFER-2026-1009</field>
+        <field name="issued_at">2026-09-19 09:00:00</field>
+        <field name="base_salary">21000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">declined</field>
+    </record>
+    <record id="d10_offer_10" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_10"/>
+        <field name="offer_no">OFFER-2026-1010</field>
+        <field name="issued_at">2026-09-20 09:00:00</field>
+        <field name="base_salary">22000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">expired</field>
+    </record>
+    <record id="d10_offer_11" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="hrm_recruitment.d10_app_08"/>
+        <field name="offer_no">OFFER-2026-1011</field>
+        <field name="issued_at">2026-09-21 09:00:00</field>
+        <field name="base_salary">23000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-11-01</field>
+        <field name="status">draft</field>
+    </record>
+
+    <!-- ── hrm.recruitment.stage: 5 bổ sung (tổng >= 10 khi cộng demo file) ── -->
+    <record id="d10_stage_tech_s1" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">tech</field>
+        <field name="code">CV-REVIEW</field>
+        <field name="name">Xem xet ho so</field>
+        <field name="sequence_no">10</field>
+        <field name="stage_type">screen</field>
+        <field name="status">active</field>
+    </record>
+    <record id="d10_stage_tech_s2" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">tech</field>
+        <field name="code">TECH-TEST</field>
+        <field name="name">Bai test ky thuat</field>
+        <field name="sequence_no">20</field>
+        <field name="stage_type">interview</field>
+        <field name="status">active</field>
+    </record>
+    <record id="d10_stage_tech_s3" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">tech</field>
+        <field name="code">PANEL-IV</field>
+        <field name="name">Phong van hoi dong</field>
+        <field name="sequence_no">30</field>
+        <field name="stage_type">interview</field>
+        <field name="status">active</field>
+    </record>
+    <record id="d10_stage_sales_s1" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">sales</field>
+        <field name="code">INTRO-CALL</field>
+        <field name="name">Goi gioi thieu</field>
+        <field name="sequence_no">10</field>
+        <field name="stage_type">screen</field>
+        <field name="status">active</field>
+    </record>
+    <record id="d10_stage_sales_s2" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">sales</field>
+        <field name="code">ROLE-PLAY</field>
+        <field name="name">Bai tap tinh huong ban hang</field>
+        <field name="sequence_no">20</field>
+        <field name="stage_type">interview</field>
+        <field name="status">active</field>
+    </record>
+    <record id="d10_stage_sales_s3" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">sales</field>
+        <field name="code">SALES-HIRED</field>
+        <field name="name">Da tuyen</field>
+        <field name="sequence_no">90</field>
+        <field name="stage_type">hired</field>
+        <field name="is_terminal">True</field>
+        <field name="status">active</field>
+    </record>
+    <record id="d10_stage_mgr_s1" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">management</field>
+        <field name="code">MGR-ASSESS</field>
+        <field name="name">Danh gia nang luc quan ly</field>
+        <field name="sequence_no">10</field>
+        <field name="stage_type">interview</field>
+        <field name="status">active</field>
+    </record>
+    <record id="d10_stage_mgr_s2" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">management</field>
+        <field name="code">BOARD-IV</field>
+        <field name="name">Phong van ban giam doc</field>
+        <field name="sequence_no">20</field>
+        <field name="stage_type">interview</field>
+        <field name="status">active</field>
+    </record>
+    <record id="d10_stage_intern_s1" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">intern</field>
+        <field name="code">INTERN-CV</field>
+        <field name="name">Xem xet ho so thuc tap</field>
+        <field name="sequence_no">10</field>
+        <field name="stage_type">screen</field>
+        <field name="status">active</field>
+    </record>
+    <record id="d10_stage_intern_s2" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">intern</field>
+        <field name="code">INTERN-REJECTED</field>
+        <field name="name">Khong phu hop</field>
+        <field name="sequence_no">99</field>
+        <field name="stage_type">rejected</field>
+        <field name="is_terminal">True</field>
+        <field name="status">active</field>
+    </record>
+</odoo>

@@ -1,0 +1,6 @@
+<odoo>
+  <record id="access_demo_workspace" model="ir.access"><field name="name">Demo workspace read</field><field name="model_id" ref="model_hrm_demo_workspace"/><field name="group_id" ref="group_import_operator"/><field name="operation">r</field></record>
+  <record id="scope_demo_workspace" model="ir.access"><field name="name">Demo workspace company scope</field><field name="model_id" ref="model_hrm_demo_workspace"/><field name="operation">crud</field><field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field></record>
+  <record id="access_demo_source" model="ir.access"><field name="name">Demo source read</field><field name="model_id" ref="model_hrm_demo_source"/><field name="group_id" ref="group_import_operator"/><field name="operation">r</field></record>
+  <record id="scope_demo_source" model="ir.access"><field name="name">Demo source company scope</field><field name="model_id" ref="model_hrm_demo_source"/><field name="operation">crud</field><field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field></record>
+</odoo>

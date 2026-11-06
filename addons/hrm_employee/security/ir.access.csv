@@ -1,0 +1,45 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_person_user,hrm.person user,hrm.person,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_person_admin,hrm.person admin,hrm.person,hrm_base.group_hrm_admin,crud,
+access_hr_employee_user,hr.employee user,hr.employee,hrm_base.group_hrm_user,cru,"['|', ('tenant_id', '=', False), ('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hr_employee_admin,hr.employee admin,hr.employee,hrm_base.group_hrm_admin,crud,
+access_hrm_employee_contact_user,contact user,hrm.employee.contact,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employee_contact_admin,contact admin,hrm.employee.contact,hrm_base.group_hrm_admin,crud,
+access_hrm_employee_family_user,family user,hrm.employee.family,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employee_family_admin,family admin,hrm.employee.family,hrm_base.group_hrm_admin,crud,
+access_hrm_emergency_contact_user,emergency user,hrm.emergency.contact,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_emergency_contact_admin,emergency admin,hrm.emergency.contact,hrm_base.group_hrm_admin,crud,
+access_hrm_employee_education_user,education user,hrm.employee.education,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employee_education_admin,education admin,hrm.employee.education,hrm_base.group_hrm_admin,crud,
+access_hrm_employee_certification_user,cert user,hrm.employee.certification,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employee_certification_admin,cert admin,hrm.employee.certification,hrm_base.group_hrm_admin,crud,
+access_hrm_employee_skill_user,skill user,hrm.employee.skill,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employee_skill_admin,skill admin,hrm.employee.skill,hrm_base.group_hrm_admin,crud,
+access_hrm_employee_document_user,document user,hrm.employee.document,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employee_document_admin,document admin,hrm.employee.document,hrm_base.group_hrm_admin,crud,
+access_hrm_employee_history_user,history user,hrm.employee.history,hrm_base.group_hrm_user,r,"['|', ('tenant_id', '=', False), ('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employee_history_admin,history admin,hrm.employee.history,hrm_base.group_hrm_admin,cr,
+access_hrm_job_user,job user,hrm.job,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_job_admin,job admin,hrm.job,hrm_base.group_hrm_admin,crud,
+access_hrm_grade_user,grade user,hrm.grade,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_grade_admin,grade admin,hrm.grade,hrm_base.group_hrm_admin,crud,
+access_hrm_position_user,position user,hrm.position,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_position_admin,position admin,hrm.position,hrm_base.group_hrm_admin,crud,
+access_hrm_reporting_line_user,reporting user,hrm.reporting.line,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_reporting_line_admin,reporting admin,hrm.reporting.line,hrm_base.group_hrm_admin,crud,
+access_hrm_contract_type_user,contract type user,hrm.contract.type,hrm_base.group_hrm_user,r,
+access_hrm_contract_type_admin,contract type admin,hrm.contract.type,hrm_base.group_hrm_admin,crud,
+access_hrm_employee_contract_user,contract user,hrm.employee.contract,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employee_contract_admin,contract admin,hrm.employee.contract,hrm_base.group_hrm_admin,crud,
+access_hrm_employee_assignment_user,assignment user,hrm.employee.assignment,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employee_assignment_admin,assignment admin,hrm.employee.assignment,hrm_base.group_hrm_admin,crud,
+access_hrm_salary_history_user,salary history user,hrm.salary.history,hrm_base.group_hrm_user,r,"['|', ('tenant_id', '=', False), ('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_salary_history_admin,salary history admin,hrm.salary.history,hrm_base.group_hrm_admin,cr,
+access_hrm_employment_status_history_user,status history user,hrm.employment.status.history,hrm_base.group_hrm_user,r,"['|', ('tenant_id', '=', False), ('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_employment_status_history_admin,status history admin,hrm.employment.status.history,hrm_base.group_hrm_admin,cr,
+access_hrm_probation_user,probation user,hrm.probation,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_probation_admin,probation admin,hrm.probation,hrm_base.group_hrm_admin,crud,
+access_hrm_promotion_user,promotion user,hrm.promotion,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_promotion_admin,promotion admin,hrm.promotion,hrm_base.group_hrm_admin,crud,
+access_hrm_transfer_user,transfer user,hrm.transfer,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_transfer_admin,transfer admin,hrm.transfer,hrm_base.group_hrm_admin,crud,

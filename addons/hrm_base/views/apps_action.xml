@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Show all module types (official + custom) in Apps by default.
+         Odoo 20 defaults the searchpanel to module_type=official,
+         which hides custom addons like hrm_*. -->
+    <record id="base.open_module_tree" model="ir.actions.act_window">
+        <field name="context">{'search_default_app': 1}</field>
+    </record>
+</odoo>

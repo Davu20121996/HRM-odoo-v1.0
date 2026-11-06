@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_job_list" model="ir.ui.view">
+        <field name="name">hrm.job.list</field>
+        <field name="model">hrm.job</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="title"/><field name="company_id"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_job_form" model="ir.ui.view">
+        <field name="name">hrm.job.form</field>
+        <field name="model">hrm.job</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="company_id"/><field name="hr_job_id"/>
+                <field name="code"/><field name="title"/><field name="grade_id"/>
+                <field name="description"/><field name="status"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_job" model="ir.actions.act_window">
+        <field name="name">Jobs</field>
+        <field name="res_model">hrm.job</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_grade_list" model="ir.ui.view">
+        <field name="name">hrm.grade.list</field>
+        <field name="model">hrm.grade</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="level"/><field name="min_salary"/><field name="max_salary"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_grade_form" model="ir.ui.view">
+        <field name="name">hrm.grade.form</field>
+        <field name="model">hrm.grade</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="company_id"/>
+                <field name="code"/><field name="name"/><field name="level"/>
+                <field name="min_salary"/><field name="max_salary"/><field name="currency_code"/>
+                <field name="status"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_grade" model="ir.actions.act_window">
+        <field name="name">Grades</field>
+        <field name="res_model">hrm.grade</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_position_list" model="ir.ui.view">
+        <field name="name">hrm.position.list</field>
+        <field name="model">hrm.position</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="title"/><field name="department_id"/><field name="headcount_limit"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_position_form" model="ir.ui.view">
+        <field name="name">hrm.position.form</field>
+        <field name="model">hrm.position</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="company_id"/>
+                <field name="department_id"/><field name="job_id"/>
+                <field name="grade_id"/><field name="location_id"/>
+                <field name="code"/><field name="title"/><field name="headcount_limit"/>
+                <field name="status"/>
+                <field name="effective_from"/><field name="effective_to"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_position" model="ir.actions.act_window">
+        <field name="name">Positions</field>
+        <field name="res_model">hrm.position</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_reporting_line_list" model="ir.ui.view">
+        <field name="name">hrm.reporting.line.list</field>
+        <field name="model">hrm.reporting.line</field>
+        <field name="arch" type="xml">
+            <list><field name="employee_id"/><field name="manager_employee_id"/><field name="relationship_type"/><field name="effective_from"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_reporting_line_form" model="ir.ui.view">
+        <field name="name">hrm.reporting.line.form</field>
+        <field name="model">hrm.reporting.line</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="company_id"/>
+                <field name="employee_id"/><field name="manager_employee_id"/>
+                <field name="relationship_type"/>
+                <field name="effective_from"/><field name="effective_to"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_reporting_line" model="ir.actions.act_window">
+        <field name="name">Reporting Lines</field>
+        <field name="res_model">hrm.reporting.line</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,1582 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: HRM 20.0\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hr_employee_tenant_person_unique
+msgid "A person can have only one employee record per tenant."
+msgstr "Mỗi cá nhân chỉ được có một hồ sơ nhân viên trong cùng đơn vị quản lý."
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hr_employee_form_hrm
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_employee_contract_form
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_probation_form
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_promotion_form
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_transfer_form
+msgid "Actions"
+msgstr "Thao tác"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hr_employee_form_hrm
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_employee_contract_form
+msgid "Activate"
+msgstr "Kích hoạt"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hr_employee__current_status__active
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_contract_type__status__active
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_assignment__status__active
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_document__status__active
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_grade__status__active
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_job__status__active
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_person__status__active
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_position__status__active
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_probation__status__active
+msgid "Active"
+msgstr "Đang hoạt động"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__actor_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__actor_id
+msgid "Actor"
+msgstr "Người thực hiện"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__actual_end_date
+msgid "Actual End Date"
+msgstr "Ngày kết thúc thực tế"
+
+#. module: hrm_employee
+#: model:ir.model.fields,help:hrm_employee.field_hrm_job__hr_job_id
+msgid "Adapter link to the Odoo job (master-skill §7)."
+msgstr "Adapter link to the Odoo job (master-skill §7)."
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__address
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_contact__contact_type__address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_skill__level__advanced
+msgid "Advanced"
+msgstr "Nâng cao"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hr_employee__current_status__alumni
+msgid "Alumni"
+msgstr "Đã nghỉ việc"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_reporting_line_no_self_report
+msgid "An employee cannot report to themselves."
+msgstr "Nhân viên không thể tự quản lý chính mình."
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_promotion_form
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_transfer_form
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_employee_contract_form
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_promotion_form
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_transfer_form
+msgid "Approve"
+msgstr "Phê duyệt"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_promotion__status__approved
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_transfer__status__approved
+msgid "Approved"
+msgstr "Đã duyệt"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_contract_type__status__archived
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_document__status__archived
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_grade__status__archived
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_job__status__archived
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_person__status__archived
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_position__status__archived
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__assignment_type
+msgid "Assignment Type"
+msgstr "Loại phân công"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_employee_assignment_uuid_unique
+msgid "Assignment UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_employee_assignment
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_assignment
+msgid "Assignments"
+msgstr "Phân công nhân sự"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__base_salary
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__base_salary
+msgid "Base Salary"
+msgstr "Lương cơ bản"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_skill__level__beginner
+msgid "Beginner"
+msgstr "Cơ bản"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__business_unit_id
+msgid "Business Unit"
+msgstr "Đơn vị kinh doanh"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_promotion__status__cancelled
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_transfer__status__cancelled
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: hrm_employee
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_catalog
+msgid "Catalogue"
+msgstr "Danh mục"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__certificate_no
+msgid "Certificate No"
+msgstr "Số chứng chỉ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__certification_name
+msgid "Certification Name"
+msgstr "Tên chứng chỉ"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_employee_certification_uuid_unique
+msgid "Certification UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__change_reason
+msgid "Change Reason"
+msgstr "Lý do thay đổi"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__change_type
+msgid "Change Type"
+msgstr "Loại thay đổi"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__checksum_sha256
+msgid "Checksum Sha256"
+msgstr "Mã kiểm tra SHA256"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_family__relationship_type__child
+msgid "Child"
+msgstr "Con"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_assignment__status__closed
+msgid "Closed"
+msgstr "Đã đóng"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__code
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__code
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__code
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__company_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__company_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__company_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__company_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__company_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_position
+msgid "Concrete organizational seat (SPEC §5.3)"
+msgstr "Concrete organizational seat (SPEC §5.3)"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__contact_type
+msgid "Contact Type"
+msgstr "Loại liên hệ"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_employee_contact_uuid_unique
+msgid "Contact UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__contract_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__contract_id
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__contract_no
+msgid "Contract No"
+msgstr "Số hợp đồng"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__contract_type_id
+msgid "Contract Type"
+msgstr "Loại hợp đồng"
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_contract_type
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_contract_type
+msgid "Contract Types"
+msgstr "Loại hợp đồng"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_employee_contract_uuid_unique
+msgid "Contract UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_employee_contract_tenant_no_unique
+msgid "Contract number must be unique per tenant."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý."
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_contract_type
+msgid "Contract type (SPEC §5.5)"
+msgstr "Contract type (SPEC §5.5)"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_contract_type_uuid_unique
+msgid "Contract type UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_contract_type_code_unique
+msgid "Contract type code must be unique."
+msgstr "Mã phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_contract_type__employment_category__contractor
+msgid "Contractor"
+msgstr "Cộng tác viên"
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_employee_contract
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_contract
+msgid "Contracts"
+msgstr "Hợp đồng"
+
+#. module: hrm_employee
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_core
+msgid "Core HR"
+msgstr "Nhân sự"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__country_code
+msgid "Country Code"
+msgstr "Mã quốc gia"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__create_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__create_uid
+msgid "Created by"
+msgstr "Người tạo"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__create_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__currency_code
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__currency_code
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__currency_code
+msgid "Currency Code"
+msgstr "Tiền tệ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__current_assignment_id
+msgid "Current Assignment"
+msgstr "Phân công hiện tại"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__current_contract_id
+msgid "Current Contract"
+msgstr "Hợp đồng hiện tại"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__current_status
+msgid "Current Status"
+msgstr "Trạng thái hiện tại"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__date_of_birth
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__date_of_birth
+msgid "Date Of Birth"
+msgstr "Ngày sinh"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__default_duration_days
+msgid "Default Duration Days"
+msgstr "Số ngày mặc định"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__degree
+msgid "Degree"
+msgstr "Bằng cấp"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__department_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__department_id
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__display_name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_person__marital_status__divorced
+msgid "Divorced"
+msgstr "Đã ly hôn"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__document_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__document_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__document_id
+msgid "Document"
+msgstr "Tài liệu"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__document_type
+msgid "Document Type"
+msgstr "Loại tài liệu"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_employee_document_uuid_unique
+msgid "Document UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_promotion__status__done
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_transfer__status__done
+msgid "Done"
+msgstr "Hoàn tất"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_contract__status__draft
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_promotion__status__draft
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_transfer__status__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_employee_education_uuid_unique
+msgid "Education UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__effective_at
+msgid "Effective At"
+msgstr "Hiệu lực lúc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__effective_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__effective_date
+msgid "Effective Date"
+msgstr "Ngày hiệu lực"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__effective_from
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__effective_from
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__effective_from
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__effective_from
+msgid "Effective From"
+msgstr "Hiệu lực từ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__effective_to
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__effective_to
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__effective_to
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__effective_to
+msgid "Effective To"
+msgstr "Hiệu lực đến"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__email
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_contact__contact_type__email
+msgid "Email"
+msgstr "Email"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_emergency_contact
+msgid "Emergency contact (SPEC §4.5)"
+msgstr "Emergency contact (SPEC §4.5)"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_emergency_contact_uuid_unique
+msgid "Emergency contact UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__employee_ids
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__employee_id
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hr_employee
+msgid "Employee (SPEC §4.2)"
+msgstr "Employee (SPEC §4.2)"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__employee_code
+msgid "Employee Code"
+msgstr "Mã nhân viên"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hr_employee_uuid_unique
+msgid "Employee UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employee_assignment
+msgid "Employee assignment (SPEC §5.7)"
+msgstr "Employee assignment (SPEC §5.7)"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employee_certification
+msgid "Employee certification (SPEC §4.7)"
+msgstr "Employee certification (SPEC §4.7)"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hr_employee_tenant_code_unique
+msgid "Employee code must be unique per tenant."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý."
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employee_contact
+msgid "Employee contact channel (SPEC §4.3)"
+msgstr "Employee contact channel (SPEC §4.3)"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employee_contract
+msgid "Employee contract, state machine (SPEC §5.6)"
+msgstr "Employee contract, state machine (SPEC §5.6)"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employee_document
+msgid "Employee document metadata; binaries in object storage (SPEC §4.9)"
+msgstr "Employee document metadata; binaries in object storage (SPEC §4.9)"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employee_education
+msgid "Employee education (SPEC §4.6)"
+msgstr "Employee education (SPEC §4.6)"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employee_family
+msgid "Employee family / dependants (SPEC §4.4)"
+msgstr "Employee family / dependants (SPEC §4.4)"
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hr_employee_hrm
+msgid "Employee records"
+msgstr "Hồ sơ nhân viên"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employee_skill
+msgid "Employee skill (SPEC §4.8)"
+msgstr "Employee skill (SPEC §4.8)"
+
+#. module: hrm_employee
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_employee
+msgid "Employees"
+msgstr "Nhân viên"
+
+#. module: hrm_employee
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_employment
+msgid "Employment"
+msgstr "Quan hệ lao động"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__employment_category
+msgid "Employment Category"
+msgstr "Hình thức lao động"
+
+#. module: hrm_employee
+#: model:ir.model.fields,help:hrm_employee.field_hrm_contract_type__tenant_id
+msgid "Empty = global catalogue entry."
+msgstr "Để trống để dùng danh mục chung."
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__end_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__end_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__end_date
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__event_at
+msgid "Event At"
+msgstr "Sự kiện lúc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__event_type
+msgid "Event Type"
+msgstr "Loại sự kiện"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_skill__level__expert
+msgid "Expert"
+msgstr "Chuyên gia"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_employee_contract_form
+msgid "Expire"
+msgstr "Kết thúc hiệu lực"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__expires_at
+msgid "Expires At"
+msgstr "Hết hạn lúc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__expiry_date
+msgid "Expiry Date"
+msgstr "Ngày hết hạn"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_probation_form
+msgid "Extend"
+msgstr "Gia hạn"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_probation__result__extended
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_probation__status__extended
+msgid "Extended"
+msgstr "Đã gia hạn"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_probation_form
+msgid "Fail"
+msgstr "Không đạt"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_probation__result__failed
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_probation__status__failed
+msgid "Failed"
+msgstr "Thất bại"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_employee_family_uuid_unique
+msgid "Family UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_person__gender__female
+msgid "Female"
+msgstr "Nữ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__field_of_study
+msgid "Field Of Study"
+msgstr "Chuyên ngành"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__file_name
+msgid "File Name"
+msgstr "Tên tệp"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__file_size_bytes
+msgid "File Size Bytes"
+msgstr "Kích thước tệp (byte)"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__first_name
+msgid "First Name"
+msgstr "Tên"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_contract_type__employment_category__fixed_term
+msgid "Fixed Term"
+msgstr "Có thời hạn"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__from_assignment_id
+msgid "From Assignment"
+msgstr "Phân công cũ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__from_company_id
+msgid "From Company"
+msgstr "Công ty cũ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__from_department_id
+msgid "From Department"
+msgstr "Phòng ban cũ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__from_grade_id
+msgid "From Grade"
+msgstr "Bậc cũ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__from_position_id
+msgid "From Position"
+msgstr "Vị trí cũ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__from_status
+msgid "From Status"
+msgstr "Trạng thái cũ"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_reporting_line__relationship_type__functional_manager
+msgid "Functional Manager"
+msgstr "Quản lý chuyên môn"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__gender
+msgid "Gender"
+msgstr "Giới tính"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__grade_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__grade
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__grade_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__grade_id
+msgid "Grade"
+msgstr "Bậc nhân sự"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_grade
+msgid "Grade / salary band (SPEC §5.2)"
+msgstr "Grade / salary band (SPEC §5.2)"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_grade_uuid_unique
+msgid "Grade UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_grade_tenant_company_code_unique
+msgid "Grade code must be unique per tenant+company."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý và công ty."
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_grade
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_grade
+msgid "Grades"
+msgstr "Bậc nhân sự"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hr_employee_form_hrm
+msgid "HRM"
+msgstr "Quản lý nhân sự"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__headcount_limit
+msgid "Headcount Limit"
+msgstr "Định biên nhân sự"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__hire_date
+msgid "Hire Date"
+msgstr "Ngày vào làm"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hr_employee__current_status__hired
+msgid "Hired"
+msgstr "Đã tiếp nhận"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__hr_job_id
+msgid "Hr Job"
+msgstr "Chức danh"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_salary_history
+msgid "Immutable compensation history (SPEC §5.11)."
+msgstr "Immutable compensation history (SPEC §5.11)."
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employee_history
+msgid "Immutable employee history projection (SPEC §4.10)."
+msgstr "Immutable employee history projection (SPEC §4.10)."
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_employment_status_history
+msgid "Immutable employment status history (SPEC §5.12)."
+msgstr "Immutable employment status history (SPEC §5.12)."
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_contract_type__employment_category__indefinite
+msgid "Indefinite"
+msgstr "Không thời hạn"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__institution
+msgid "Institution"
+msgstr "Trường/cơ sở đào tạo"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_skill__level__intermediate
+msgid "Intermediate"
+msgstr "Trung cấp"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__is_dependent
+msgid "Is Dependent"
+msgstr "Người phụ thuộc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__is_indefinite
+msgid "Is Indefinite"
+msgstr "Không thời hạn"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__is_primary
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__is_primary
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__is_primary
+msgid "Is Primary"
+msgstr "Liên hệ chính"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__issued_at
+msgid "Issued At"
+msgstr "Phát hành lúc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__issued_date
+msgid "Issued Date"
+msgstr "Ngày phát hành"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__issuer
+msgid "Issuer"
+msgstr "Đơn vị cấp"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__job_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__job_id
+msgid "Job"
+msgstr "Chức danh"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_job_uuid_unique
+msgid "Job UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_job_tenant_company_code_unique
+msgid "Job code must be unique per tenant+company."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý và công ty."
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_job
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_job
+msgid "Jobs"
+msgstr "Chức danh"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__label
+msgid "Label"
+msgstr "Nhãn"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__last_name
+msgid "Last Name"
+msgstr "Họ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__write_uid
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__write_uid
+msgid "Last Updated by"
+msgstr "Người cập nhật"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__write_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__write_date
+msgid "Last Updated on"
+msgstr "Ngày cập nhật"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__level
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__level
+msgid "Level"
+msgstr "Cấp độ"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_reporting_line__relationship_type__line_manager
+msgid "Line Manager"
+msgstr "Quản lý trực tiếp"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__location_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_person__gender__male
+msgid "Male"
+msgstr "Nam"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_reporting_line
+msgid "Manager <-> employee reporting line (SPEC §5.4)"
+msgstr "Manager <-> employee reporting line (SPEC §5.4)"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__manager_employee_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__manager_employee_id
+msgid "Manager Employee"
+msgstr "Nhân viên quản lý"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__marital_status
+msgid "Marital Status"
+msgstr "Tình trạng hôn nhân"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_person__marital_status__married
+msgid "Married"
+msgstr "Đã kết hôn"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_reporting_line__relationship_type__matrix_manager
+msgid "Matrix Manager"
+msgstr "Quản lý phối hợp"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__max_salary
+msgid "Max Salary"
+msgstr "Lương tối đa"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__middle_name
+msgid "Middle Name"
+msgstr "Tên đệm"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__mime_type
+msgid "Mime Type"
+msgstr "Loại tệp"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__min_salary
+msgid "Min Salary"
+msgstr "Lương tối thiểu"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__name
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__nationality_code
+msgid "Nationality Code"
+msgstr "Mã quốc tịch"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__notes
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__notes
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hr_employee_form_hrm
+msgid "Onboard"
+msgstr "Tiếp nhận nhân viên"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hr_employee__current_status__onboarding
+msgid "Onboarding"
+msgstr "Đang tiếp nhận"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_family__relationship_type__other
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_person__gender__other
+msgid "Other"
+msgstr "Khác"
+
+#. module: hrm_employee
+#: model:ir.module.module,summary:base.module_hrm_employee
+msgid "P2 Core HR: person, employee, organization catalogue, contract, assignment and salary/status history."
+msgstr "P2 Core HR: person, employee, org catalogue, contract, assignment, salary/status history (master-skill §8)"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_family__relationship_type__parent
+msgid "Parent"
+msgstr "Đơn vị cấp trên"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_contract_type__employment_category__part_time
+msgid "Part Time"
+msgstr "Bán thời gian"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_probation_form
+msgid "Pass"
+msgstr "Đạt"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_probation__result__passed
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_probation__status__passed
+msgid "Passed"
+msgstr "Đạt"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__payload
+msgid "Payload"
+msgstr "Nội dung dữ liệu"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_probation__status__pending
+msgid "Pending"
+msgstr "Đang chờ"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_contract__status__pending_approval
+msgid "Pending Approval"
+msgstr "Chờ phê duyệt"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__person_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__person_id
+msgid "Person"
+msgstr "Cá nhân"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_person
+msgid "Person (SPEC §4.1)"
+msgstr "Person (SPEC §4.1)"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__person_code
+msgid "Person Code"
+msgstr "Mã hồ sơ cá nhân"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_person_uuid_unique
+msgid "Person UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_person_tenant_person_code_unique
+msgid "Person code must be unique per tenant."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý."
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_person
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_person
+msgid "Persons"
+msgstr "Hồ sơ cá nhân"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__phone
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_contact__contact_type__phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__photo
+msgid "Photo"
+msgstr "Ảnh"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__planned_end_date
+msgid "Planned End Date"
+msgstr "Ngày kết thúc dự kiến"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__position_id
+msgid "Position"
+msgstr "Vị trí"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_position_uuid_unique
+msgid "Position UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_position_tenant_company_code_unique
+msgid "Position code must be unique per tenant+company."
+msgstr "Mã phải duy nhất trong cùng đơn vị quản lý và công ty."
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_position
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_position
+msgid "Positions"
+msgstr "Vị trí công việc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__preferred_name
+msgid "Preferred Name"
+msgstr "Tên thường dùng"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_assignment__assignment_type__primary
+msgid "Primary"
+msgstr "Chính"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__priority
+msgid "Priority"
+msgstr "Mức ưu tiên"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_contract_type__employment_category__probation
+msgid "Probation"
+msgstr "Thử việc"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_probation
+msgid "Probation (SPEC §5.8)"
+msgstr "Probation (SPEC §5.8)"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__probation_end
+msgid "Probation End"
+msgstr "Kết thúc thử việc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__probation_start
+msgid "Probation Start"
+msgstr "Bắt đầu thử việc"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_probation_uuid_unique
+msgid "Probation UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_probation
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_probation
+msgid "Probations"
+msgstr "Thử việc"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_promotion
+msgid "Promotion (SPEC §5.9)"
+msgstr "Promotion (SPEC §5.9)"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_promotion_uuid_unique
+msgid "Promotion UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_promotion
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_promotion
+msgid "Promotions"
+msgstr "Bổ nhiệm/thăng chức"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__reason
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__reason
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__reason
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__reference_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__reference_id
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__reference_type
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__reference_type
+msgid "Reference Type"
+msgstr "Loại tham chiếu"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__relationship
+msgid "Relationship"
+msgstr "Quan hệ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__relationship_type
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__relationship_type
+msgid "Relationship Type"
+msgstr "Loại quan hệ"
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_reporting_line
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_reporting_line
+msgid "Reporting Lines"
+msgstr "Quan hệ quản lý"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_reporting_line_uuid_unique
+msgid "Reporting line UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__result
+msgid "Result"
+msgstr "Kết quả"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_job
+msgid "Reusable job definition (SPEC §5.1)"
+msgstr "Reusable job definition (SPEC §5.1)"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_certification__status__revoked
+msgid "Revoked"
+msgstr "Đã thu hồi"
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_salary_history
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_salary_history
+msgid "Salary History"
+msgstr "Lịch sử lương"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_assignment__assignment_type__secondary
+msgid "Secondary"
+msgstr "Phụ"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_family__relationship_type__sibling
+msgid "Sibling"
+msgstr "Anh/chị/em"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__signed_at
+msgid "Signed At"
+msgstr "Ký lúc"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_person__marital_status__single
+msgid "Single"
+msgstr "Độc thân"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_employee_skill_uuid_unique
+msgid "Skill UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__source_id
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__source_type
+msgid "Source Type"
+msgstr "Loại nguồn"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_family__relationship_type__spouse
+msgid "Spouse"
+msgstr "Vợ/chồng"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_probation_form
+msgid "Start"
+msgstr "Bắt đầu"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__start_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__start_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__start_date
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__start_date
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__status
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__status
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_employment_status_history
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_status_history
+msgid "Status History"
+msgstr "Lịch sử trạng thái"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__status_reason
+msgid "Status Reason"
+msgstr "Lý do đổi trạng thái"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__storage_key
+msgid "Storage Key"
+msgstr "Mã lưu trữ"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_employee_contract_form
+msgid "Submit"
+msgstr "Gửi duyệt"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hr_employee_form_hrm
+msgid "Suspend"
+msgstr "Tạm ngưng"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hr_employee__current_status__suspended
+msgid "Suspended"
+msgstr "Tạm ngưng"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_history__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_salary_history__tenant_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__tenant_id
+msgid "Tenant"
+msgstr "Đơn vị quản lý"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hr_employee_form_hrm
+msgid "Terminate"
+msgstr "Cho thôi việc"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hr_employee__current_status__terminated
+msgid "Terminated"
+msgstr "Đã nghỉ việc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__termination_date
+msgid "Termination Date"
+msgstr "Ngày nghỉ việc"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hr_employee__current_status__termination_pending
+msgid "Termination Pending"
+msgstr "Chờ nghỉ việc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__title
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__title
+msgid "Title"
+msgstr "Chức danh"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__to_company_id
+msgid "To Company"
+msgstr "Công ty mới"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__to_department_id
+msgid "To Department"
+msgstr "Phòng ban mới"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__to_grade_id
+msgid "To Grade"
+msgstr "Bậc mới"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__to_position_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__to_position_id
+msgid "To Position"
+msgstr "Vị trí mới"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employment_status_history__to_status
+msgid "To Status"
+msgstr "Trạng thái mới"
+
+#. module: hrm_employee
+#: model:ir.model,name:hrm_employee.model_hrm_transfer
+msgid "Transfer (SPEC §5.10)"
+msgstr "Transfer (SPEC §5.10)"
+
+#. module: hrm_employee
+#: model:ir.model.constraint,message:hrm_employee.constraint_hrm_transfer_uuid_unique
+msgid "Transfer UUID must be unique."
+msgstr "Mã định danh phải duy nhất."
+
+#. module: hrm_employee
+#: model:ir.actions.act_window,name:hrm_employee.action_hrm_transfer
+#: model:ir.ui.menu,name:hrm_employee.menu_hrm_transfer
+msgid "Transfers"
+msgstr "Điều chuyển"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_certification__status__valid
+msgid "Valid"
+msgstr "Hợp lệ"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__verified_at
+msgid "Verified At"
+msgstr "Xác minh lúc"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hr_employee__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_contract_type__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_emergency_contact__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_assignment__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_certification__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contact__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_document__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_education__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_family__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_grade__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_job__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_person__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_position__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_probation__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_reporting_line__version
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__version
+msgid "Version"
+msgstr "Phiên bản"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_person__marital_status__widowed
+msgid "Widowed"
+msgstr "Góa"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_promotion__workflow_instance_id
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_transfer__workflow_instance_id
+msgid "Workflow Instance"
+msgstr "Hồ sơ phê duyệt"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_contract__working_hours_per_week
+msgid "Working Hours Per Week"
+msgstr "Giờ làm việc mỗi tuần"
+
+#. module: hrm_employee
+#: model:ir.model.fields,field_description:hrm_employee.field_hrm_employee_skill__years_experience
+msgid "Years Experience"
+msgstr "Số năm kinh nghiệm"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_contract__status__active
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_employee_contract_search
+msgid "In effect"
+msgstr "Đang hiệu lực"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_employee_contract_search
+msgid "Awaiting action"
+msgstr "Chờ xử lý"
+
+#. module: hrm_employee
+#: model_terms:ir.ui.view,arch_db:hrm_employee.view_hrm_employee_contract_search
+msgid "Closed history"
+msgstr "Lịch sử đã đóng"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_contract__status__approved
+msgid "Approved · Awaiting activation"
+msgstr "Đã duyệt · Chờ kích hoạt"
+
+#. module: hrm_employee
+#: model:ir.model.fields.selection,name:hrm_employee.selection__hrm_employee_contract__status__expired
+msgid "Contract closed"
+msgstr "Đã đóng"

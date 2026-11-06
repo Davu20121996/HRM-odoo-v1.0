@@ -1,0 +1,22 @@
+<odoo>
+    <menuitem id="menu_hrm_root" name="HRM" sequence="10"/>
+
+    <menuitem id="menu_hrm_foundation" name="Foundation" parent="menu_hrm_root" sequence="10"/>
+    <menuitem id="menu_hrm_tenant" parent="menu_hrm_foundation" action="action_hrm_tenant" sequence="10" name="Tenants"/>
+    <menuitem id="menu_hrm_company" parent="menu_hrm_foundation" action="action_hrm_company" sequence="20" name="Companies"/>
+    <menuitem id="menu_hrm_business_unit" parent="menu_hrm_foundation" action="action_hrm_business_unit" sequence="30" name="Business Units"/>
+    <menuitem id="menu_hrm_department" parent="menu_hrm_foundation" action="action_hrm_department" sequence="40" name="Departments"/>
+    <menuitem id="menu_hrm_location" parent="menu_hrm_foundation" action="action_hrm_location" sequence="50" name="Locations"/>
+    <menuitem id="menu_hrm_cost_center" parent="menu_hrm_foundation" action="action_hrm_cost_center" sequence="60" name="Cost Centers"/>
+
+    <menuitem id="menu_hrm_security" name="Security" parent="menu_hrm_root" sequence="20"/>
+    <menuitem id="menu_hrm_role" parent="menu_hrm_security" action="action_hrm_role" sequence="10" name="Roles"/>
+    <menuitem id="menu_hrm_permission" parent="menu_hrm_security" action="action_hrm_permission" sequence="20" name="Permissions"/>
+    <menuitem id="menu_hrm_user_role" parent="menu_hrm_security" action="action_hrm_user_role" sequence="30" name="User Roles"/>
+    <menuitem id="menu_hrm_role_scope" parent="menu_hrm_security" action="action_hrm_role_scope" sequence="40" name="Role Scopes"/>
+
+    <menuitem id="menu_hrm_platform" name="Platform" parent="menu_hrm_root" sequence="30"/>
+    <menuitem id="menu_hrm_audit" parent="menu_hrm_platform" action="action_hrm_audit_log" sequence="10" name="Audit Log"/>
+    <menuitem id="menu_hrm_configuration" parent="menu_hrm_platform" action="action_hrm_configuration" sequence="20" name="Configuration"/>
+    <menuitem id="menu_hrm_feature_flag" parent="menu_hrm_platform" action="action_hrm_feature_flag" sequence="30" name="Feature Flags"/>
+</odoo>

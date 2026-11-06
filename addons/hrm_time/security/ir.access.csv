@@ -1,0 +1,21 @@
+id,name,model_id,group_id/id,operation,domain
+access_hrm_schedule_user,schedule user,hrm.work.schedule,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_schedule_admin,schedule admin,hrm.work.schedule,hrm_base.group_hrm_admin,crud,
+access_hrm_shift_user,shift user,hrm.shift,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_shift_admin,shift admin,hrm.shift,hrm_base.group_hrm_admin,crud,
+access_hrm_shift_assignment_user,shift assignment user,hrm.shift.assignment,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_shift_assignment_admin,shift assignment admin,hrm.shift.assignment,hrm_base.group_hrm_admin,crud,
+access_hrm_device_user,device user,hrm.attendance.device,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_device_admin,device admin,hrm.attendance.device,hrm_base.group_hrm_admin,crud,
+access_hrm_device_event_user,device event user,hrm.attendance.device.event,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_device_event_admin,device event admin,hrm.attendance.device.event,hrm_base.group_hrm_admin,cr,
+access_hrm_attendance_user,attendance user,hrm.attendance,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_attendance_admin,attendance admin,hrm.attendance,hrm_base.group_hrm_admin,crud,
+access_hrm_adjustment_user,adjustment user,hrm.attendance.adjustment,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_adjustment_admin,adjustment admin,hrm.attendance.adjustment,hrm_base.group_hrm_admin,crud,
+access_hrm_ot_user,overtime user,hrm.overtime.request,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_ot_admin,overtime admin,hrm.overtime.request,hrm_base.group_hrm_admin,crud,
+access_hrm_timesheet_user,timesheet user,hrm.timesheet,hrm_base.group_hrm_user,cru,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_timesheet_admin,timesheet admin,hrm.timesheet,hrm_base.group_hrm_admin,crud,
+access_hrm_work_entry_user,work entry user,hrm.work.entry,hrm_base.group_hrm_user,r,"[('tenant_id', 'in', user.hrm_tenant_ids.ids)]"
+access_hrm_work_entry_admin,work entry admin,hrm.work.entry,hrm_base.group_hrm_admin,crud,

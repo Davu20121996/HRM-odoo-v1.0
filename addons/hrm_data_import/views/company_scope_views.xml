@@ -1,0 +1,27 @@
+<odoo>
+  <record id="audit_details_form" model="ir.ui.view">
+    <field name="name">hrm.audit.log.details.visible</field><field name="model">hrm.audit.log</field>
+    <field name="inherit_id" ref="hrm_base.view_hrm_audit_log_form"/>
+    <field name="arch" type="xml"><xpath expr="//sheet" position="inside">
+      <group string="Log details"><field name="company_id"/><field name="entity_id"/><field name="create_date"/><field name="metadata"/><field name="old_value"/><field name="new_value"/></group>
+    </xpath></field>
+  </record>
+  <record id="employee_company_form" model="ir.ui.view">
+    <field name="name">hr.employee.hrm.company.scope</field><field name="model">hr.employee</field>
+    <field name="inherit_id" ref="hrm_employee.view_hr_employee_form_hrm"/>
+    <field name="arch" type="xml"><field name="employee_code" position="before"><field name="hrm_company_id"/></field></field>
+  </record>
+  <record id="person_company_form" model="ir.ui.view">
+    <field name="name">hrm.person.company.scope</field><field name="model">hrm.person</field>
+    <field name="inherit_id" ref="hrm_employee.view_hrm_person_form"/>
+    <field name="arch" type="xml"><field name="tenant_id" position="after"><field name="company_id"/></field></field>
+  </record>
+  <record id="payroll_results_form" model="ir.ui.view">
+    <field name="name">hrm.payroll.results.visible</field><field name="model">hrm.payroll</field>
+    <field name="inherit_id" ref="hrm_payroll.view_hrm_payroll_form"/>
+    <field name="arch" type="xml"><xpath expr="//sheet" position="inside">
+      <group><field name="calculation_version" readonly="1"/></group>
+      <field name="item_ids" readonly="1"><list><field name="employee_id"/><field name="gross_amount"/><field name="deduction_amount"/><field name="tax_amount"/><field name="net_amount"/><field name="currency_code"/><field name="status"/></list></field>
+    </xpath></field>
+  </record>
+</odoo>

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- 5 pipeline stages -->
+    <record id="demo_stage_screen" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">default</field>
+        <field name="code">SCREEN</field>
+        <field name="name">Sang loc CV</field>
+        <field name="sequence_no">10</field>
+        <field name="stage_type">screen</field>
+        <field name="status">active</field>
+    </record>
+    <record id="demo_stage_interview" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">default</field>
+        <field name="code">INTERVIEW</field>
+        <field name="name">Phong van</field>
+        <field name="sequence_no">20</field>
+        <field name="stage_type">interview</field>
+        <field name="status">active</field>
+    </record>
+    <record id="demo_stage_offer" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">default</field>
+        <field name="code">OFFER</field>
+        <field name="name">Thu viec / Offer</field>
+        <field name="sequence_no">30</field>
+        <field name="stage_type">offer</field>
+        <field name="status">active</field>
+    </record>
+    <record id="demo_stage_hired" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">default</field>
+        <field name="code">HIRED</field>
+        <field name="name">Nhan viec</field>
+        <field name="sequence_no">40</field>
+        <field name="stage_type">hired</field>
+        <field name="is_terminal">True</field>
+        <field name="status">active</field>
+    </record>
+    <record id="demo_stage_rejected" model="hrm.recruitment.stage">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="pipeline_code">default</field>
+        <field name="code">REJECTED</field>
+        <field name="name">Loai</field>
+        <field name="sequence_no">90</field>
+        <field name="stage_type">rejected</field>
+        <field name="is_terminal">True</field>
+        <field name="status">active</field>
+    </record>
+
+    <!-- 10 ung vien mau: du trang thai de demo list/form/kanban -->
+    <record id="demo_cand_01" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0001</field>
+        <field name="first_name">An</field>
+        <field name="last_name">Nguyen Van</field>
+        <field name="email">an.nv@example.com</field>
+        <field name="phone">0901000001</field>
+        <field name="source">VietnamWorks</field>
+        <field name="status">new</field>
+    </record>
+    <record id="demo_cand_02" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0002</field>
+        <field name="first_name">Binh</field>
+        <field name="last_name">Tran Thi</field>
+        <field name="email">binh.tt@example.com</field>
+        <field name="phone">0901000002</field>
+        <field name="source">TopCV</field>
+        <field name="status">screening</field>
+    </record>
+    <record id="demo_cand_03" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0003</field>
+        <field name="first_name">Cuong</field>
+        <field name="last_name">Le Van</field>
+        <field name="email">cuong.lv@example.com</field>
+        <field name="phone">0901000003</field>
+        <field name="source">Referral</field>
+        <field name="status">interview</field>
+    </record>
+    <record id="demo_cand_04" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0004</field>
+        <field name="first_name">Dung</field>
+        <field name="last_name">Pham Thi</field>
+        <field name="email">dung.pt@example.com</field>
+        <field name="phone">0901000004</field>
+        <field name="source">Facebook</field>
+        <field name="status">interview</field>
+    </record>
+    <record id="demo_cand_05" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0005</field>
+        <field name="first_name">Hieu</field>
+        <field name="last_name">Vo Van</field>
+        <field name="email">hieu.vv@example.com</field>
+        <field name="phone">0901000005</field>
+        <field name="source">VietnamWorks</field>
+        <field name="status">offer</field>
+    </record>
+    <record id="demo_cand_06" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0006</field>
+        <field name="first_name">Lan</field>
+        <field name="last_name">Do Thi</field>
+        <field name="email">lan.dt@example.com</field>
+        <field name="phone">0901000006</field>
+        <field name="source">TopCV</field>
+        <field name="status">hired</field>
+    </record>
+    <record id="demo_cand_07" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0007</field>
+        <field name="first_name">Minh</field>
+        <field name="last_name">Hoang Van</field>
+        <field name="email">minh.hv@example.com</field>
+        <field name="phone">0901000007</field>
+        <field name="source">Website</field>
+        <field name="status">rejected</field>
+    </record>
+    <record id="demo_cand_08" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0008</field>
+        <field name="first_name">Nga</field>
+        <field name="last_name">Bui Thi</field>
+        <field name="email">nga.bt@example.com</field>
+        <field name="phone">0901000008</field>
+        <field name="source">Referral</field>
+        <field name="status">screening</field>
+    </record>
+    <record id="demo_cand_09" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0009</field>
+        <field name="first_name">Phuc</field>
+        <field name="last_name">Dang Van</field>
+        <field name="email">phuc.dv@example.com</field>
+        <field name="phone">0901000009</field>
+        <field name="source">LinkedIn</field>
+        <field name="status">new</field>
+    </record>
+    <record id="demo_cand_10" model="hrm.candidate">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_code">UV-0010</field>
+        <field name="first_name">Thao</field>
+        <field name="last_name">Ngo Thi</field>
+        <field name="email">thao.nt@example.com</field>
+        <field name="phone">0901000010</field>
+        <field name="source">TopCV</field>
+        <field name="status">new</field>
+    </record>
+
+    <!-- 2 nhu cau tuyen dung -->
+    <record id="demo_req_dev" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_it"/>
+        <field name="position_id" ref="hrm_employee.demo_pos_dev01"/>
+        <field name="job_id" ref="hrm_employee.demo_job_dev"/>
+        <field name="approved_headcount">3</field>
+        <field name="target_hire_date">2026-03-31</field>
+        <field name="description">Tuyen 3 Dev Odoo cho du an HRM</field>
+        <field name="status">open</field>
+    </record>
+    <record id="demo_req_tester" model="hrm.job.requisition">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="company_id" ref="hrm_base.demo_company_hcm"/>
+        <field name="department_id" ref="hrm_base.demo_dept_it"/>
+        <field name="position_id" ref="hrm_employee.demo_pos_test01"/>
+        <field name="job_id" ref="hrm_employee.demo_job_tester"/>
+        <field name="approved_headcount">2</field>
+        <field name="target_hire_date">2026-03-31</field>
+        <field name="description">Tuyen 2 Tester cho du an HRM</field>
+        <field name="status">open</field>
+    </record>
+
+    <!-- Don ung tuyen mau noi UV <-> nhu cau -->
+    <record id="demo_app_01" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="demo_cand_01"/>
+        <field name="requisition_id" ref="demo_req_dev"/>
+        <field name="current_stage_id" ref="demo_stage_screen"/>
+        <field name="applied_at">2026-09-01 08:00:00</field>
+        <field name="source">VietnamWorks</field>
+        <field name="status">new</field>
+    </record>
+    <record id="demo_app_03" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="demo_cand_03"/>
+        <field name="requisition_id" ref="demo_req_dev"/>
+        <field name="current_stage_id" ref="demo_stage_interview"/>
+        <field name="applied_at">2026-08-20 09:00:00</field>
+        <field name="source">Referral</field>
+        <field name="status">in_progress</field>
+    </record>
+    <record id="demo_app_05" model="hrm.application">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="candidate_id" ref="demo_cand_05"/>
+        <field name="requisition_id" ref="demo_req_dev"/>
+        <field name="current_stage_id" ref="demo_stage_offer"/>
+        <field name="applied_at">2026-08-10 09:00:00</field>
+        <field name="source">VietnamWorks</field>
+        <field name="status">offered</field>
+    </record>
+
+    <!-- Offer mau cho UV-0005 -->    <record id="demo_offer_05" model="hrm.offer">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="demo_app_05"/>
+        <field name="offer_no">OFFER-2026-0005</field>
+        <field name="issued_at">2026-09-10 09:00:00</field>
+        <field name="base_salary">18000000</field>
+        <field name="currency_code">VND</field>
+        <field name="start_date">2026-10-01</field>
+        <field name="status">sent</field>
+    </record>
+    <!-- 2 lich phong van mau (nguoi PV la NV that) -->
+    <record id="demo_iv_01" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="demo_app_03"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_05"/>
+        <field name="scheduled_at">2026-09-25 09:00:00</field>
+        <field name="duration_minutes">60</field>
+        <field name="location">Phong hop tang 3 - HCM-HQ</field>
+        <field name="status">done</field>
+    </record>
+    <record id="demo_iv_02" model="hrm.interview">
+        <field name="tenant_id" ref="hrm_base.demo_tenant_abc"/>
+        <field name="application_id" ref="demo_app_01"/>
+        <field name="interviewer_employee_id" ref="hrm_employee.demo_emp_04"/>
+        <field name="scheduled_at">2026-10-02 14:00:00</field>
+        <field name="duration_minutes">45</field>
+        <field name="meeting_url">https://meet.abc-tech.vn/pv-uv0001</field>
+        <field name="status">scheduled</field>
+    </record>
+</odoo>

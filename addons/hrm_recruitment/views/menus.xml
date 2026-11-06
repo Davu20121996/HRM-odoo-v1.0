@@ -1,0 +1,8 @@
+<odoo>
+    <menuitem id="menu_hrm_recruitment" name="Recruitment" parent="hrm_base.menu_hrm_root" sequence="22"/>
+    <menuitem id="menu_hrm_candidate" parent="menu_hrm_recruitment" action="action_hrm_candidate" sequence="10" name="Ung vien"/>
+    <menuitem id="menu_hrm_requisition" parent="menu_hrm_recruitment" action="action_hrm_requisition" sequence="20" name="Nhu cau tuyen dung"/>
+    <menuitem id="menu_hrm_application" parent="menu_hrm_recruitment" action="action_hrm_application" sequence="30" name="Don ung tuyen"/>
+    <menuitem id="menu_hrm_interview" parent="menu_hrm_recruitment" action="action_hrm_interview" sequence="40" name="Phong van"/>
+    <menuitem id="menu_hrm_offer" parent="menu_hrm_recruitment" action="action_hrm_offer" sequence="50" name="Thu viec (Offer)"/>
+</odoo>

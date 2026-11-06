@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_hrm_user" model="res.groups">
+        <field name="name">HRM User</field>
+    </record>
+    <record id="group_hrm_admin" model="res.groups">
+        <field name="name">HRM Admin</field>
+        <field name="implied_ids" eval="[(4, ref('group_hrm_user'))]"/>
+    </record>
+</odoo>

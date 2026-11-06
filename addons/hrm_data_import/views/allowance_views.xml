@@ -1,0 +1,187 @@
+<odoo>
+  <record id="access_allowance_version_read" model="ir.access">
+    <field name="name">Read allowance history</field>
+    <field name="model_id" ref="model_hrm_allowance_version"/>
+    <field name="group_id" ref="hrm_base.group_hrm_user"/>
+    <field name="operation">r</field>
+  </record>
+  <record id="access_allowance_version_create" model="ir.access">
+    <field name="name">Add allowance policy versions</field>
+    <field name="model_id" ref="model_hrm_allowance_version"/>
+    <field name="group_id" ref="group_import_approver"/>
+    <field name="operation">c</field>
+  </record>
+  <record id="scope_allowance_version" model="ir.access">
+    <field name="name">Allowance history company scope</field>
+    <field name="model_id" ref="model_hrm_allowance_version"/>
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="access_allowance_type_read" model="ir.access">
+    <field name="name">Read allowance policies</field>
+    <field name="model_id" ref="model_hrm_allowance_type"/>
+    <field name="group_id" ref="hrm_base.group_hrm_user"/>
+    <field name="operation">r</field>
+  </record>
+  <record id="access_allowance_type_manage" model="ir.access">
+    <field name="name">Manage allowance policies</field>
+    <field name="model_id" ref="model_hrm_allowance_type"/>
+    <field name="group_id" ref="group_import_approver"/>
+    <field name="operation">cru</field>
+  </record>
+  <record id="scope_allowance_type" model="ir.access">
+    <field name="name">Allowance policy company scope</field>
+    <field name="model_id" ref="model_hrm_allowance_type"/>
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="access_contract_allowance_read" model="ir.access">
+    <field name="name">Read contract allowances</field>
+    <field name="model_id" ref="model_hrm_contract_allowance"/>
+    <field name="group_id" ref="hrm_base.group_hrm_user"/>
+    <field name="operation">r</field>
+  </record>
+  <record id="access_contract_allowance_edit" model="ir.access">
+    <field name="name">Edit draft contract allowances</field>
+    <field name="model_id" ref="model_hrm_contract_allowance"/>
+    <field name="group_id" ref="group_import_operator"/>
+    <field name="operation">crud</field>
+  </record>
+  <record id="scope_contract_allowance" model="ir.access">
+    <field name="name">Contract allowance company scope</field>
+    <field name="model_id" ref="model_hrm_contract_allowance"/>
+    <field name="operation">crud</field>
+    <field name="domain">[('company_id', 'in', user.hrm_company_ids.ids)]</field>
+  </record>
+  <record id="allowance_type_list" model="ir.ui.view">
+    <field name="name">hrm.allowance.type.list</field>
+    <field name="model">hrm.allowance.type</field>
+    <field name="arch" type="xml">
+      <list><field name="company_id" string="Company"/><field name="code" string="Code"/><field name="name" string="Name"/><field name="tax_mode" string="Initial tax treatment"/><field name="exempt_limit" string="Initial exemption limit"/></list>
+    </field>
+  </record>
+  <record id="allowance_type_form" model="ir.ui.view">
+    <field name="name">hrm.allowance.type.form</field>
+    <field name="model">hrm.allowance.type</field>
+    <field name="arch" type="xml">
+      <form js_class="hrm_allowance_type_form"><sheet><group>
+        <field name="company_id" string="Company"/><field name="name" string="Name"/>
+        <field name="code" string="Code" readonly="1" invisible="not id"/>
+        <field name="active" string="Active" invisible="not id"/>
+        <field name="tax_mode" string="Initial tax treatment" readonly="id"/>
+        <field name="exempt_limit" string="Initial exemption limit" readonly="id" invisible="tax_mode != 'capped'"/>
+      </group><p>Example: an allowance of 1,000,000 with an exemption limit of 730,000 has a taxable portion of 270,000.</p>
+      <notebook><page string="Policy history" name="policy_history">
+        <p>Add a row with an effective date, tax treatment and reason. Payroll uses the latest version effective at the start of its period. The initial settings apply before the first version.</p>
+        <field name="version_ids">
+          <list editable="bottom" delete="0">
+            <field name="effective_from" string="Effective from" readonly="id"/>
+            <field name="tax_mode" string="Tax treatment" readonly="id"/>
+            <field name="exempt_limit" string="Monthly exemption limit" readonly="id"/>
+            <field name="reason" string="Reason" readonly="id"/>
+            <field name="create_uid" string="Created by" optional="hide"/>
+            <field name="create_date" string="Created on" optional="hide"/>
+          </list>
+          <form>
+            <group>
+              <field name="effective_from" string="Effective from" readonly="id"/>
+              <field name="tax_mode" string="Tax treatment" readonly="id"/>
+              <field name="exempt_limit" string="Monthly exemption limit" readonly="id" invisible="tax_mode != 'capped'"/>
+              <field name="reason" string="Reason" readonly="id"/>
+            </group>
+          </form>
+        </field>
+      </page></notebook></sheet></form>
+    </field>
+  </record>
+  <record id="action_allowance_type" model="ir.actions.act_window">
+    <field name="name">Allowance settings</field><field name="res_model">hrm.allowance.type</field>
+    <field name="view_mode">list,form</field>
+  </record>
+  <menuitem id="menu_allowance_type" name="Allowance settings" parent="menu_staff_advanced"
+            action="action_allowance_type" sequence="15" groups="group_import_approver"/>
+  <record id="action_contract_allowance_settings" model="ir.actions.act_window">
+    <field name="name">Allowance settings</field>
+    <field name="res_model">hrm.allowance.type</field>
+    <field name="view_mode">list,form</field>
+    <field name="target">new</field>
+    <field name="domain">[('company_id', '=', context.get('default_company_id'))]</field>
+  </record>
+  <record id="action_contract_allowance_create" model="ir.actions.act_window">
+    <field name="name">Create allowance type</field>
+    <field name="res_model">hrm.allowance.type</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="allowance_type_form"/>
+    <field name="target">new</field>
+  </record>
+  <record id="contract_allowance_form" model="ir.ui.view">
+    <field name="name">hrm.employee.contract.allowances</field>
+    <field name="model">hrm.employee.contract</field>
+    <field name="inherit_id" ref="contract_details_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='structure_id']/parent::group" position="after">
+        <div name="allowances" class="mb-3">
+          <separator string="Allowances"/>
+          <p>On an addendum, enter only the allowances that change. Enter zero to stop an existing allowance during the addendum.</p>
+          <button name="%(action_contract_allowance_settings)d" type="action" string="Allowance settings"
+                  class="btn btn-secondary mb-2" groups="hrm_data_import.group_import_approver"
+                  invisible="not id or not company_id" context="{'default_company_id': company_id}"/>
+          <button name="%(action_contract_allowance_create)d" type="action" string="Create allowance type"
+                  class="btn btn-secondary mb-2" groups="hrm_data_import.group_import_approver"
+                  invisible="not id or not company_id" context="{'default_company_id': company_id}"/>
+          <button name="action_new_allowance_addendum" type="object" string="Create allowance addendum"
+                  class="btn btn-secondary mb-2" groups="hrm_data_import.group_import_operator"
+                  invisible="not id or parent_id or status not in ('approved', 'active')"/>
+          <p invisible="status in ('approved', 'active', 'expired')">
+            Bấm vào dòng phụ cấp đã thêm để mở cửa sổ sửa số tiền. Lưu hợp đồng hoặc phụ lục để ghi thay đổi.
+          </p>
+          <p invisible="status not in ('approved', 'active', 'expired')">
+            Phụ cấp của hồ sơ đã duyệt được lưu theo lịch sử. Để đổi số tiền, tạo phụ lục mới từ hợp đồng gốc.
+          </p>
+          <field name="allowance_ids" readonly="status in ('approved', 'active', 'expired')">
+            <list>
+              <field name="type_id" domain="[('company_id', '=', parent.company_id)]"
+                     context="{'default_company_id': parent.company_id}" options="{'no_quick_create': True}"/>
+              <field name="amount"/><field name="tax_mode"/><field name="exempt_limit"/>
+              <field name="tax_exempt_amount"/><field name="taxable_amount"/>
+            </list>
+            <form string="Chi tiết phụ cấp">
+              <group>
+                <field name="type_id" domain="[('company_id', '=', parent.company_id)]"
+                       context="{'default_company_id': parent.company_id}" options="{'no_quick_create': True}"/>
+                <field name="amount"/>
+                <field name="tax_mode"/>
+                <field name="exempt_limit"/>
+                <field name="tax_exempt_amount"/>
+                <field name="taxable_amount"/>
+              </group>
+            </form>
+          </field>
+        </div>
+      </xpath>
+    </field>
+  </record>
+  <record id="payslip_allowance_details" model="ir.ui.view">
+    <field name="name">hrm.payroll.item.allowance.details</field>
+    <field name="model">hrm.payroll.item</field>
+    <field name="inherit_id" ref="payroll_item_details"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='detail_ids']/list/field[@name='amount']" position="after">
+        <field name="tax_exempt_amount" optional="show"/><field name="taxable_amount" optional="show"/>
+      </xpath>
+    </field>
+  </record>
+  <template id="contract_allowance_print" inherit_id="contract_document">
+    <xpath expr="//div[@t-field='doc.terms']" position="before">
+      <div t-if="doc.allowance_ids">
+        <h4>Allowances</h4>
+        <table class="table table-sm">
+          <thead><tr><th>Allowance type</th><th>Monthly amount</th></tr></thead>
+          <tbody><tr t-foreach="doc.allowance_ids" t-as="line"><td t-field="line.type_id.name"/>
+            <td><span t-field="line.amount" t-options="{'widget': 'float', 'precision': 0}"/> <span t-field="doc.currency_code"/></td>
+          </tr></tbody>
+        </table>
+      </div>
+    </xpath>
+  </template>
+</odoo>

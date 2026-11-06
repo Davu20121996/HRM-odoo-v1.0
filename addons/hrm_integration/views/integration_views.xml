@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_outbox_list" model="ir.ui.view">
+        <field name="name">hrm.event.outbox.list</field>
+        <field name="model">hrm.event.outbox</field>
+        <field name="arch" type="xml">
+            <list create="false"><field name="event_type"/><field name="aggregate_type"/><field name="status"/><field name="retry_count"/><field name="occurred_at"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_outbox" model="ir.actions.act_window">
+        <field name="name">Event Outbox</field>
+        <field name="res_model">hrm.event.outbox</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_endpoint_list" model="ir.ui.view">
+        <field name="name">hrm.webhook.endpoint.list</field>
+        <field name="model">hrm.webhook.endpoint</field>
+        <field name="arch" type="xml">
+            <list><field name="name"/><field name="url"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_endpoint_form" model="ir.ui.view">
+        <field name="name">hrm.webhook.endpoint.form</field>
+        <field name="model">hrm.webhook.endpoint</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="tenant_id"/><field name="name"/><field name="url"/>
+                <field name="secret_reference"/><field name="status"/>
+            </group></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_endpoint" model="ir.actions.act_window">
+        <field name="name">Webhook Endpoints</field>
+        <field name="res_model">hrm.webhook.endpoint</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_delivery_list" model="ir.ui.view">
+        <field name="name">hrm.webhook.delivery.list</field>
+        <field name="model">hrm.webhook.delivery</field>
+        <field name="arch" type="xml">
+            <list create="false"><field name="endpoint_id"/><field name="event_id"/><field name="attempt_no"/><field name="status"/><field name="http_status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_delivery" model="ir.actions.act_window">
+        <field name="name">Deliveries</field>
+        <field name="res_model">hrm.webhook.delivery</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_import_list" model="ir.ui.view">
+        <field name="name">hrm.import.job.list</field>
+        <field name="model">hrm.import.job</field>
+        <field name="arch" type="xml">
+            <list><field name="entity_type"/><field name="total_rows"/><field name="processed_rows"/><field name="success_rows"/><field name="failed_rows"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_import" model="ir.actions.act_window">
+        <field name="name">Import Jobs</field>
+        <field name="res_model">hrm.import.job</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_connection_list" model="ir.ui.view">
+        <field name="name">hrm.integration.connection.list</field>
+        <field name="model">hrm.integration.connection</field>
+        <field name="arch" type="xml">
+            <list><field name="provider"/><field name="connection_type"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_connection" model="ir.actions.act_window">
+        <field name="name">Connections</field>
+        <field name="res_model">hrm.integration.connection</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_idempotency_list" model="ir.ui.view">
+        <field name="name">hrm.idempotency.key.list</field>
+        <field name="model">hrm.idempotency.key</field>
+        <field name="arch" type="xml">
+            <list create="false"><field name="key"/><field name="request_hash"/><field name="response_status"/><field name="created_at"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_idempotency" model="ir.actions.act_window">
+        <field name="name">Idempotency Keys</field>
+        <field name="res_model">hrm.idempotency.key</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hrm_api_token_list" model="ir.ui.view">
+        <field name="name">hrm.api.token.list</field>
+        <field name="model">hrm.api.token</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false"><field name="name"/><field name="tenant_id"/><field name="token_tail"/><field name="expires_at"/><field name="active"/><field name="rate_limit_per_hour"/><field name="requests_in_window"/><field name="last_used_at"/></list>
+        </field>
+    </record>
+    <record id="view_hrm_api_token_form" model="ir.ui.view">
+        <field name="name">hrm.api.token.form</field>
+        <field name="model">hrm.api.token</field>
+        <field name="arch" type="xml">
+            <form><header>
+                <button name="action_generate_new_key" string="Generate Key" type="object" class="oe_highlight"/>
+                <button name="action_revoke" string="Revoke" type="object"/>
+            </header><sheet><group>
+                <field name="tenant_id"/><field name="name"/><field name="token_tail" readonly="1"/>
+                <field name="expires_at"/><field name="active"/>
+                <field name="rate_limit_per_hour"/><field name="requests_in_window" readonly="1"/>
+                <field name="last_used_at" readonly="1"/><field name="revoked_at" readonly="1"/>
+            </group><div class="alert alert-info" role="alert">Bam Generate Key de cap key moi. Key hien 1 lan duy nhat trong popup — copy ngay cho Mini App.</div></sheet></form>
+        </field>
+    </record>
+    <record id="view_hrm_api_token_show_form" model="ir.ui.view">
+        <field name="name">hrm.api.token.show.form</field>
+        <field name="model">hrm.api.token.show</field>
+        <field name="arch" type="xml">
+            <form><sheet><group>
+                <field name="name" readonly="1"/><field name="expires_at" readonly="1"/>
+                <field name="raw" readonly="1"/>
+            </group><div class="alert alert-warning" role="alert">Copy key ngay. Dong popup la mat — DB chi luu hash, khong lay lai duoc.</div></sheet></form>
+        </field>
+    </record>
+    <record id="action_hrm_api_token" model="ir.actions.act_window">
+        <field name="name">API Tokens</field>
+        <field name="res_model">hrm.api.token</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

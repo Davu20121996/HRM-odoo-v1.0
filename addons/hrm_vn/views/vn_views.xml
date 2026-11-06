@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hrm_person_identifier_list" model="ir.ui.view">
+        <field name="name">hrm.person.identifier.list</field>
+        <field name="model">hrm.person.identifier</field>
+        <field name="arch" type="xml">
+            <list><field name="person_id"/><field name="id_type"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_person_identifier" model="ir.actions.act_window">
+        <field name="name">Identifiers</field>
+        <field name="res_model">hrm.person.identifier</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="view_hrm_insurance_rule_list" model="ir.ui.view">
+        <field name="name">hrm.insurance.rule.list</field>
+        <field name="model">hrm.insurance.rule</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="effective_from"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_insurance_rule" model="ir.actions.act_window">
+        <field name="name">Insurance Rules</field>
+        <field name="res_model">hrm.insurance.rule</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="view_hrm_tax_rule_list" model="ir.ui.view">
+        <field name="name">hrm.tax.rule.list</field>
+        <field name="model">hrm.tax.rule</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="effective_from"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_tax_rule" model="ir.actions.act_window">
+        <field name="name">Tax Rules</field>
+        <field name="res_model">hrm.tax.rule</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="view_hrm_payroll_rule_list" model="ir.ui.view">
+        <field name="name">hrm.payroll.rule.list</field>
+        <field name="model">hrm.payroll.rule</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="effective_from"/><field name="status"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_payroll_rule" model="ir.actions.act_window">
+        <field name="name">Payroll Rules</field>
+        <field name="res_model">hrm.payroll.rule</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="view_hrm_statutory_rule_list" model="ir.ui.view">
+        <field name="name">hrm.statutory.rule.list</field>
+        <field name="model">hrm.statutory.rule</field>
+        <field name="arch" type="xml">
+            <list><field name="code"/><field name="name"/><field name="rule_type"/><field name="effective_from"/></list>
+        </field>
+    </record>
+    <record id="action_hrm_statutory_rule" model="ir.actions.act_window">
+        <field name="name">Statutory Rules</field>
+        <field name="res_model">hrm.statutory.rule</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

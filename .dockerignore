@@ -1,0 +1,16 @@
+.git
+.gitignore
+addons
+config
+*.md
+.env
+.env.local
+.vscode
+.idea
+.opencode
+.backups
+.qa_tools
+logs
+docs/qa
+
+outputs/
